@@ -1,0 +1,1120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetcss='false' b:responsive='true' lang='bn' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+    <meta charset='UTF-8'/>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+    <title><data:blog.pageTitle/></title>
+    
+    <b:skin><![CDATA[
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Hind+Siliguri:wght@400;600;700&display=swap');
+
+    :root {
+        --primary: #d4af37; /* Royal Gold */
+        --primary-light: #fcf6ba;
+        --bg-dark: #0a0e14; 
+        --card-bg: rgba(22, 27, 34, 0.7);
+        --text-white: #ffffff;
+        --text-muted: #94a3b8;
+        --border: rgba(212, 175, 55, 0.15);
+        --glass: rgba(255, 255, 255, 0.03);
+        --gradient-main: linear-gradient(135deg, #d4af37 0%, #fcf6ba 50%, #d4af37 100%);
+    }
+
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body { 
+        font-family: 'Plus Jakarta Sans', 'Hind Siliguri', sans-serif; 
+        margin: 0; 
+        background-color: var(--bg-dark); 
+        color: var(--text-white); 
+        overflow-x: hidden; 
+        line-height: 1.6;
+    }
+
+    /* --- ANIMATED BACKGROUND --- */
+    .bg-pattern {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+        background: 
+            radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 40%),
+            radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 40%);
+        z-index: -1;
+    }
+
+    /* --- PREMIUM NAVBAR --- */
+    header {
+        position: fixed; top: 0; width: 100%; z-index: 1000;
+        background: rgba(10, 14, 20, 0.8); 
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border);
+        padding: 15px 5%; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center;
+        gap: 20px;
+    }
+    
+    /* Widget Control Visibility */
+    .widget-item-control { display: none !important; } 
+    
+    /* Logo Area Styling for Widget */
+    .header-widget-section {
+        flex-shrink: 1;
+        min-width: 0;
+    }
+    .header-widget-section .widget { margin: 0; }
+    .header-widget-section .widget-content { display: flex; align-items: center; gap: 12px; }
+    
+    .logo-area { 
+        display: flex; 
+        align-items: center; 
+        gap: 12px; 
+        text-decoration: none; 
+    }
+    .logo-icon { 
+        width: 48px; height: 48px; background: var(--gradient-main); 
+        border-radius: 14px; display: flex; align-items: center; justify-content: center; 
+        color: #000; font-weight: 800; font-size: 24px; 
+        box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+        transition: transform 0.3s; flex-shrink: 0;
+    }
+    .logo-area:hover .logo-icon { transform: rotate(-10deg) scale(1.1); }
+    
+    .logo-text { 
+        font-size: 26px; 
+        font-weight: 800; 
+        background: var(--gradient-main); 
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+    }
+    .header-widget-section h1 { margin: 0; line-height: 1; }
+    .header-widget-section img { max-height: 50px; width: auto; }
+    
+    /* Navigation Widget Styling */
+    nav { 
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: flex-end; 
+        flex-shrink: 0;
+    }
+    /* Force LinkList widget to look like our menu */
+    nav .widget { margin: 0; }
+    nav .widget-content { display: flex; flex-wrap: wrap; justify-content: flex-end; }
+    nav ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; }
+    nav li { margin-left: 25px; list-style: none; }
+    nav li a { 
+        text-decoration: none; 
+        color: #cbd5e1; 
+        font-weight: 600; 
+        font-size: 15px; 
+        transition: 0.3s; 
+        position: relative; 
+        white-space: nowrap; 
+        display: inline-block;
+    }
+    nav li a:hover { color: var(--primary); }
+    nav li a::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 0; height: 2px; background: var(--primary); transition: 0.3s; }
+    nav li a:hover::after { width: 100%; }
+
+    @media (max-width: 1200px) {
+        header { padding: 15px 4%; }
+        .logo-text { font-size: 22px; }
+        nav li { margin-left: 18px; } nav li a { font-size: 14px; }
+    }
+    @media (max-width: 992px) {
+        .logo-text { font-size: 20px; }
+        nav li { margin-left: 12px; } nav li a { font-size: 13px; }
+    }
+    @media (max-width: 768px) {
+        header { padding: 12px 4%; }
+        .logo-text { font-size: 18px; }
+        nav { display: none; } /* Hidden on mobile, can be replaced with hamburger widget */
+    }
+
+    /* --- HERO SECTION --- */
+    .hero { 
+        min-height: 100vh; display: flex; align-items: center; justify-content: center;
+        text-align: center; 
+        background: radial-gradient(circle at 50% 0%, #1a202c 0%, var(--bg-dark) 70%); 
+        position: relative; padding: 100px 5%;
+    }
+    .hero-content { max-width: 800px; z-index: 1; animation: fadeInUp 1s ease-out; }
+    
+    /* COMING SOON BADGE */
+    .coming-soon-badge { 
+        display: inline-flex; align-items: center; gap: 10px;
+        background: rgba(212, 175, 55, 0.1); 
+        color: var(--primary); padding: 10px 25px; border-radius: 50px; 
+        font-size: 14px; font-weight: 700; border: 1px solid var(--primary); 
+        margin-bottom: 30px; text-transform: uppercase; letter-spacing: 2px;
+        animation: glow 2s infinite alternate;
+    }
+    .coming-soon-badge span { width: 8px; height: 8px; background: var(--primary); border-radius: 50%; animation: blink 1s infinite; }
+    
+    @keyframes blink { 0% { opacity: 0.2; } 50% { opacity: 1; } 100% { opacity: 0.2; } }
+    @keyframes glow { from { box-shadow: 0 0 5px rgba(212, 175, 55, 0.2); } to { box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+    .hero h1 { font-size: clamp(40px, 6vw, 70px); font-weight: 800; margin: 0 0 25px 0; line-height: 1.1; text-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    .hero h1 span { background: var(--gradient-main); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p { font-size: 20px; color: var(--text-muted); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    
+    .btn-primary { 
+        display: inline-block; background: var(--gradient-main); color: #000; 
+        padding: 15px 40px; border-radius: 50px; text-decoration: none; 
+        font-weight: 800; font-size: 16px; letter-spacing: 0.5px;
+        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5); }
+
+    /* --- SECTION STYLING --- */
+    .section-padding { padding: 120px 8%; position: relative; }
+    .section-header { text-align: center; margin-bottom: 70px; }
+    .section-header h2 { font-size: 42px; font-weight: 800; margin: 0 0 15px 0; }
+    .section-header h2 span { color: var(--primary); }
+    .section-header p { color: var(--text-muted); font-size: 18px; max-width: 600px; margin: 0 auto; }
+    
+    /* --- SERVICE GRID --- */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+    
+    .service-card { 
+        background: var(--card-bg); padding: 30px; border-radius: 24px; 
+        border: 1px solid rgba(255,255,255,0.05); 
+        backdrop-filter: blur(10px);
+        transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        text-align: left; position: relative; overflow: hidden;
+    }
+    .service-card::before { 
+        content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; 
+        background: var(--gradient-main); opacity: 0; transition: 0.3s; 
+    }
+    .service-card:hover { 
+        border-color: rgba(212, 175, 55, 0.4); 
+        transform: translateY(-10px); 
+        box-shadow: 0 20px 50px rgba(0,0,0,0.5); 
+    }
+    .service-card:hover::before { opacity: 1; }
+    
+    .icon-box { 
+        width: 65px; height: 65px; background: rgba(212, 175, 55, 0.1); 
+        color: var(--primary); border-radius: 18px; display: flex; 
+        align-items: center; justify-content: center; font-size: 28px; margin-bottom: 20px;
+        transition: 0.3s;
+    }
+    .service-card:hover .icon-box { background: var(--primary); color: #000; transform: rotate(-5deg); }
+
+    .service-card h3 { font-size: 20px; color: #fff; margin-bottom: 10px; }
+    .service-card p { color: var(--text-muted); font-size: 14px; margin-bottom: 20px; line-height: 1.6; }
+    
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tags span { 
+        background: rgba(255,255,255,0.05); color: #aaa; 
+        padding: 4px 10px; border-radius: 6px; font-size: 11px; 
+        font-weight: 600; border: 1px solid rgba(255,255,255,0.08); 
+    }
+
+    /* --- FAQ SECTION --- */
+    .faq-section { background: #0d1117; }
+    .faq-container { max-width: 800px; margin: 0 auto; }
+    
+    .faq-item { 
+        background: var(--card-bg); margin-bottom: 15px; border-radius: 16px; 
+        border: 1px solid rgba(255,255,255,0.05); overflow: hidden; transition: 0.3s;
+    }
+    .faq-item:hover { border-color: rgba(212, 175, 55, 0.2); }
+    
+    .faq-question { 
+        padding: 20px 25px; cursor: pointer; display: flex; 
+        justify-content: space-between; align-items: center; 
+        font-weight: 700; font-size: 17px; color: var(--text-white); 
+    }
+    .faq-icon { 
+        font-size: 20px; color: var(--primary); transition: transform 0.3s; 
+        font-weight: bold; display: flex; align-items: center; justify-content: center;
+        width: 30px; height: 30px; border-radius: 50%; background: rgba(212, 175, 55, 0.1);
+    }
+    
+    .faq-answer { 
+        max-height: 0; overflow: hidden; transition: max-height 0.4s ease; 
+        color: var(--text-muted); line-height: 1.7;
+    }
+    .faq-answer-content { padding: 0 25px 20px 25px; }
+    
+    /* UI Logic for FAQ */
+    .faq-toggle { display: none; }
+    .faq-toggle:checked + .faq-question .faq-icon { transform: rotate(45deg); background: var(--primary); color: #000; }
+    .faq-toggle:checked ~ .faq-answer { max-height: 300px; padding: 0; border-top: 1px solid rgba(255,255,255,0.05); }
+
+    /* --- BLOG SECTION --- */
+    .blog-section { background: linear-gradient(180deg, #0a0e14 0%, #111827 100%); }
+    .blog-grid { 
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 25px; 
+        margin-bottom: 50px;
+    }
+    .post-card { 
+        background: var(--card-bg); 
+        border-radius: 20px; 
+        overflow: hidden; 
+        border: 1px solid rgba(255,255,255,0.05); 
+        transition: 0.3s; 
+        display: flex;
+        flex-direction: column;
+    }
+    .post-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.3); }
+    .post-info { padding: 20px; flex-grow: 1; }
+    .post-info h3 { margin: 0 0 10px 0; font-size: 18px; line-height: 1.4; }
+    .post-info h3 a { color: #fff; text-decoration: none; }
+    .post-meta { font-size: 12px; color: var(--text-muted); margin-bottom: 12px; }
+    .read-more { color: var(--primary); font-weight: 700; text-decoration: none; font-size: 14px; display: inline-flex; align-items: center; gap: 5px; transition: 0.3s; }
+    .read-more:hover { gap: 10px; }
+
+    /* Pagination Styles */
+    .blog-pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin-top: 40px;
+    }
+    .pagination-link, .pagination-current {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 45px;
+        height: 45px;
+        padding: 0 12px;
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        color: var(--text-white);
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.3s;
+        backdrop-filter: blur(5px);
+    }
+    .pagination-link:hover {
+        background: var(--primary);
+        color: #000;
+        border-color: var(--primary);
+        transform: scale(1.05);
+    }
+    .pagination-current {
+        background: var(--primary);
+        color: #000;
+        border-color: var(--primary);
+        cursor: default;
+    }
+    .pagination-dots { color: var(--text-muted); font-weight: 600; }
+
+    @media (max-width: 1200px) { .blog-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 900px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .blog-grid { grid-template-columns: 1fr; } }
+
+    /* --- MAP SECTION --- */
+    .map-section {
+        background: #0d1117;
+        padding: 80px 8%;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+    }
+    .map-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        border-radius: 30px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        border: 1px solid var(--border);
+    }
+    .map-container iframe {
+        width: 100%;
+        height: 450px;
+        display: block;
+        border: 0;
+    }
+
+    /* --- STATS SECTION --- */
+    .stats-section {
+        background: linear-gradient(145deg, #0a0e14 0%, #111111 100%);
+        padding: 80px 8%;
+    }
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .stat-card {
+        text-align: center;
+        padding: 30px 20px;
+        background: var(--card-bg);
+        border-radius: 24px;
+        border: 1px solid var(--border);
+        backdrop-filter: blur(10px);
+        transition: 0.3s;
+    }
+    .stat-card:hover {
+        transform: translateY(-8px);
+        border-color: var(--primary);
+    }
+    .stat-number {
+        font-size: 48px;
+        font-weight: 800;
+        background: var(--gradient-main);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 1.2;
+        margin-bottom: 8px;
+    }
+    .stat-label {
+        color: var(--text-muted);
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    @media (max-width: 800px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 500px) { .stats-grid { grid-template-columns: 1fr; } }
+
+    /* --- CTA SECTION --- */
+    .cta-section {
+        padding: 100px 8%;
+        background: radial-gradient(circle at 30% 30%, rgba(212, 175, 55, 0.1) 0%, transparent 60%);
+        text-align: center;
+    }
+    .cta-content {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    .cta-content h2 {
+        font-size: 42px;
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
+    .cta-content p {
+        color: var(--text-muted);
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    .cta-buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .btn-secondary {
+        display: inline-block;
+        background: transparent;
+        color: var(--primary);
+        padding: 15px 40px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 800;
+        font-size: 16px;
+        border: 2px solid var(--primary);
+        transition: 0.3s;
+    }
+    .btn-secondary:hover {
+        background: var(--primary);
+        color: #000;
+        transform: translateY(-3px);
+    }
+
+    /* --- CONTACT FORM SECTION --- */
+    .contact-section {
+        background: #0a0e14;
+        padding: 80px 8%;
+    }
+    .contact-form-container {
+        max-width: 700px;
+        margin: 0 auto;
+        background: var(--card-bg);
+        border-radius: 30px;
+        padding: 50px;
+        border: 1px solid var(--border);
+        backdrop-filter: blur(10px);
+    }
+    .contact-form-container .contact-form-widget { max-width: 100%; }
+    .contact-form-container .contact-form-name,
+    .contact-form-container .contact-form-email,
+    .contact-form-container .contact-form-email-message {
+        width: 100%;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+        background: rgba(255,255,255,0.05);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        color: var(--text-white);
+        font-family: inherit;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+    .contact-form-container input:focus, .contact-form-container textarea:focus {
+        outline: none;
+        border-color: var(--primary);
+        background: rgba(212, 175, 55, 0.1);
+    }
+    .contact-form-container .contact-form-button {
+        background: var(--gradient-main);
+        color: #000;
+        padding: 15px 40px;
+        border: none;
+        border-radius: 50px;
+        font-weight: 800;
+        font-size: 16px;
+        cursor: pointer;
+        width: 100%;
+        transition: 0.3s;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .contact-form-container .contact-form-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+    }
+
+    /* --- BACK TO TOP --- */
+    .back-to-top {
+        position: fixed; bottom: 40px; right: 40px;
+        width: 55px; height: 55px; background: var(--gradient-main);
+        border-radius: 50%; display: flex; align-items: center; justify-content: center;
+        color: #000; font-size: 24px; font-weight: bold; text-decoration: none;
+        box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3); transition: 0.3s; z-index: 99;
+    }
+    .back-to-top:hover {
+        transform: translateY(-10px) scale(1.1);
+        box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
+    }
+
+    /* --- FOOTER --- */
+    footer { background: #05070a; padding: 80px 8% 40px; border-top: 1px solid var(--border); }
+    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+    
+    /* Widget Styling for Footer */
+    footer .widget { margin: 0; }
+    footer .widget > h2 { /* Hide widget titles in footer */ display: none; }
+    footer .widget-content { color: var(--text-muted); font-size: 15px; line-height: 1.8; }
+    footer .widget-content a { color: var(--text-muted); text-decoration: none; transition: 0.3s; }
+    footer .widget-content a:hover { color: #fff; padding-left: 5px; }
+    
+    .footer-col h4 { color: var(--primary); margin-bottom: 20px; font-size: 18px; }
+    .map-link { display: inline-flex; align-items: center; gap: 8px; color: var(--primary) !important; font-weight: 600; }
+    .map-link:hover { color: #fff !important; }
+    .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 14px; color: var(--text-muted); }
+
+    /* POST VIEW & STATIC PAGE */
+    .post-view-container { max-width: 1000px; margin: 120px auto 60px; padding: 0 30px; }
+    .post-body-content { 
+        background: var(--card-bg); padding: 40px; border-radius: 30px; 
+        border: 1px solid var(--border); line-height: 1.8; color: #e2e8f0; 
+    }
+    .back-home-container { text-align: center; margin: 40px 0 20px; }
+    .back-home-btn {
+        display: inline-flex; align-items: center; gap: 10px;
+        background: var(--card-bg); color: var(--primary);
+        padding: 12px 30px; border-radius: 50px; text-decoration: none;
+        font-weight: 700; font-size: 16px; border: 1px solid var(--border); transition: 0.3s;
+    }
+    .back-home-btn:hover { background: var(--primary); color: #000; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2); }
+
+    /* Comments Section Styling */
+    .comments { margin-top: 50px; background: var(--card-bg); border-radius: 30px; padding: 30px; border: 1px solid var(--border); }
+    .comments h4 { color: var(--primary); font-size: 24px; margin-bottom: 30px; text-align: center; }
+    #comments-block dt { color: var(--primary); font-weight: 700; }
+    #comments-block dd { margin-left: 20px; color: var(--text-muted); }
+
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 768px) {
+        header { padding: 12px 4%; }
+        .logo-text { font-size: 18px; }
+        nav { display: none; }
+        .hero h1 { font-size: 36px; }
+        .section-padding { padding: 60px 5%; }
+        .services-grid { grid-template-columns: 1fr; }
+        .cta-content h2 { font-size: 32px; }
+        .map-container iframe { height: 300px; }
+        .contact-form-container { padding: 30px 20px; }
+        .back-to-top { bottom: 20px; right: 20px; width: 45px; height: 45px; font-size: 20px; }
+        .post-view-container { padding: 0 20px; }
+    }
+    ]]></b:skin>
+</head>
+<body>
+
+<div class='bg-pattern'/>
+
+<!-- HEADER WITH WIDGETS FOR LOGO AND MENU -->
+<header>
+    <!-- Logo Section -->
+    <b:section class='header-widget-section' id='header-widget' maxwidgets='1' showaddelement='no'>
+      <b:widget id='Header1' locked='false' title='Ayman IT &amp;amp; Online Services (Header)' type='Header' version='1'>
+        <b:widget-settings>
+          <b:widget-setting name='displayUrl'/>
+          <b:widget-setting name='displayHeight'>0</b:widget-setting>
+          <b:widget-setting name='sectionWidth'>-1</b:widget-setting>
+          <b:widget-setting name='useImage'>false</b:widget-setting>
+          <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
+          <b:widget-setting name='imagePlacement'>BEHIND</b:widget-setting>
+          <b:widget-setting name='displayWidth'>0</b:widget-setting>
+        </b:widget-settings>
+        <b:includable id='main'>
+          <b:if cond='data:useImage'>
+             <!-- If Image Uploaded -->
+             <a class='logo-area' expr:href='data:blog.homepageUrl'>
+                 <div class='logo-icon'>A</div> <!-- Keep Icon or remove if you want pure image -->
+                 <b:if cond='data:imagePlacement == &quot;REPLACE&quot;'>
+                    <img expr:alt='data:title' expr:src='data:sourceUrl'/>
+                 <b:else/>
+                    <div class='logo-text'><data:title/></div>
+                 </b:if>
+             </a>
+          <b:else/>
+             <!-- If No Image (Text Only) -->
+             <a class='logo-area' expr:href='data:blog.homepageUrl'>
+                 <div class='logo-icon'>A</div>
+                 <h1 class='logo-text'><data:title/></h1>
+             </a>
+          </b:if>
+        </b:includable>
+        <b:includable id='description'>
+  <div class='descriptionwrapper'>
+    <p class='description'><span><data:description/></span></p>
+  </div>
+</b:includable>
+        <b:includable id='title'>
+  <b:tag cond='data:blog.url != data:blog.homepageUrl' expr:href='data:blog.homepageUrl' name='a'>
+    <data:title/>
+  </b:tag>
+</b:includable>
+      </b:widget>
+    </b:section>
+
+    <!-- Navigation Menu Section -->
+    <nav>
+        <b:section class='nav-widget-section' id='nav-widget' maxwidgets='1' showaddelement='no'>
+          <b:widget id='LinkList1' locked='false' title='Navigation' type='LinkList' version='1'>
+            <b:widget-settings>
+              <b:widget-setting name='link-3'>#contact</b:widget-setting>
+              <b:widget-setting name='sorting'>NONE</b:widget-setting>
+              <b:widget-setting name='text-1'>FAQ</b:widget-setting>
+              <b:widget-setting name='link-1'>#faq</b:widget-setting>
+              <b:widget-setting name='text-0'>স&#2503;ব&#2494;সম&#2498;হ</b:widget-setting>
+              <b:widget-setting name='link-2'>#updates</b:widget-setting>
+              <b:widget-setting name='text-3'>য&#2507;গ&#2494;য&#2507;গ</b:widget-setting>
+              <b:widget-setting name='link-0'>#services</b:widget-setting>
+              <b:widget-setting name='text-2'>আপড&#2503;ট</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+             <div class='widget-content'>
+               <ul>
+                 <b:loop values='data:links' var='link'>
+                   <li><a expr:href='data:link.target'><data:link.name/></a></li>
+                 </b:loop>
+               </ul>
+             </div>
+            </b:includable>
+          </b:widget>
+        </b:section>
+    </nav>
+</header>
+
+<b:if cond='data:blog.url == data:blog.homepageUrl'>
+    <main>
+        <!-- HERO SECTION WIDGET -->
+        <section class='hero'>
+            <b:section id='hero-section' showaddelement='yes'>
+              <b:widget id='HTML1' locked='false' title='Hero Content' type='HTML' version='1'>
+                <b:widget-settings>
+                  <b:widget-setting name='content'/>
+                </b:widget-settings>
+                <b:includable id='main'>
+                  <div class='hero-content'>
+                    <b:if cond='data:content != &quot;&quot;'>
+                        <!-- If user adds content in Layout, show it -->
+                        <data:content/>
+                    <b:else/>
+                        <!-- Default Content -->
+                        <div class='coming-soon-badge'><span/> Coming Soon</div>
+                        <h1>সম&#2509;প&#2498;র&#2509;ণ ড&#2495;জ&#2495;ট&#2494;ল স&#2503;ব&#2494;<br/><span>আয়ম&#2494;ন আইট&#2495; এন&#2509;ড ড&#2495;জ&#2495;ট&#2494;ল স&#2494;র&#2509;ভ&#2495;স&#2503;স</span></h1>
+                        <p>আমর&#2494; প&#2509;রয&#2497;ক&#2509;ত&#2495;জ&#2509;ঞ&#2503; লভ&#2509;য স&#2494;ধ&#2494;রণ ম&#2494;ন&#2497;ষ&#2503;র দরগ&#2497;&#2433;ড়জ&#2503;ড়&#2503; প&#2508;&#2433;ছ&#2503;ছ&#2495; দ&#2495;চ&#2509;ছ&#2495; দ&#2509;র&#2497;ততম এব&#2434; ন&#2495;র&#2509;ভরয&#2507;গ&#2509;য সব ড&#2495;জ&#2495;ট&#2494;ল স&#2503;ব&#2494;&#2404;</p>
+                        <a class='btn-primary' href='#services'>আম&#2494;দ&#2503;র স&#2503;ব&#2494;সম&#2498;হ</a>
+                    </b:if>
+                  </div>
+                </b:includable>
+              </b:widget>
+            </b:section>
+        </section>
+
+        <!-- SERVICES SECTION WIDGET -->
+        <section class='section-padding' id='services'>
+            <div class='section-header'>
+                <h2>আম&#2494;দ&#2503;র <span>এক&#2509;সক&#2509;ল&#2497;স&#2495;ভ স&#2503;ব&#2494;</span></h2>
+                <p>সরক&#2494;র&#2495; থ&#2503;ক&#2503; ব&#2509;যক&#2509;ত&#2495;গত সকল ড&#2495;জ&#2495;ট&#2494;ল সম&#2494;ধ&#2494;ন এক ছ&#2494;দ&#2503;র ন&#2495;চ&#2503;</p>
+            </div>
+            <b:section id='services-section' showaddelement='yes'>
+              <b:widget id='HTML2' locked='false' title='Services Grid' type='HTML' version='1'>
+                <b:widget-settings>
+                  <b:widget-setting name='content'/>
+                </b:widget-settings>
+                <b:includable id='main'>
+                  <b:if cond='data:content != &quot;&quot;'>
+                     <data:content/>
+                  <b:else/>
+                     <!-- Default Services Grid -->
+                     <div class='services-grid'>
+                        <div class='service-card'>
+                            <div class='icon-box'>📝</div>
+                            <h3>অনল&#2494;ইন আব&#2503;দন</h3>
+                            <p>সরক&#2494;র&#2495;-ব&#2503;সরক&#2494;র&#2495; চ&#2494;কর&#2495;, ভ&#2495;স&#2494; ও ব&#2495;ভ&#2495;ন&#2509;ন প&#2509;রত&#2495;ষ&#2509;ঠ&#2494;ন&#2503;র অনল&#2494;ইন ফরম প&#2498;রণ&#2404;</p>
+                            <div class='tags'><span>Govt Jobs</span> <span>Admission</span> <span>Visa</span></div>
+                        </div>
+                        <div class='service-card'>
+                            <div class='icon-box'>📸</div>
+                            <h3>স&#2509;ম&#2494;র&#2509;ট ফট&#2507; স&#2509;ট&#2497;ড&#2495;ও</h3>
+                            <p>আধ&#2497;ন&#2495;ক ল&#2509;য&#2494;ব&#2503; ছব&#2495; প&#2509;র&#2495;ন&#2509;ট এব&#2434; প&#2509;রফ&#2503;শন&#2494;ল ফট&#2507; র&#2495;ট&#2494;চ&#2495;&#2434; স&#2494;র&#2509;ভ&#2495;স&#2404;</p>
+                            <div class='tags'><span>HD Print</span> <span>Retouch</span> <span>Passport</span></div>
+                        </div>
+                        <div class='service-card'>
+                            <div class='icon-box'>💳</div>
+                            <h3>ম&#2507;ব&#2494;ইল ব&#2509;য&#2494;&#2434;ক&#2495;&#2434;</h3>
+                            <p>ব&#2495;ক&#2494;শ, নগদ, রক&#2503;ট ও ব&#2509;য&#2494;&#2434;ক&#2495;&#2434; ল&#2503;নদ&#2503;ন&#2503;র ন&#2495;র&#2494;পদ ম&#2494;ধ&#2509;যম&#2404;</p>
+                            <div class='tags'><span>ব&#2495;ক&#2494;শ</span> <span>নগদ</span> <span>ব&#2495;ল প&#2503;</span></div>
+                        </div>
+                        <div class='service-card'>
+                            <div class='icon-box'>💻</div>
+                            <h3>আইট&#2495; প&#2509;রশ&#2495;ক&#2509;ষণ</h3>
+                            <p>দক&#2509;ষ ট&#2509;র&#2503;ইন&#2494;র দ&#2509;ব&#2494;র&#2494; কম&#2509;প&#2495;উট&#2494;র শ&#2503;খ&#2494;র আধ&#2497;ন&#2495;ক প&#2509;রশ&#2495;ক&#2509;ষণ ক&#2507;র&#2509;স&#2404;</p>
+                            <div class='tags'><span>Office</span> <span>Graphics</span> <span>Freelancing</span></div>
+                        </div>
+                        <!-- Add more default cards here if needed -->
+                     </div>
+                  </b:if>
+                </b:includable>
+              </b:widget>
+            </b:section>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section class='section-padding faq-section' id='faq'>
+            <div class='section-header'>
+                <h2>স&#2494;ধ&#2494;রণ <span>প&#2509;রশ&#2509;ন&#2507;ত&#2509;তর</span></h2>
+                <p>আপন&#2494;দ&#2503;র ক&#2508;ত&#2498;হল&#2503;র উত&#2509;তর</p>
+            </div>
+            <div class='faq-container'>
+                <!-- FAQ Items (Kept Static for CSS toggle functionality, but can be widgetized) -->
+                <div class='faq-item'>
+                    <input class='faq-toggle' id='q1' type='checkbox'/>
+                    <label class='faq-question' for='q1'>অনল&#2494;ইন আব&#2503;দন করত&#2503; ক&#2495; ক&#2495; ল&#2494;গ&#2503;? <span class='faq-icon'>+</span></label>
+                    <div class='faq-answer'><div class='faq-answer-content'>স&#2494;ধ&#2494;রণত আপন&#2494;র এনআইড&#2495; ক&#2494;র&#2509;ড/জন&#2509;ম সনদ, শ&#2495;ক&#2509;ষ&#2494;গত য&#2507;গ&#2509;যত&#2494;র স&#2494;র&#2509;ট&#2495;ফ&#2495;ক&#2503;ট, ছব&#2495; এব&#2434; সচল ম&#2507;ব&#2494;ইল নম&#2509;বর প&#2509;রয়&#2507;জন হয়&#2404;</div></div>
+                </div>
+                <div class='faq-item'>
+                    <input class='faq-toggle' id='q2' type='checkbox'/>
+                    <label class='faq-question' for='q2'>স&#2494;র&#2509;ভ&#2495;স&#2503;র খরচ কত? <span class='faq-icon'>+</span></label>
+                    <div class='faq-answer'><div class='faq-answer-content'>আম&#2494;দ&#2503;র সকল স&#2494;র&#2509;ভ&#2495;স&#2503;র ম&#2498;ল&#2509;য অত&#2509;যন&#2509;ত স&#2494;শ&#2509;রয়&#2496;&#2404; ন&#2495;র&#2509;দ&#2495;ষ&#2509;ট ম&#2498;ল&#2509;য জ&#2494;নত&#2503; আম&#2494;দ&#2503;র ক&#2494;উন&#2509;ট&#2494;র&#2503; আস&#2497;ন&#2404;</div></div>
+                </div>
+                <div class='faq-item'>
+                    <input class='faq-toggle' id='q3' type='checkbox'/>
+                    <label class='faq-question' for='q3'>ছব&#2495; প&#2509;র&#2495;ন&#2509;ট কতক&#2509;ষণ সময় ন&#2503;য়? <span class='faq-icon'>+</span></label>
+                    <div class='faq-answer'><div class='faq-answer-content'>স&#2494;ধ&#2494;রণ প&#2494;সপ&#2507;র&#2509;ট ছব&#2495; ১৫ ম&#2495;ন&#2495;ট&#2503;র মধ&#2509;য&#2503; প&#2509;রস&#2509;ত&#2497;ত হয়&#2404;</div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS SECTION WIDGET -->
+        <section class='stats-section'>
+            <b:section id='stats-section' showaddelement='yes'>
+              <b:widget id='HTML3' locked='false' title='Stats' type='HTML' version='1'>
+                <b:widget-settings>
+                  <b:widget-setting name='content'/>
+                </b:widget-settings>
+                <b:includable id='main'>
+                  <b:if cond='data:content != &quot;&quot;'>
+                     <data:content/>
+                  <b:else/>
+                    <div class='stats-grid'>
+                        <div class='stat-card'>
+                            <div class='stat-number'>৫০০০+</div>
+                            <div class='stat-label'>সন&#2509;ত&#2497;ষ&#2509;ট ক&#2509;ল&#2494;য&#2492;&#2503;ন&#2509;ট</div>
+                        </div>
+                        <div class='stat-card'>
+                            <div class='stat-number'>১২+</div>
+                            <div class='stat-label'>বছর&#2503;র অভ&#2495;জ&#2509;ঞত&#2494;</div>
+                        </div>
+                        <div class='stat-card'>
+                            <div class='stat-number'>২৪/৭</div>
+                            <div class='stat-label'>স&#2503;ব&#2494; প&#2509;রদ&#2494;ন</div>
+                        </div>
+                        <div class='stat-card'>
+                            <div class='stat-number'>১০০%</div>
+                            <div class='stat-label'>গ&#2509;য&#2494;র&#2494;ন&#2509;ট&#2495;</div>
+                        </div>
+                    </div>
+                  </b:if>
+                </b:includable>
+              </b:widget>
+            </b:section>
+        </section>
+
+        <!-- BLOG SECTION -->
+        <section class='section-padding blog-section' id='updates'>
+            <div class='section-header'>
+                <h2>নত&#2497;ন <span>আপড&#2503;টসম&#2498;হ</span></h2>
+                <p>সর&#2509;বশ&#2503;ষ খবর ও তথ&#2509;য</p>
+            </div>
+            
+            <b:section id='recent-posts' showaddelement='yes'>
+              <b:widget id='Blog1' locked='false' title='Blog Posts' type='Blog' version='1'>
+                <b:widget-settings>
+                  <b:widget-setting name='showDateHeader'>true</b:widget-setting>
+                  <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
+                  <b:widget-setting name='showShareButtons'>false</b:widget-setting>
+                  <b:widget-setting name='authorLabel'>By</b:widget-setting>
+                  <b:widget-setting name='showCommentLink'>false</b:widget-setting>
+                  <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
+                  <b:widget-setting name='showAuthor'>false</b:widget-setting>
+                  <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
+                  <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+                  <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+                  <b:widget-setting name='reactionsLabel'/>
+                  <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
+                  <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+                  <b:widget-setting name='showLabels'>true</b:widget-setting>
+                  <b:widget-setting name='showLocation'>false</b:widget-setting>
+                  <b:widget-setting name='showTimestamp'>true</b:widget-setting>
+                  <b:widget-setting name='postsPerAd'>1</b:widget-setting>
+                  <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+                  <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+                  <b:widget-setting name='showInlineAds'>false</b:widget-setting>
+                  <b:widget-setting name='showReactions'>false</b:widget-setting>
+                </b:widget-settings>
+                <b:includable id='main'>
+                        <div class='blog-grid'>
+                            <b:loop values='data:posts' var='post'>
+                                <div class='post-card'>
+                                    <div class='post-info'>
+                                        <h3><a expr:href='data:post.url'><data:post.title/></a></h3>
+                                        <div class='post-meta'>
+                                            <data:post.timestamp/> 
+                                            <b:if cond='data:post.labels'><span> | <data:post.labels/></span></b:if>
+                                        </div>
+                                        <a class='read-more' expr:href='data:post.url'>ব&#2495;স&#2509;ত&#2494;র&#2495;ত &#8594;</a>
+                                    </div>
+                                </div>
+                            </b:loop>
+                        </div>
+                        <b:include name='nextprev'/>
+                    </b:includable>
+                <b:includable id='backlinkDeleteIcon' var='backlink'/>
+                <b:includable id='backlinks' var='post'/>
+                <b:includable id='comment-form' var='post'/>
+                <b:includable id='commentDeleteIcon' var='comment'/>
+                <b:includable id='comment_count_picker' var='post'/>
+                <b:includable id='comment_picker' var='post'/>
+                <b:includable id='comments' var='post'/>
+                <b:includable id='feedLinks'/>
+                <b:includable id='feedLinksBody' var='links'/>
+                <b:includable id='iframe_comments' var='post'/>
+                <b:includable id='mobile-index-post' var='post'/>
+                <b:includable id='mobile-main' var='top'/>
+                <b:includable id='mobile-nextprev'/>
+                <b:includable id='mobile-post' var='post'/>
+                <b:includable id='nextprev'>
+                        <div class='blog-pagination'>
+                            <b:if cond='data:newerPageUrl'>
+                                <a class='pagination-link' expr:href='data:newerPageUrl' expr:title='data:newerPageTitle'>&amp;laquo; প&#2498;র&#2509;ব&#2503;র</a>
+                            </b:if>
+                            <span class='pagination-current'>1</span>
+                            <a class='pagination-link' href='#/page/2'>2</a>
+                            <span class='pagination-dots'>...</span>
+                            <b:if cond='data:olderPageUrl'>
+                                <a class='pagination-link' expr:href='data:olderPageUrl' expr:title='data:olderPageTitle'>পরবর&#2509;ত&#2496; &amp;raquo;</a>
+                            </b:if>
+                        </div>
+                    </b:includable>
+                <b:includable id='post' var='post'/>
+                <b:includable id='postQuickEdit' var='post'/>
+                <b:includable id='shareButtons' var='post'/>
+                <b:includable id='status-message'/>
+                <b:includable id='threaded-comment-form' var='post'/>
+                <b:includable id='threaded_comment_js' var='post'/>
+                <b:includable id='threaded_comments' var='post'/>
+              </b:widget>
+            </b:section>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class='cta-section'>
+            <div class='cta-content'>
+                <h2>আপন&#2494;র ড&#2495;জ&#2495;ট&#2494;ল সম&#2494;ধ&#2494;ন আম&#2494;দ&#2503;র স&#2494;থ&#2503;</h2>
+                <p>য&#2503;ক&#2507;ন&#2507; সমস&#2509;য&#2494;য&#2492; আম&#2494;দ&#2503;র ব&#2495;শ&#2503;ষজ&#2509;ঞ দল প&#2509;রস&#2509;ত&#2497;ত&#2404; আজই য&#2507;গ&#2494;য&#2507;গ কর&#2497;ন&#2404;</p>
+                <div class='cta-buttons'>
+                    <a class='btn-primary' href='#contact'>য&#2507;গ&#2494;য&#2507;গ কর&#2497;ন</a>
+                    <a class='btn-secondary' href='#services'>স&#2503;ব&#2494; দ&#2503;খ&#2497;ন</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAP SECTION -->
+        <section class='map-section'>
+            <div class='section-header'>
+                <h2>আম&#2494;দ&#2503;র <span>অবস&#2509;থ&#2494;ন</span></h2>
+                <p>সর&#2494;সর&#2495; চল&#2503; আস&#2497;ন আম&#2494;দ&#2503;র ঠ&#2495;ক&#2494;ন&#2494;য&#2492;</p>
+            </div>
+            <div class='map-container'>
+                <iframe allowfullscreen='' height='450' loading='lazy' referrerpolicy='no-referrer-when-downgrade' src='https://www.google.com/maps/embed?pb=!4v1772949275120!6m8!1m7!1sQSQdsCsGIjTBNT-CaXbmZg!2m2!1d23.91600529941623!2d90.66956407738311!3f277.01915463600676!4f0!5f0.7820865974627469' style='border:0;' width='600'/>
+            </div>
+            <p style='text-align: center; margin-top: 20px;'>
+                <a href='https://maps.app.goo.gl/RTyWzMaWT3uWFoCHA' style='color: var(--primary); font-weight: 600;' target='_blank'>গ&#2497;গল ম&#2509;য&#2494;প&#2503; খ&#2497;ল&#2497;ন &#8594;</a>
+            </p>
+        </section>
+
+        <!-- CONTACT FORM SECTION -->
+        <section class='contact-section' id='contact'>
+            <div class='section-header'>
+                <h2>ইম&#2503;ইল&#2503;র <span>জন&#2509;য ফর&#2509;ম</span></h2>
+                <p>আম&#2494;দ&#2503;র সর&#2494;সর&#2495; ব&#2494;র&#2509;ত&#2494; প&#2494;ঠ&#2494;ন</p>
+            </div>
+            <div class='contact-form-container'>
+                <b:section id='contact-form-widget' showaddelement='yes'>
+                  <b:widget id='ContactForm1' locked='false' title='Contact Form' type='ContactForm' version='1'>
+                    <b:includable id='main'>
+                            <div class='contact-form-widget'>
+                                <div class='form'>
+                                    <form name='contact-form'>
+                                        <input class='contact-form-name' expr:id='data:widget.instanceId + &quot;_contact-form-name&quot;' name='name' placeholder='আপনার নাম' size='30' type='text' value=''/>
+                                        <input class='contact-form-email' expr:id='data:widget.instanceId + &quot;_contact-form-email&quot;' name='email' placeholder='ইমেইল ঠিকানা' size='30' type='text' value=''/>
+                                        <textarea class='contact-form-email-message' cols='25' expr:id='data:widget.instanceId + &quot;_contact-form-email-message&quot;' name='email-message' placeholder='আপনার বার্তা' rows='5'/>
+                                        <input class='contact-form-button contact-form-button-submit' expr:id='data:widget.instanceId + &quot;_contact-form-submit&quot;' expr:value='data:contactFormSendMsg' type='button'/>
+                                        <p class='contact-form-error-message' expr:id='data:widget.instanceId + &quot;_contact-form-error-message&quot;'/>
+                                        <p class='contact-form-success-message' expr:id='data:widget.instanceId + &quot;_contact-form-success-message&quot;'/>
+                                    </form>
+                                </div>
+                            </div>
+                        </b:includable>
+                  </b:widget>
+                </b:section>
+            </div>
+        </section>
+    </main>
+</b:if>
+
+<!-- POST VIEW -->
+<b:if cond='data:blog.pageType in {&quot;item&quot;, &quot;static_page&quot;}'>
+    <div class='post-view-container'>
+        <b:section id='main-post' showaddelement='no'>
+          <b:widget id='Blog2' locked='true' title='Blog Posts' type='Blog' version='1'>
+            <b:widget-settings>
+              <b:widget-setting name='showDateHeader'>true</b:widget-setting>
+              <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='showShareButtons'>false</b:widget-setting>
+              <b:widget-setting name='showCommentLink'>true</b:widget-setting>
+              <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='showAuthor'>true</b:widget-setting>
+              <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+              <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='reactionsLabel'/>
+              <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
+              <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+              <b:widget-setting name='showLabels'>true</b:widget-setting>
+              <b:widget-setting name='showLocation'>true</b:widget-setting>
+              <b:widget-setting name='showTimestamp'>true</b:widget-setting>
+              <b:widget-setting name='postsPerAd'>1</b:widget-setting>
+              <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+              <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='showInlineAds'>false</b:widget-setting>
+              <b:widget-setting name='showReactions'>false</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+                    <b:loop values='data:posts' var='post'>
+                        <h1 style='color:var(--primary); font-size: 36px; margin-bottom: 20px; text-align:center;'><data:post.title/></h1>
+                        <div class='post-body-content'>
+                            <data:post.body/>
+                        </div>
+                        <b:include name='comments'/>
+                        <div class='back-home-container'>
+                            <a class='back-home-btn' href='/'><span>🏠</span> প&#2509;রধ&#2494;ন প&#2494;ত&#2494;য&#2492; ফ&#2495;র&#2503; য&#2494;ন</a>
+                        </div>
+                    </b:loop>
+                </b:includable>
+            <b:includable id='backlinkDeleteIcon' var='backlink'/>
+            <b:includable id='backlinks' var='post'/>
+            <b:includable id='comment-form' var='post'>
+                    <div class='comment-form'>
+                        <a name='comment-form'/>
+                        <h4 id='comment-post-message'><data:postCommentMsg/></h4>
+                        <p><data:blogCommentMessage/></p>
+                        <data:blogTeamBlogMessage/>
+                        <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
+                        <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
+                        <data:post.cmtfpIframe/>
+                        <script type='text/javascript'>
+                            BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;);
+                        </script>
+                    </div>
+                </b:includable>
+            <b:includable id='commentDeleteIcon' var='comment'>
+                    <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
+                        <a class='comment-delete' expr:href='data:comment.deleteUrl' expr:title='data:top.deleteCommentMsg'>
+                            <img src='https://resources.blogblog.com/img/icon_delete13.gif'/>
+                        </a>
+                    </span>
+                </b:includable>
+            <b:includable id='comment_count_picker' var='post'/>
+            <b:includable id='comment_picker' var='post'>
+  <b:if cond='data:post.showThreadedComments'>
+    <b:include data='post' name='threaded_comments'/>
+  <b:else/>
+    <b:include data='post' name='comments'/>
+  </b:if>
+</b:includable>
+            <b:includable id='comments' var='post'>
+                    <div class='comments' id='comments'>
+                        <a name='comments'/>
+                        <b:if cond='data:post.allowComments'>
+                            <h4><data:post.commentLabelFull/>:</h4>
+                            <div expr:id='data:widget.instanceId + &quot;_comments-block-wrapper&quot;'>
+                                <dl expr:class='data:post.avatarIndentClass' id='comments-block'>
+                                    <b:loop values='data:post.comments' var='comment'>
+                                        <dt expr:class='&quot;comment-author &quot; + data:comment.authorClass' expr:id='data:comment.anchorName'>
+                                            <a expr:name='data:comment.anchorName'/>
+                                            <b:if cond='data:blog.enabledCommentProfileImages'>
+                                                <data:comment.authorAvatarImage/>
+                                            </b:if>
+                                            <b:if cond='data:comment.authorUrl'>
+                                                <a expr:href='data:comment.authorUrl' rel='nofollow'><data:comment.author/></a>
+                                            <b:else/>
+                                                <data:comment.author/>
+                                            </b:if>
+                                            <data:commentPostedByMsg/>
+                                        </dt>
+                                        <dd class='comment-body' expr:id='data:widget.instanceId + data:comment.cmtBodyIdPostfix'>
+                                            <b:if cond='data:comment.isDeleted'>
+                                                <span class='deleted-comment'><data:comment.body/></span>
+                                            <b:else/>
+                                                <p><data:comment.body/></p>
+                                            </b:if>
+                                        </dd>
+                                        <dd class='comment-footer'>
+                                            <span class='comment-timestamp'>
+                                                <a expr:href='data:comment.url' title='comment permalink'><data:comment.timestamp/></a>
+                                                <b:include data='comment' name='commentDeleteIcon'/>
+                                            </span>
+                                        </dd>
+                                    </b:loop>
+                                </dl>
+                            </div>
+                            <p class='comment-footer'>
+                                <b:if cond='data:post.embedCommentForm'>
+                                    <b:if cond='data:post.allowNewComments'>
+                                        <b:include data='post' name='comment-form'/>
+                                    <b:else/>
+                                        <data:post.noNewCommentsText/>
+                                    </b:if>
+                                <b:elseif cond='data:post.allowComments'/>
+                                    <a expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><data:postCommentMsg/></a>
+                                </b:if>
+                            </p>
+                        </b:if>
+                    </div>
+                </b:includable>
+            <b:includable id='feedLinks'/>
+            <b:includable id='feedLinksBody' var='links'/>
+            <b:includable id='iframe_comments' var='post'/>
+            <b:includable id='mobile-index-post' var='post'/>
+            <b:includable id='mobile-main' var='top'/>
+            <b:includable id='mobile-nextprev'/>
+            <b:includable id='mobile-post' var='post'/>
+            <b:includable id='nextprev'/>
+            <b:includable id='post' var='post'/>
+            <b:includable id='postQuickEdit' var='post'/>
+            <b:includable id='shareButtons' var='post'/>
+            <b:includable id='status-message'/>
+            <b:includable id='threaded-comment-form' var='post'/>
+            <b:includable id='threaded_comment_js' var='post'/>
+            <b:includable id='threaded_comments' var='post'/>
+          </b:widget>
+        </b:section>
+    </div>
+</b:if>
+
+<!-- FOOTER WIDGETS -->
+<footer id='footer-section'>
+    <div class='footer-content'>
+        <!-- Column 1: About -->
+        <div class='footer-col'>
+            <b:section id='footer-about' showaddelement='yes'>
+              <b:widget id='HTML4' locked='false' title='About' type='HTML' version='1'>
+                <b:widget-settings>
+                  <b:widget-setting name='content'/>
+                </b:widget-settings>
+                <b:includable id='main'>
+                  <div class='logo-text' style='margin-bottom: 15px; font-size: 24px; white-space: normal;'>আয়ম&#2494;ন আইট&#2495; এন&#2509;ড ড&#2495;জ&#2495;ট&#2494;ল স&#2494;র&#2509;ভ&#2495;স&#2503;স</div>
+                  <b:if cond='data:content != &quot;&quot;'>
+                     <data:content/>
+                  <b:else/>
+                     <p>প&#2509;রয&#2497;ক&#2509;ত&#2495; ও স&#2503;ব&#2494;র ন&#2495;র&#2509;ভরয&#2507;গ&#2509;য ঠ&#2495;ক&#2494;ন&#2494;&#2404; আমর&#2494; আধ&#2497;ন&#2495;ক প&#2509;রয&#2497;ক&#2509;ত&#2495; ব&#2509;যবহ&#2494;র কর&#2503; গ&#2509;র&#2494;ম&#2503;র ম&#2494;ন&#2497;ষদ&#2503;র দরগ&#2497;&#2433;ড়জ&#2503;ড&#2492;&#2503; ড&#2495;জ&#2495;ট&#2494;ল স&#2503;ব&#2494; প&#2508;&#2433;ছ&#2503; দ&#2495;ত&#2503; প&#2509;রত&#2495;শ&#2509;র&#2497;ত&#2495;বদ&#2509;ধ&#2404;</p>
+                  </b:if>
+                </b:includable>
+              </b:widget>
+            </b:section>
+        </div>
+
+        <!-- Column 2: Contact -->
+        <div class='footer-col'>
+            <b:section id='footer-contact' showaddelement='yes'>
+              <b:widget id='HTML5' locked='false' title='Contact' type='HTML' version='1'>
+                <b:widget-settings>
+                  <b:widget-setting name='content'/>
+                </b:widget-settings>
+                <b:includable id='main'>
+                  <h4>য&#2507;গ&#2494;য&#2507;গ</h4>
+                  <b:if cond='data:content != &quot;&quot;'>
+                     <data:content/>
+                  <b:else/>
+                     <p>📍 ম&#2497;লপ&#2494;ড়&#2494; চ&#2508;র&#2494;স&#2509;ত&#2494;, প&#2494;&#2433;চদ&#2507;ন&#2494;, নরস&#2495;&#2434;দ&#2496;</p>
+                     <p>📞 +৮৮০ ১৭০০-০০০০০০</p>
+                     <p>📧 aymanit@example.com</p>
+                     <p><a class='map-link' href='https://maps.app.goo.gl/RTyWzMaWT3uWFoCHA' target='_blank'>🗺&#65039; গ&#2497;গল ম&#2509;য&#2494;প&#2503; দ&#2503;খ&#2497;ন</a></p>
+                  </b:if>
+                </b:includable>
+              </b:widget>
+            </b:section>
+        </div>
+
+        <!-- Column 3: Hours -->
+        <div class='footer-col'>
+            <b:section id='footer-hours' showaddelement='yes'>
+              <b:widget id='HTML6' locked='false' title='Hours' type='HTML' version='1'>
+                <b:widget-settings>
+                  <b:widget-setting name='content'/>
+                </b:widget-settings>
+                <b:includable id='main'>
+                  <h4>সময&#2492;স&#2498;চ&#2496;</h4>
+                  <b:if cond='data:content != &quot;&quot;'>
+                     <data:content/>
+                  <b:else/>
+                     <p>শন&#2495; - ব&#2497;ধসপত&#2495;: সক&#2494;ল ৯ট&#2494; - র&#2494;ত ৯ট&#2494;</p>
+                     <p>শ&#2497;ক&#2509;রব&#2494;র: বন&#2509;ধ</p>
+                     <p>জর&#2497;র&#2495; প&#2509;রয়&#2507;জন&#2503;: +৮৮০ ১৭১১-২২২২২২</p>
+                  </b:if>
+                </b:includable>
+              </b:widget>
+            </b:section>
+        </div>
+    </div>
+    
+    <div class='footer-bottom'>
+        <p>&#169; 2024 আয়ম&#2494;ন আইট&#2495; এন&#2509;ড ড&#2495;জ&#2495;ট&#2494;ল স&#2494;র&#2509;ভ&#2495;স&#2503;স | <a href='/' style='color: var(--primary); text-decoration: none;'>প&#2509;রধ&#2494;ন প&#2494;ত&#2494;</a></p>
+    </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<a class='back-to-top' href='#' title='উপরে যান'>&#8593;</a>
+
+</body>
+</html>
