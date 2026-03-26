@@ -1,0 +1,1021 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetcss='false' b:responsive='true' lang='bn' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+    <meta charset='UTF-8'/>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+    <title><data:blog.pageTitle/></title>
+    
+    <b:skin><![CDATA[
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght;400;600;800&family=Hind+Siliguri:wght;400;600;700&display=swap');
+
+    :root {
+        --primary: #d4af37; /* Royal Gold */
+        --primary-dark: #b8960c;
+        --bg-dark: #0a0e14; 
+        --bg-darker: #05070a;
+        --card-bg: rgba(22, 27, 34, 0.8);
+        --text-white: #ffffff;
+        --text-muted: #94a3b8;
+        --border: rgba(212, 175, 55, 0.15);
+        --border-light: rgba(255,255,255,0.05);
+        --gradient-main: linear-gradient(135deg, #d4af37 0%, #fcf6ba 50%, #d4af37 100%);
+        --shadow-sm: 0 5px 20px rgba(0,0,0,0.3);
+        --shadow-lg: 0 20px 50px rgba(0,0,0,0.5);
+        --transition: all 0.3s ease;
+    }
+
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body { font-family: 'Plus Jakarta Sans', 'Hind Siliguri', sans-serif; margin: 0; background-color: var(--bg-dark); color: var(--text-white); overflow-x: hidden; line-height: 1.6; }
+    a { text-decoration: none; }
+
+    /* --- UTILITIES --- */
+    .section-padding { padding: 100px 5%; position: relative; }
+    .container { max-width: 1280px; margin: 0 auto; }
+    .section-header { text-align: center; margin-bottom: 70px; }
+    .section-header h2 { font-size: 42px; font-weight: 800; margin: 0 0 15px 0; }
+    .section-header h2 span { color: var(--primary); background: var(--gradient-main); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .section-header p { color: var(--text-muted); font-size: 18px; max-width: 600px; margin: 0 auto; }
+    .btn-primary { display: inline-block; background: var(--gradient-main); color: #000; padding: 15px 40px; border-radius: 50px; font-weight: 800; font-size: 16px; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3); transition: var(--transition); border: none; cursor: pointer; }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5); }
+    .btn-outline { display: inline-block; background: transparent; color: var(--primary); padding: 13px 40px; border-radius: 50px; font-weight: 800; font-size: 16px; border: 2px solid var(--primary); transition: var(--transition); }
+    .btn-outline:hover { background: var(--primary); color: #000; }
+
+    /* --- BREAKING NEWS TICKER --- */
+    .news-ticker-wrapper { background: var(--bg-darker); border-bottom: 1px solid var(--primary); padding: 8px 5%; position: relative; z-index: 1001; margin-top: 80px; }
+    .ticker-container { display: flex; align-items: center; gap: 20px; max-width: 1280px; margin: 0 auto; }
+    .ticker-label { background: var(--primary); color: #000; padding: 6px 20px; border-radius: 40px; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; white-space: nowrap; box-shadow: 0 0 15px rgba(212,175,55,0.5); }
+    .ticker-content { overflow: hidden; flex: 1; }
+    .ticker-marquee { display: flex; gap: 40px; animation: tickerMove 25s linear infinite; white-space: nowrap; }
+    .ticker-item { display: inline-flex; align-items: center; gap: 10px; color: var(--text-white); font-size: 14px; font-weight: 500; }
+    .ticker-item .dot { width: 8px; height: 8px; background: var(--primary); border-radius: 50%; }
+    .ticker-item a { color: var(--text-white); transition: var(--transition); }
+    .ticker-item a:hover { color: var(--primary); }
+    @keyframes tickerMove { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+    /* --- HEADER (UPDATED for ticker spacing) --- */
+    header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(10, 14, 20, 0.98); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 0 5%; display: flex; justify-content: space-between; align-items: center; height: 80px; box-shadow: var(--shadow-sm); }
+    .header-widget-section { flex-shrink: 1; min-width: 0; }
+    .header-widget-section .widget { margin: 0; }
+    .header-widget-section .widget-content { display: flex; align-items: center; gap: 12px; }
+    .logo-area { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-icon { width: 48px; height: 48px; background: var(--gradient-main); border-radius: 14px; display: flex; align-items: center; justify-content: center; color: #000; font-weight: 800; font-size: 24px; box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3); transition: transform 0.3s; }
+    .logo-area:hover .logo-icon { transform: rotate(-10deg) scale(1.1); }
+    .logo-text { font-size: 24px; font-weight: 800; background: var(--gradient-main); -webkit-background-clip: text; -webkit-text-fill-color: transparent; white-space: nowrap; }
+    .header-widget-section h1 { margin: 0; line-height: 1; }
+    .header-widget-section img { max-height: 50px; width: auto; }
+    
+    nav { display: flex; flex-wrap: wrap; justify-content: flex-end; flex-shrink: 0; }
+    nav .widget { margin: 0; }
+    nav .widget-content { display: flex; flex-wrap: wrap; justify-content: flex-end; }
+    nav ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; }
+    nav li { margin-left: 30px; list-style: none; }
+    nav li a { text-decoration: none; color: #cbd5e1; font-weight: 600; font-size: 15px; transition: var(--transition); position: relative; white-space: nowrap; display: inline-block; }
+    nav li a:hover { color: var(--primary); }
+    nav li a::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 0; height: 2px; background: var(--primary); transition: var(--transition); }
+    nav li a:hover::after { width: 100%; }
+
+    @media (max-width: 900px) { nav { display: none; } .logo-text { font-size: 20px; } .news-ticker-wrapper { margin-top: 70px; } }
+
+    /* --- HERO --- */
+    .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; padding: 100px 5%; overflow: hidden; }
+    .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.3; z-index: -1; }
+    .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 0%, rgba(26, 32, 44, 0.8) 0%, rgba(10, 14, 20, 0.95) 70%); z-index: -1; }
+    .hero-content { max-width: 800px; z-index: 1; animation: fadeInUp 1s ease-out; }
+    .badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(212, 175, 55, 0.1); color: var(--primary); padding: 10px 25px; border-radius: 50px; font-size: 14px; font-weight: 700; border: 1px solid var(--primary); margin-bottom: 30px; backdrop-filter: blur(5px); }
+    .badge span { width: 8px; height: 8px; background: var(--primary); border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+    
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .hero h1 { font-size: clamp(40px, 6vw, 70px); font-weight: 800; margin: 0 0 25px 0; line-height: 1.1; }
+    .hero h1 span { background: var(--gradient-main); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p { font-size: 20px; color: var(--text-muted); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .hero-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+
+    /* --- ABOUT US --- */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .about-image { position: relative; border-radius: 30px; overflow: hidden; box-shadow: var(--shadow-lg); }
+    .about-image img { width: 100%; height: auto; display: block; transition: transform 0.5s; }
+    .about-image:hover img { transform: scale(1.05); }
+    .about-image::before { content: ''; position: absolute; top: -20px; left: -20px; right: 20px; bottom: 20px; border: 2px solid var(--primary); border-radius: 30px; z-index: -1; opacity: 0.3; }
+    .about-content h3 { font-size: 36px; margin-bottom: 20px; }
+    .about-content p { color: var(--text-muted); margin-bottom: 30px; line-height: 1.8; }
+    .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .feature-item { display: flex; align-items: center; gap: 15px; background: var(--card-bg); padding: 15px; border-radius: 12px; border: 1px solid var(--border); backdrop-filter: blur(10px); transition: var(--transition); }
+    .feature-item:hover { border-color: var(--primary); transform: translateX(5px); }
+    .feature-item .icon { font-size: 24px; }
+    .feature-item span { font-weight: 600; font-size: 14px; }
+    @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } .about-features { grid-template-columns: 1fr; } }
+
+    /* --- SERVICES (Enhanced Cards) --- */
+    .services-section-bg { background: #0d1117; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .service-card { background: var(--card-bg); padding: 35px; border-radius: 24px; border: 1px solid var(--border-light); transition: var(--transition); text-align: left; position: relative; overflow: hidden; backdrop-filter: blur(10px); }
+    .service-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: var(--gradient-main); opacity: 0; transition: var(--transition); }
+    .service-card:hover { border-color: rgba(212, 175, 55, 0.4); transform: translateY(-10px); box-shadow: var(--shadow-lg); }
+    .service-card:hover::before { opacity: 1; }
+    .service-icon { width: 70px; height: 70px; background: rgba(212, 175, 55, 0.1); color: var(--primary); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 32px; margin-bottom: 25px; transition: var(--transition); }
+    .service-card:hover .service-icon { background: var(--primary); color: #000; transform: rotate(-5deg) scale(1.1); }
+    .service-card h3 { font-size: 22px; color: #fff; margin-bottom: 15px; }
+    .service-card p { color: var(--text-muted); font-size: 15px; line-height: 1.6; }
+
+    /* --- PORTFOLIO with Popup --- */
+    .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+    .portfolio-item { position: relative; border-radius: 20px; overflow: hidden; height: 300px; border: 1px solid var(--border); cursor: pointer; transition: var(--transition); }
+    .portfolio-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .portfolio-item:hover { border-color: var(--primary); box-shadow: var(--shadow-lg); }
+    .portfolio-item:hover img { transform: scale(1.1); }
+    .portfolio-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, transparent 100%); display: flex; align-items: flex-end; padding: 25px; opacity: 0; transition: var(--transition); }
+    .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+    .portfolio-info h3 { color: #fff; margin: 0 0 5px 0; font-size: 20px; }
+    .portfolio-info p { color: var(--primary); font-size: 14px; font-weight: 600; margin-bottom: 10px; }
+    .view-project-btn { display: inline-block; background: var(--primary); color: #000; padding: 8px 20px; border-radius: 20px; font-size: 12px; font-weight: 700; text-transform: uppercase; transition: var(--transition); border: none; cursor: pointer; }
+    .view-project-btn:hover { background: #fff; color: #000; transform: scale(1.05); }
+
+    /* --- POPUP MODAL STYLES --- */
+    .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.96); z-index: 2000; display: none; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s; padding: 20px; }
+    .modal-overlay.active { display: flex; opacity: 1; }
+    .modal-box { background: var(--bg-dark); border: 1px solid var(--primary); border-radius: 30px; max-width: 1000px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative; transform: scale(0.9); transition: transform 0.4s ease; box-shadow: 0 30px 80px rgba(212,175,55,0.2); }
+    .modal-overlay.active .modal-box { transform: scale(1); }
+    .modal-close { position: absolute; top: 15px; right: 20px; font-size: 30px; color: #fff; cursor: pointer; z-index: 10; background: rgba(0,0,0,0.5); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; line-height: 1; transition: var(--transition); border: 1px solid var(--border); }
+    .modal-close:hover { background: var(--primary); color: #000; transform: rotate(90deg); }
+    .modal-img-container { width: 100%; height: 400px; overflow: hidden; border-radius: 30px 30px 0 0; }
+    .modal-img { width: 100%; height: 100%; object-fit: cover; }
+    .modal-body { padding: 40px; }
+    .modal-title { font-size: 32px; margin-bottom: 20px; color: var(--primary); font-weight: 800; }
+    .modal-text { color: var(--text-muted); line-height: 1.8; font-size: 16px; white-space: pre-line; }
+    @media (max-width:600px){ .modal-img-container{height:250px} .modal-body{padding:25px} }
+
+    /* --- GALLERY SLIDER (Infinite) --- */
+    .gallery-section { background: #0d1117; overflow: hidden; padding: 80px 5%; }
+    .slider-container { width: 100%; position: relative; padding: 20px 0; }
+    .slider-wrapper { display: flex; gap: 20px; animation: scroll 40s linear infinite; width: fit-content; }
+    .slider-wrapper:hover { animation-play-state: paused; }
+    .slide { min-width: 350px; height: 250px; border-radius: 20px; overflow: hidden; position: relative; border: 1px solid var(--border); flex-shrink: 0; box-shadow: var(--shadow-sm); }
+    .slide img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .slide:hover img { transform: scale(1.1); }
+    
+    @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-350px * 4 - 80px)); } } /* adjust based on slide count */
+    
+    @media (max-width: 600px) { .slide { min-width: 280px; height: 200px; } }
+
+    /* --- TEAM (Enhanced) --- */
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+    .team-card { background: var(--card-bg); border-radius: 24px; overflow: hidden; border: 1px solid var(--border); text-align: center; transition: var(--transition); backdrop-filter: blur(10px); }
+    .team-card:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: var(--shadow-lg); }
+    .team-img { height: 300px; overflow: hidden; position: relative; }
+    .team-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .team-card:hover .team-img img { transform: scale(1.1); }
+    .team-info { padding: 25px; }
+    .team-info h3 { margin: 0 0 5px 0; font-size: 20px; }
+    .team-info p { color: var(--primary); font-size: 14px; margin-bottom: 15px; }
+    .team-social a { display: inline-flex; align-items: center; justify-content: center; width: 35px; height: 35px; background: rgba(255,255,255,0.05); border-radius: 50%; color: #fff; margin: 0 5px; transition: var(--transition); border: 1px solid var(--border); }
+    .team-social a:hover { background: var(--primary); color: #000; transform: translateY(-3px); }
+
+    /* --- TESTIMONIALS (New design) --- */
+    .testimonials-section-bg { background: linear-gradient(145deg, #0a0e14, #11151e); }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .testimonial-card { background: var(--card-bg); padding: 35px; border-radius: 30px; border: 1px solid var(--border); position: relative; backdrop-filter: blur(10px); transition: var(--transition); }
+    .testimonial-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+    .testimonial-card::before { content: '“'; position: absolute; top: 20px; right: 30px; font-size: 100px; color: var(--primary); opacity: 0.1; font-family: serif; line-height: 1; }
+    .testimonial-text { color: var(--text-muted); font-size: 16px; line-height: 1.8; margin-bottom: 25px; font-style: italic; }
+    .testimonial-author { display: flex; align-items: center; gap: 15px; }
+    .author-img { width: 55px; height: 55px; border-radius: 50%; overflow: hidden; border: 2px solid var(--primary); padding: 3px; background: var(--bg-dark); }
+    .author-img img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+    .author-info h4 { margin: 0; color: #fff; font-size: 16px; font-weight: 700; }
+    .author-info span { font-size: 13px; color: var(--primary); }
+
+    /* --- STATS (with counter animation placeholder) --- */
+    .stats-section { background: linear-gradient(145deg, #0a0e14 0%, #111111 100%); padding: 80px 5%; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+    .stat-card { text-align: center; padding: 40px 20px; background: var(--card-bg); border-radius: 30px; border: 1px solid var(--border); transition: var(--transition); backdrop-filter: blur(10px); }
+    .stat-card:hover { transform: translateY(-8px); border-color: var(--primary); box-shadow: var(--shadow-lg); }
+    .stat-number { font-size: 52px; font-weight: 800; background: var(--gradient-main); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.2; margin-bottom: 8px; }
+    .stat-label { color: var(--text-muted); font-size: 16px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+    @media (max-width: 800px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    /* --- BLOG (Homepage) --- */
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+    .post-card { background: var(--card-bg); border-radius: 20px; overflow: hidden; border: 1px solid var(--border-light); transition: var(--transition); backdrop-filter: blur(10px); }
+    .post-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: var(--shadow-lg); }
+    .post-thumb { height: 200px; overflow: hidden; position: relative; }
+    .post-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .post-card:hover .post-thumb img { transform: scale(1.1); }
+    .post-info { padding: 25px; }
+    .post-info h3 { margin: 0 0 10px 0; font-size: 20px; line-height: 1.4; }
+    .post-info h3 a { color: #fff; transition: var(--transition); }
+    .post-info h3 a:hover { color: var(--primary); }
+    .post-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 15px; display: flex; gap: 15px; }
+    .post-meta i { margin-right: 5px; color: var(--primary); }
+    .read-more { color: var(--primary); font-weight: 700; text-decoration: none; font-size: 15px; display: inline-flex; align-items: center; gap: 5px; transition: var(--transition); }
+    .read-more:hover { gap: 10px; color: #fff; }
+
+    /* --- CONTACT & MAP (Enhanced) --- */
+    .contact-section { background: #0a0e14; padding: 100px 5%; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+    .contact-form-container { background: var(--card-bg); border-radius: 40px; padding: 50px; border: 1px solid var(--border); backdrop-filter: blur(10px); box-shadow: var(--shadow-lg); }
+    .contact-form-container input, .contact-form-container textarea { width: 100%; padding: 16px 22px; margin-bottom: 22px; background: rgba(0,0,0,0.4); border: 1px solid var(--border); border-radius: 50px; color: var(--text-white); font-family: inherit; font-size: 16px; transition: var(--transition); }
+    .contact-form-container textarea { border-radius: 30px; resize: vertical; }
+    .contact-form-container input:focus, .contact-form-container textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(212,175,55,0.2); }
+    .map-container { border-radius: 40px; overflow: hidden; height: 100%; min-height: 450px; border: 1px solid var(--border); box-shadow: var(--shadow-lg); }
+    .map-container iframe { width: 100%; height: 100%; border: 0; }
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+
+    /* --- FOOTER (Enhanced) --- */
+    footer { background: var(--bg-darker); padding: 80px 5% 30px; border-top: 1px solid var(--primary); }
+    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 50px; }
+    footer .widget { margin: 0; }
+    footer .widget > h2 { display: none; }
+    footer .widget-content { color: var(--text-muted); font-size: 15px; }
+    .footer-col h4 { color: var(--primary); margin-bottom: 25px; font-size: 20px; font-weight: 800; position: relative; padding-bottom: 10px; }
+    .footer-col h4::after { content: ''; position: absolute; bottom: 0; left: 0; width: 50px; height: 2px; background: var(--primary); }
+    .footer-links a { display: block; color: var(--text-muted); margin-bottom: 12px; transition: var(--transition); }
+    .footer-links a:hover { color: #fff; padding-left: 8px; }
+    .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 14px; color: var(--text-muted); }
+
+    /* --- BACK TO TOP --- */
+    .back-to-top { position: fixed; bottom: 30px; right: 30px; width: 55px; height: 55px; background: var(--gradient-main); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #000; font-size: 24px; font-weight: bold; text-decoration: none; box-shadow: 0 5px 25px rgba(212, 175, 55, 0.5); transition: var(--transition); z-index: 99; border: none; }
+    .back-to-top:hover { transform: translateY(-8px) scale(1.1); }
+
+    /* ========== REDESIGNED SINGLE POST PAGE ========== */
+    .post-view-container { max-width: 1000px; margin: 120px auto 60px; padding: 0 25px; }
+    .single-post-card { background: var(--card-bg); border-radius: 40px; border: 1px solid var(--border); overflow: hidden; backdrop-filter: blur(10px); box-shadow: var(--shadow-lg); }
+    .post-header { padding: 40px 40px 20px; text-align: center; border-bottom: 1px solid var(--border-light); }
+    .post-header h1 { font-size: 42px; color: #fff; margin: 20px 0 15px; line-height: 1.3; }
+    .post-meta-single { display: flex; justify-content: center; gap: 30px; color: var(--text-muted); font-size: 15px; flex-wrap: wrap; }
+    .post-meta-single span i { color: var(--primary); margin-right: 8px; }
+    .featured-image-single { width: 100%; max-height: 500px; overflow: hidden; border-radius: 30px; margin: 20px 40px; box-shadow: var(--shadow-lg); border: 1px solid var(--border); }
+    .featured-image-single img { width: 100%; height: auto; display: block; }
+    .post-body-content { padding: 30px 40px 40px; color: #e2e8f0; font-size: 17px; line-height: 1.9; }
+    .post-body-content h1, .post-body-content h2, .post-body-content h3 { color: var(--primary); margin-top: 30px; }
+    .post-body-content a { color: var(--primary); text-decoration: underline; }
+    .post-body-content a:hover { color: #fff; }
+    .post-body-content blockquote { border-left: 4px solid var(--primary); background: rgba(212,175,55,0.05); margin: 30px 0; padding: 20px 30px; font-style: italic; border-radius: 10px; }
+    .post-body-content img { max-width: 100%; height: auto; border-radius: 20px; margin: 20px 0; box-shadow: var(--shadow-sm); }
+    
+    .post-footer-single { padding: 30px 40px 40px; border-top: 1px solid var(--border-light); }
+    .post-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 30px; }
+    .post-tags a { background: rgba(212,175,55,0.1); color: var(--primary); padding: 8px 18px; border-radius: 50px; font-size: 14px; border: 1px solid var(--border); transition: var(--transition); }
+    .post-tags a:hover { background: var(--primary); color: #000; border-color: var(--primary); }
+    .post-share { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; margin-bottom: 35px; }
+    .post-share span { font-weight: 700; color: #fff; }
+    .share-icons { display: flex; gap: 10px; }
+    .share-icon { width: 45px; height: 45px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; border: 1px solid var(--border); transition: var(--transition); font-size: 18px; }
+    .share-icon:hover { background: var(--primary); color: #000; transform: translateY(-3px); }
+    
+    .post-author-box { display: flex; gap: 25px; background: rgba(0,0,0,0.3); padding: 30px; border-radius: 30px; margin: 30px 0; border: 1px solid var(--border); }
+    .author-avatar { width: 90px; height: 90px; border-radius: 50%; overflow: hidden; border: 3px solid var(--primary); flex-shrink: 0; }
+    .author-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .author-details h4 { font-size: 22px; margin: 0 0 10px; color: #fff; }
+    .author-details p { color: var(--text-muted); margin: 0 0 15px; }
+    .author-details a { color: var(--primary); font-weight: 600; }
+    
+    .comments-section { background: var(--card-bg); border-radius: 40px; padding: 40px; margin-top: 50px; border: 1px solid var(--border); }
+    .comments-section h3 { font-size: 28px; color: var(--primary); margin-bottom: 30px; text-align: center; }
+    #comment-editor { background: #fff; border-radius: 20px; min-height: 250px; }
+    .comment-form iframe { width: 100%; border-radius: 20px; background: #fff; }
+    
+    .post-navigation { display: flex; justify-content: space-between; margin-top: 40px; gap: 20px; }
+    .post-nav-item { flex: 1; background: rgba(255,255,255,0.03); padding: 20px; border-radius: 20px; border: 1px solid var(--border); transition: var(--transition); }
+    .post-nav-item:hover { border-color: var(--primary); background: rgba(212,175,55,0.05); }
+    .post-nav-item .label { color: var(--primary); font-size: 14px; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 5px; }
+    .post-nav-item .title { color: #fff; font-weight: 600; }
+    
+    @media (max-width:700px){ 
+        .post-header{padding:30px 20px} .post-body-content{padding:20px} .post-footer-single{padding:20px} 
+        .post-author-box{flex-direction:column;align-items:center;text-align:center} 
+        .post-navigation{flex-direction:column}
+    }
+
+    /* --- Additional Animations --- */
+    .fade-in { animation: fadeIn 1s ease; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    ]]></b:skin>
+</head>
+<body>
+
+<!-- BREAKING NEWS TICKER - placed right after header spacer -->
+<div class='news-ticker-wrapper' id='news-ticker'>
+    <div class='ticker-container'>
+        <span class='ticker-label'><span class='dot' style='margin-right:8px;'/>স&#2494;ম&#2509;প&#2509;রত&#2495;ক</span>
+        <div class='ticker-content'>
+            <div class='ticker-marquee'>
+                <!-- Dynamic content will be populated via widgets -->
+                <b:section id='ticker-section' maxwidgets='1' showaddelement='yes'>
+                  <b:widget id='HTML12' locked='false' title='News Ticker' type='HTML' version='1'>
+                    <b:widget-settings>
+                      <b:widget-setting name='content'><![CDATA[<span class="ticker-item"><span class="dot"></span><a href="/2024/01/new-service.html">🚀 নতুন অনলাইন আবেদন সেবা চালু হয়েছে</a></span>
+                                <span class="ticker-item"><span class="dot"></span><a href="/2024/01/holiday-notice.html">📢 ২৬শে মার্চ সকল শাখা বন্ধ থাকবে</a></span>
+                                <span class="ticker-item"><span class="dot"></span><a href="/2024/01/training.html">💻 ফ্রি আইটি প্রশিক্ষণের রেজিস্ট্রেশন চলছে</a></span>
+                                <span class="ticker-item"><span class="dot"></span><a href="/2024/01/offer.html">🎉 সোনালী সপ্তাহে বিশেষ ছাড়!</a></span>
+                                <!-- Duplicate for seamless loop -->
+                                <span class="ticker-item"><span class="dot"></span><a href="/2024/01/new-service.html">🚀 নতুন অনলাইন আবেদন সেবা চালু হয়েছে</a></span>
+                                <span class="ticker-item"><span class="dot"></span><a href="/2024/01/holiday-notice.html">📢 ২৬শে মার্চ সকল শাখা বন্ধ থাকবে</a></span>]]></b:widget-setting>
+                    </b:widget-settings>
+                    <b:includable id='main'><data:content/></b:includable>
+                  </b:widget>
+                </b:section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header>
+    <b:section class='header-widget-section' id='header-widget' maxwidgets='1' showaddelement='yes'>
+      <b:widget id='Header1' locked='false' title='Ayman IT &amp;amp; Online Services (Header)' type='Header' version='1'>
+        <b:widget-settings>
+          <b:widget-setting name='displayUrl'>https://blogger.googleusercontent.com/img/a/AVvXsEhAZwSEjULqGr1AtR2Mpt3-d89qjpQ0NmIA6vKrT9kol_7iFbAx9rT5vXXqmzL-wtJnC-XiJywJTWl7tw-WcY7QYacMZVGxProbeI3NoYNrZypOkcoxi5CL8LolcOfY5LBC0XSL5gFueEvNmiOG-4f0HcjvHZYDdx_RXrJJsblNYppmBDZ0jy7Km-f5nqe7=s150</b:widget-setting>
+          <b:widget-setting name='displayHeight'>150</b:widget-setting>
+          <b:widget-setting name='sectionWidth'>150</b:widget-setting>
+          <b:widget-setting name='useImage'>true</b:widget-setting>
+          <b:widget-setting name='shrinkToFit'>true</b:widget-setting>
+          <b:widget-setting name='imagePlacement'>BEHIND</b:widget-setting>
+          <b:widget-setting name='displayWidth'>150</b:widget-setting>
+        </b:widget-settings>
+        <b:includable id='main'>
+          <b:if cond='data:useImage'>
+             <a class='logo-area' expr:href='data:blog.homepageUrl'>
+                 <div class='logo-icon'>A</div>
+                 <b:if cond='data:imagePlacement == &quot;REPLACE&quot;'>
+                    <img expr:alt='data:title' expr:src='data:sourceUrl'/>
+                 <b:else/>
+                    <div class='logo-text'><data:title/></div>
+                 </b:if>
+             </a>
+          <b:else/>
+             <a class='logo-area' expr:href='data:blog.homepageUrl'>
+                 <div class='logo-icon'>A</div>
+                 <h1 class='logo-text'><data:title/></h1>
+             </a>
+          </b:if>
+        </b:includable>
+        <b:includable id='description'>
+  <div class='descriptionwrapper'>
+    <p class='description'><span><data:description/></span></p>
+  </div>
+</b:includable>
+        <b:includable id='title'>
+  <b:tag cond='data:blog.url != data:blog.homepageUrl' expr:href='data:blog.homepageUrl' name='a'>
+    <data:title/>
+  </b:tag>
+</b:includable>
+      </b:widget>
+    </b:section>
+
+    <nav>
+        <b:section class='nav-widget-section' id='nav-widget' maxwidgets='1' showaddelement='yes'>
+          <b:widget id='LinkList1' locked='false' title='Navigation' type='LinkList' version='1'>
+            <b:widget-settings>
+              <b:widget-setting name='link-3'>#contact</b:widget-setting>
+              <b:widget-setting name='sorting'>NONE</b:widget-setting>
+              <b:widget-setting name='text-1'>স&#2503;ব&#2494;সম&#2498;হ</b:widget-setting>
+              <b:widget-setting name='link-1'>#services</b:widget-setting>
+              <b:widget-setting name='text-0'>হ&#2507;ম</b:widget-setting>
+              <b:widget-setting name='link-2'>#gallery</b:widget-setting>
+              <b:widget-setting name='text-3'>য&#2507;গ&#2494;য&#2507;গ</b:widget-setting>
+              <b:widget-setting name='link-0'>/</b:widget-setting>
+              <b:widget-setting name='text-2'>গ&#2509;য&#2494;ল&#2494;র&#2495;</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+             <div class='widget-content'>
+               <ul>
+                 <b:loop values='data:links' var='link'>
+                   <li><a expr:href='data:link.target'><data:link.name/></a></li>
+                 </b:loop>
+               </ul>
+             </div>
+            </b:includable>
+          </b:widget>
+        </b:section>
+    </nav>
+</header>
+
+<b:if cond='data:blog.url == data:blog.homepageUrl'>
+    <main>
+        <!-- HERO -->
+        <section class='hero'>
+            <img alt='Background' class='hero-bg' src='https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80'/>
+            <div class='hero-overlay'/>
+            <b:section id='hero-section' showaddelement='yes'>
+              <b:widget id='HTML1' locked='false' title='Hero' type='HTML' version='1'>
+                <b:widget-settings>
+                  <b:widget-setting name='content'><![CDATA[<div class="badge"><span></span> শীঘ্রই আসছি ইনশাআল্লাহ</div>
+<h1><span>আয়মান আইটি  
+এন্ড ডিজিটাল সার্ভিসেস</span></h1>
+<p>প্রযুক্তির সেরা সমাধান আপনার দোরগোড়ায়। আমরা প্রফেশনাল কোয়ালিটিতে সকল ডিজিটাল সেবা দিয়ে থাকি।</p>
+<div class="hero-buttons">
+  <a class="btn-primary" href="#services">আমাদের সেবাসমূহ</a>
+  <a class="btn-outline" href="#contact">যোগাযোগ করুন</a>
+</div>]]></b:widget-setting>
+                </b:widget-settings>
+                <b:includable id='main'><div class='hero-content'><data:content/></div></b:includable>
+              </b:widget>
+            </b:section>
+        </section>
+
+        <!-- ABOUT -->
+        <section class='section-padding' id='about'>
+            <div class='container'>
+                <b:section id='about-section' showaddelement='yes'>
+                  <b:widget id='HTML2' locked='false' title='About Us' type='HTML' version='1'>
+                    <b:widget-settings>
+                      <b:widget-setting name='content'><![CDATA[<div class="about-grid">
+    <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Our Office"/>
+    </div>
+    <div class="about-content">
+        <h3>আমরা কেন সেরা?</h3>
+        <p>দীর্ঘ ১২ বছর ধরে আমরা ডিজিটাল সেবা প্রদানে নিরবচ্ছিন্নভাবে কাজ করে যাচ্ছি। আমাদের লক্ষ্য হলো প্রযুক্তির সুবিধা সাধারণ মানুষের কাছে সহজলভ্য করা।</p>
+        <div class="about-features">
+            <div class="feature-item"><div class="icon">⚡</div><span>দ্রুত সেবা প্রদান</span></div>
+            <div class="feature-item"><div class="icon">💰</div><span>সাশ্রয়ী মূল্য</span></div>
+            <div class="feature-item"><div class="icon">🛡️</div><span>নিরাপদ লেনদেন</span></div>
+            <div class="feature-item"><div class="icon">🤝</div><span>২৪/৭ সাপোর্ট</span></div>
+        </div>
+    </div>
+</div>]]></b:widget-setting>
+                    </b:widget-settings>
+                    <b:includable id='main'><data:content/></b:includable>
+                  </b:widget>
+                </b:section>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section class='section-padding services-section-bg' id='services'>
+            <div class='container'>
+                <div class='section-header'>
+                    <h2>আম&#2494;দ&#2503;র <span>স&#2503;ব&#2494;সম&#2498;হ</span></h2>
+                    <p>আপন&#2494;র প&#2509;রয&#2492;&#2507;জন&#2496;য&#2492; সকল ড&#2495;জ&#2495;ট&#2494;ল স&#2503;ব&#2494; এক ছ&#2494;দ&#2503;র ন&#2495;চ&#2503;</p>
+                </div>
+                <b:section id='services-section' showaddelement='yes'>
+                  <b:widget id='HTML3' locked='false' title='Services' type='HTML' version='1'>
+                    <b:widget-settings>
+                      <b:widget-setting name='content'><![CDATA[<div class="services-grid">
+    <div class="service-card"><div class="service-icon">📝</div><h3>অনলাইন আবেদন</h3><p>সরকারি-বেসরকারি চাকরি, ভিসা ও বিভিন্ন প্রতিষ্ঠানের অনলাইন ফরম পূরণ।</p></div>
+    <div class="service-card"><div class="service-icon">📸</div><h3>স্মার্ট ফটো স্টুডিও</h3><p>আধুনিক ল্যাবে ছবি প্রিন্ট এবং প্রফেশনাল ফটো রিটাচিং সার্ভিস।</p></div>
+    <div class="service-card"><div class="service-icon">💳</div><h3>মোবাইল ব্যাংকিং</h3><p>বিকাশ, নগদ, রকেট ও ব্যাংকিং লেনদেনের নিরাপদ মাধ্যম।</p></div>
+    <div class="service-card"><div class="service-icon">💻</div><h3>আইটি প্রশিক্ষণ</h3><p>দক্ষ ট্রেইনার দ্বারা কম্পিউটার শেখার আধুনিক প্রশিক্ষণ কোর্স।</p></div>
+    <div class="service-card"><div class="service-icon">📄</div><h3>সিভি ডিজাইন</h3><p>প্রফেশনাল বায়োডাটা ও আকর্ষণীয় সিভি তৈরি।</p></div>
+    <div class="service-card"><div class="service-icon">🖨️</div><h3>কম্পোজ ও প্রিন্ট</h3><p>যেকোনো ডকুমেন্ট টাইপিং, থিসিস পেপার কম্পোজ ও প্রিন্ট।</p></div>
+</div>]]></b:widget-setting>
+                    </b:widget-settings>
+                    <b:includable id='main'><data:content/></b:includable>
+                  </b:widget>
+                </b:section>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO WITH POPUP -->
+        <section class='section-padding' id='portfolio'>
+            <div class='container'>
+                <div class='section-header'>
+                    <h2>আম&#2494;দ&#2503;র <span>ক&#2494;জ&#2503;র নম&#2497;ন&#2494;</span></h2>
+                    <p>ব&#2495;স&#2509;ত&#2494;র&#2495;ত দ&#2503;খত&#2503; ছব&#2495;ত&#2503; ক&#2509;ল&#2495;ক কর&#2497;ন</p>
+                </div>
+                <b:section id='portfolio-section' showaddelement='yes'>
+                  <b:widget id='HTML4' locked='false' title='Portfolio' type='HTML' version='1'>
+                    <b:widget-settings>
+                      <b:widget-setting name='content'><![CDATA[<div class="portfolio-grid">
+    <!-- Project 1 -->
+    <div class="portfolio-item" onclick="openModal(this)" 
+         data-title="ওয়েব ডিজাইন প্রজেক্ট" 
+         data-img="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+         data-desc="এটি একটি আধুনিক ওয়েবসাইট ডিজাইন প্রজেক্ট। এখানে আমরা HTML, CSS এবং JavaScript ব্যবহার করে একটি পূর্ণাঙ্গ রেসপন্সিভ ওয়েবসাইট তৈরি করেছি। ক্লায়েন্টের চাহিদা অনুযায়ী ড্যাশবোর্ড এবং ইউজার প্যানেল ডিজাইন করা হয়েছে। প্রজেক্টটি ১৫ দিনের মধ্যে সম্পন্ন হয়েছে।">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Project"/>
+        <div class="portfolio-overlay"><div class="portfolio-info"><h3>ওয়েব ডিজাইন প্রজেক্ট</h3><p>বিস্তারিত দেখুন</p><span class="view-project-btn">বিস্তারিত</span></div></div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="portfolio-item" onclick="openModal(this)" 
+         data-title="গ্রাফিক ডিজাইন ও ব্র্যান্ডিং" 
+         data-img="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+         data-desc="একটি স্টার্টআপ কোম্পানির জন্য সম্পূর্ণ ব্র্যান্ডিং এবং লোগো ডিজাইন করা হয়েছে। লোগো, ভিজিটিং কার্ড, লেটারহেড এবং সোশ্যাল মিডিয়া ব্যানার ডিজাইন অন্তর্ভুক্ত ছিল। কালার থিম ছিল গোল্ড এবং ব্ল্যাক।">
+        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Project"/>
+        <div class="portfolio-overlay"><div class="portfolio-info"><h3>গ্রাফিক ডিজাইন</h3><p>বিস্তারিত দেখুন</p><span class="view-project-btn">বিস্তারিত</span></div></div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="portfolio-item" onclick="openModal(this)" 
+         data-title="ই-কমার্স সলিউশন" 
+         data-img="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+         data-desc="একটি অনলাইন শপের জন্য পেমেন্ট গেটওয়ে এবং ইনভেন্টরি ম্যানেজমেন্ট সিস্টেম তৈরি করা হয়েছে। এতে অর্ডার ট্র্যাকিং, সাপ্লায়ার ম্যানেজমেন্ট এবং রিপোর্ট জেনারেশন ফিচার রয়েছে।">
+        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Project"/>
+        <div class="portfolio-overlay"><div class="portfolio-info"><h3>ই-কমার্স সেবা</h3><p>বিস্তারিত দেখুন</p><span class="view-project-btn">বিস্তারিত</span></div></div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="portfolio-item" onclick="openModal(this)" 
+         data-title="ডিজিটাল মার্কেটিং ক্যাম্পেইন" 
+         data-img="https://images.unsplash.com/photo-1542744094-3a31f272c490?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+         data-desc="সোশ্যাল মিডিয়া মার্কেটিং এবং SEO এর মাধ্যমে একটি লোকাল বিজনেসের অনলাইন প্রেজেন্স ৩০০% বাড়ানো হয়েছে। এতে Facebook Ads, Google Ads এবং Content Marketing অন্তর্ভুক্ত ছিল।">
+        <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Project"/>
+        <div class="portfolio-overlay"><div class="portfolio-info"><h3>ডিজিটাল মার্কেটিং</h3><p>বিস্তারিত দেখুন</p><span class="view-project-btn">বিস্তারিত</span></div></div>
+    </div>
+</div>]]></b:widget-setting>
+                    </b:widget-settings>
+                    <b:includable id='main'><data:content/></b:includable>
+                  </b:widget>
+                </b:section>
+            </div>
+        </section>
+
+        <!-- POPUP MODAL STRUCTURE -->
+        <div class='modal-overlay' id='projectModal' onclick='closeModal(event)'>
+            <div class='modal-box' onclick='event.stopPropagation()'>
+                <div class='modal-close' onclick='closeModal()'>&amp;times;</div>
+                <div class='modal-img-container'>
+                    <img alt='Project Image' class='modal-img' id='modalImg' src=''/>
+                </div>
+                <div class='modal-body'>
+                    <h2 class='modal-title' id='modalTitle'/>
+                    <p class='modal-text' id='modalText'/>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHOTO GALLERY SLIDER -->
+        <section class='section-padding gallery-section' id='gallery'>
+            <div class='container'>
+                <div class='section-header'>
+                    <h2>আম&#2494;দ&#2503;র <span>ফট&#2507; গ&#2509;য&#2494;ল&#2494;র&#2495;</span></h2>
+                    <p>আম&#2494;দ&#2503;র ক&#2494;জ&#2503;র সর&#2509;বশ&#2503;ষ ছব&#2495;সম&#2498;হ</p>
+                </div>
+                
+                <b:section id='gallery-section' showaddelement='yes'>
+                  <b:widget id='HTML5' locked='false' title='Gallery Slider' type='HTML' version='1'>
+                    <b:widget-settings>
+                      <b:widget-setting name='content'><![CDATA[<div class="slider-container">
+    <div class="slider-wrapper">
+        <div class="slide"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery 1"/></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery 2"/></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery 3"/></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery 4"/></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery 5"/></div>
+        <!-- Duplicate for seamless loop -->
+        <div class="slide"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery 1"/></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery 2"/></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery 3"/></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery 4"/></div>
+    </div>
+</div>]]></b:widget-setting>
+                    </b:widget-settings>
+                    <b:includable id='main'><data:content/></b:includable>
+                  </b:widget>
+                </b:section>
+            </div>
+        </section>
+
+        <!-- TEAM -->
+        <section class='section-padding' id='team'>
+            <div class='container'>
+                <div class='section-header'>
+                    <h2>আম&#2494;দ&#2503;র <span>ট&#2495;ম</span></h2>
+                    <p>দক&#2509;ষ ও অভ&#2495;জ&#2509;ঞ ট&#2495;ম সদস&#2509;যর&#2494;</p>
+                </div>
+                <b:section id='team-section' showaddelement='yes'>
+                  <b:widget id='HTML6' locked='false' title='Team' type='HTML' version='1'>
+                    <b:widget-settings>
+                      <b:widget-setting name='content'><![CDATA[<div class="team-grid">
+    <div class="team-card">
+        <div class="team-img"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="CEO"/></div>
+        <div class="team-info"><h3>মোঃ আয়মান হোসেন</h3><p>প্রতিষ্ঠাতা ও সিইও</p><div class="team-social"><a href="#">f</a><a href="#">in</a></div></div>
+    </div>
+    <div class="team-card">
+        <div class="team-img"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Manager"/></div>
+        <div class="team-info"><h3>ফাতেমা আক্তার</h3><p>ম্যানেজার</p><div class="team-social"><a href="#">f</a><a href="#">in</a></div></div>
+    </div>
+    <div class="team-card">
+        <div class="team-img"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Designer"/></div>
+        <div class="team-info"><h3>রাকিবুল ইসলাম</h3><p>গ্রাফিক ডিজাইনার</p><div class="team-social"><a href="#">f</a><a href="#">in</a></div></div>
+    </div>
+</div>]]></b:widget-setting>
+                    </b:widget-settings>
+                    <b:includable id='main'><data:content/></b:includable>
+                  </b:widget>
+                </b:section>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class='section-padding testimonials-section-bg' id='testimonials'>
+            <div class='container'>
+                <div class='section-header'>
+                    <h2>ক&#2509;ল&#2494;য&#2492;&#2503;ন&#2509;ট <span>প&#2509;রশ&#2434;স&#2494;পত&#2509;র</span></h2>
+                    <p>আম&#2494;দ&#2503;র সন&#2509;ত&#2497;ষ&#2509;ট ক&#2509;ল&#2494;য&#2492;&#2503;ন&#2509;টদ&#2503;র মত&#2494;মত</p>
+                </div>
+                <b:section id='testimonial-section' showaddelement='yes'>
+                  <b:widget id='HTML7' locked='false' title='Testimonials' type='HTML' version='1'>
+                    <b:widget-settings>
+                      <b:widget-setting name='content'><![CDATA[<div class="testimonials-grid">
+    <div class="testimonial-card">
+        <div class="testimonial-text">অসাধারণ সেবা! আমি মাত্র ২০ মিনিটের মধ্যে আমার পাসপোর্টের ছবি পেয়ে গেলাম। স্টাফরা খুবই বিনয়ী এবং দক্ষ।</div>
+        <div class="testimonial-author">
+            <div class="author-img"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client"/></div>
+            <div class="author-info"><h4>রহিম উদ্দিন</h4><span>ব্যবসায়ী</span></div>
+        </div>
+    </div>
+    <div class="testimonial-card">
+        <div class="testimonial-text">আয়মান আইটি থেকে কম্পিউটার শিখে আমি এখন ফ্রিল্যান্সিং করছি। তাদের ট্রেনিং কোয়ালিটি অনেক ভালো।</div>
+        <div class="testimonial-author">
+            <div class="author-img"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Client"/></div>
+            <div class="author-info"><h4>সাবরিনা আক্তার</h4><span>ফ্রিল্যান্সার</span></div>
+        </div>
+    </div>
+</div>]]></b:widget-setting>
+                    </b:widget-settings>
+                    <b:includable id='main'><data:content/></b:includable>
+                  </b:widget>
+                </b:section>
+            </div>
+        </section>
+
+        <!-- STATS -->
+        <section class='stats-section'>
+             <b:section id='stats-section' showaddelement='yes'>
+               <b:widget id='HTML8' locked='false' title='Stats' type='HTML' version='1'>
+                 <b:widget-settings>
+                   <b:widget-setting name='content'><![CDATA[<div class="stats-grid">
+    <div class="stat-card"><div class="stat-number">৫০০০+</div><div class="stat-label">সন্তুষ্ট ক্লায়েন্ট</div></div>
+    <div class="stat-card"><div class="stat-number">১২+</div><div class="stat-label">বছরের অভিজ্ঞতা</div></div>
+    <div class="stat-card"><div class="stat-number">২৪/৭</div><div class="stat-label">সেবা প্রদান</div></div>
+    <div class="stat-card"><div class="stat-number">১০০%</div><div class="stat-label">গ্যারান্টি</div></div>
+</div>]]></b:widget-setting>
+                 </b:widget-settings>
+                 <b:includable id='main'><data:content/></b:includable>
+               </b:widget>
+             </b:section>
+        </section>
+
+        <!-- BLOG -->
+        <section class='section-padding' id='blog'>
+            <div class='container'>
+                <div class='section-header'>
+                    <h2>সর&#2509;বশ&#2503;ষ <span>আপড&#2503;ট</span></h2>
+                    <p>প&#2509;রয&#2497;ক&#2509;ত&#2495; ও স&#2503;ব&#2494; সম&#2509;পর&#2509;ক&#2495;ত খবর</p>
+                </div>
+                <b:section id='blog-section' showaddelement='yes'>
+                  <b:widget id='Blog1' locked='false' title='Blog Posts' type='Blog' version='1'>
+                    <b:widget-settings>
+                      <b:widget-setting name='showDateHeader'>true</b:widget-setting>
+                      <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
+                      <b:widget-setting name='showShareButtons'>false</b:widget-setting>
+                      <b:widget-setting name='authorLabel'>By</b:widget-setting>
+                      <b:widget-setting name='showCommentLink'>false</b:widget-setting>
+                      <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
+                      <b:widget-setting name='showAuthor'>false</b:widget-setting>
+                      <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
+                      <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+                      <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+                      <b:widget-setting name='reactionsLabel'/>
+                      <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
+                      <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+                      <b:widget-setting name='showLabels'>true</b:widget-setting>
+                      <b:widget-setting name='showLocation'>false</b:widget-setting>
+                      <b:widget-setting name='showTimestamp'>true</b:widget-setting>
+                      <b:widget-setting name='postsPerAd'>1</b:widget-setting>
+                      <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+                      <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+                      <b:widget-setting name='showInlineAds'>false</b:widget-setting>
+                      <b:widget-setting name='showReactions'>false</b:widget-setting>
+                    </b:widget-settings>
+                    <b:includable id='main'>
+                        <div class='blog-grid'>
+                            <b:loop values='data:posts' var='post'>
+                                <div class='post-card'>
+                                    <div class='post-thumb'>
+                                        <b:if cond='data:post.thumbnailUrl'>
+                                            <img expr:src='data:post.thumbnailUrl'/>
+                                        <b:else/>
+                                            <img src='https://placehold.co/600x400/0a0e14/d4af37?text=News'/>
+                                        </b:if>
+                                    </div>
+                                    <div class='post-info'>
+                                        <div class='post-meta'><i class='far fa-calendar'/> <data:post.timestamp/></div>
+                                        <h3><a expr:href='data:post.url'><data:post.title/></a></h3>
+                                        <a class='read-more' expr:href='data:post.url'>ব&#2495;স&#2509;ত&#2494;র&#2495;ত পড়&#2497;ন &#8594;</a>
+                                    </div>
+                                </div>
+                            </b:loop>
+                        </div>
+                     </b:includable>
+                    <b:includable id='backlinkDeleteIcon' var='backlink'/>
+                    <b:includable id='backlinks' var='post'/>
+                    <b:includable id='comment-form' var='post'/>
+                    <b:includable id='commentDeleteIcon' var='comment'/>
+                    <b:includable id='comment_count_picker' var='post'/>
+                    <b:includable id='comment_picker' var='post'/>
+                    <b:includable id='comments' var='post'/>
+                    <b:includable id='feedLinks'/>
+                    <b:includable id='feedLinksBody' var='links'/>
+                    <b:includable id='iframe_comments' var='post'/>
+                    <b:includable id='mobile-index-post' var='post'/>
+                    <b:includable id='mobile-main' var='top'/>
+                    <b:includable id='mobile-nextprev'/>
+                    <b:includable id='mobile-post' var='post'/>
+                    <b:includable id='nextprev'/>
+                    <b:includable id='post' var='post'/>
+                    <b:includable id='postQuickEdit' var='post'/>
+                    <b:includable id='shareButtons' var='post'/>
+                    <b:includable id='status-message'/>
+                    <b:includable id='threaded-comment-form' var='post'/>
+                    <b:includable id='threaded_comment_js' var='post'/>
+                    <b:includable id='threaded_comments' var='post'/>
+                  </b:widget>
+                </b:section>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class='contact-section' id='contact'>
+            <div class='container'>
+                <div class='section-header'>
+                    <h2>য&#2507;গ&#2494;য&#2507;গ <span>কর&#2497;ন</span></h2>
+                    <p>আম&#2494;দ&#2503;র স&#2494;থ&#2503; য&#2507;গ&#2494;য&#2507;গ করত&#2503; দ&#2509;ব&#2495;ধ&#2494; করব&#2503;ন ন&#2494;</p>
+                </div>
+                <div class='contact-grid'>
+                    <div class='contact-form-container'>
+                        <b:section id='contact-form-section' showaddelement='yes'>
+                          <b:widget id='ContactForm1' locked='false' title='Contact' type='ContactForm' version='1'>
+                            <b:includable id='main'>
+                                <form name='contact-form'>
+                                    <input class='contact-form-name' name='name' placeholder='আপনার নাম' size='30' type='text' value=''/>
+                                    <input class='contact-form-email' name='email' placeholder='ইমেইল' size='30' type='text' value=''/>
+                                    <textarea class='contact-form-email-message' cols='25' name='email-message' placeholder='আপনার বার্তা' rows='5'/>
+                                    <input class='btn-primary' expr:value='data:contactFormSendMsg' style='width:100%;' type='button'/>
+                                </form>
+                            </b:includable>
+                          </b:widget>
+                        </b:section>
+                    </div>
+                    <div class='map-container'>
+                        <iframe loading='lazy' src='https://www.google.com/maps/embed?pb=!4v1772949275120!6m8!1m7!1sQSQdsCsGIjTBNT-CaXbmZg!2m2!1d23.91600529941623!2d90.66956407738311!3f277.01915463600676!4f0!5f0.7820865974627469'/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</b:if>
+
+<!-- ========== REDESIGNED SINGLE POST PAGE ========== -->
+<b:if cond='data:blog.pageType in {&quot;item&quot;, &quot;static_page&quot;}'>
+    <div class='post-view-container'>
+        <b:section id='main-post' showaddelement='no'>
+          <b:widget id='Blog2' locked='true' title='Blog Posts' type='Blog' version='1'>
+            <b:widget-settings>
+              <b:widget-setting name='showDateHeader'>true</b:widget-setting>
+              <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='showShareButtons'>true</b:widget-setting>
+              <b:widget-setting name='showCommentLink'>true</b:widget-setting>
+              <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='showAuthor'>true</b:widget-setting>
+              <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+              <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='reactionsLabel'/>
+              <b:widget-setting name='showAuthorProfile'>true</b:widget-setting>
+              <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+              <b:widget-setting name='showLabels'>true</b:widget-setting>
+              <b:widget-setting name='showLocation'>true</b:widget-setting>
+              <b:widget-setting name='showTimestamp'>true</b:widget-setting>
+              <b:widget-setting name='postsPerAd'>1</b:widget-setting>
+              <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+              <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+              <b:widget-setting name='showInlineAds'>false</b:widget-setting>
+              <b:widget-setting name='showReactions'>false</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+                <b:loop values='data:posts' var='post'>
+                    <div class='single-post-card'>
+                        <!-- Post Header -->
+                        <div class='post-header'>
+                            <h1><data:post.title/></h1>
+                            <div class='post-meta-single'>
+                                <span><i class='far fa-calendar-alt'/> <data:post.timestamp/></span>
+                                <span><i class='far fa-user'/> <data:post.author/></span>
+                                <span><i class='far fa-folder-open'/> <data:post.labels/></span>
+                            </div>
+                        </div>
+                        
+                        <!-- Featured Image -->
+                        <b:if cond='data:post.thumbnailUrl'>
+                            <div class='featured-image-single'>
+                                <img expr:alt='data:post.title' expr:src='data:post.thumbnailUrl'/>
+                            </div>
+                        </b:if>
+                        
+                        <!-- Post Body -->
+                        <div class='post-body-content'>
+                            <data:post.body/>
+                        </div>
+                        
+                        <!-- Post Footer with Tags, Share, Author Box -->
+                        <div class='post-footer-single'>
+                            <!-- Labels/Tags -->
+                            <b:if cond='data:post.labels'>
+                                <div class='post-tags'>
+                                    <b:loop values='data:post.labels' var='label'>
+                                        <a expr:href='data:label.url' rel='tag'><data:label.name/></a>
+                                    </b:loop>
+                                </div>
+                            </b:if>
+                            
+                            <!-- Share Buttons -->
+                            <div class='post-share'>
+                                <span>শ&#2503;য়&#2494;র কর&#2497;ন:</span>
+                                <div class='share-icons'>
+                                    <a class='share-icon' expr:href='&quot;https://www.facebook.com/sharer.php?u=&quot; + data:post.url' target='_blank' title='Facebook'>f</a>
+                                    <a class='share-icon' expr:href='&quot;https://twitter.com/intent/tweet?url=&quot; + data:post.url + &quot;&amp;text=&quot; + data:post.title' target='_blank' title='Twitter'>𝕏</a>
+                                    <a class='share-icon' expr:href='&quot;https://www.linkedin.com/shareArticle?mini=true&amp;url=&quot; + data:post.url' target='_blank' title='LinkedIn'>in</a>
+                                    <a class='share-icon' expr:href='&quot;https://wa.me/?text=&quot; + data:post.title + &quot; &quot; + data:post.url' target='_blank' title='WhatsApp'>📱</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Author Box -->
+                            <b:if cond='data:post.author'>
+                                <div class='post-author-box'>
+                                    <div class='author-avatar'>
+                                        <b:if cond='data:post.authorPhoto.url'>
+                                            <img expr:src='data:post.authorPhoto.url'/>
+                                        <b:else/>
+                                            <img src='https://placehold.co/200x200/0a0e14/d4af37?text=Author'/>
+                                        </b:if>
+                                    </div>
+                                    <div class='author-details'>
+                                        <h4><data:post.author.name/></h4>
+                                        <p><data:post.author.aboutMe/></p>
+                                        <a expr:href='data:post.authorUrl'>প&#2509;র&#2507;ফ&#2494;ইল দ&#2503;খ&#2497;ন</a>
+                                    </div>
+                                </div>
+                            </b:if>
+                            
+                            <!-- Post Navigation (Previous/Next) - basic implementation -->
+                            <div class='post-navigation'>
+                                <b:include name='nextprev'/>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Comments Section -->
+                    <div class='comments-section' id='comments'>
+                        <h3>মন&#2509;তব&#2509;য কর&#2497;ন</h3>
+                        <b:include data='post' name='comment-form'/>
+                    </div>
+                </b:loop>
+             </b:includable>
+            <b:includable id='backlinkDeleteIcon' var='backlink'/>
+            <b:includable id='backlinks' var='post'/>
+            <b:includable id='comment-form' var='post'>
+                <a name='comment-form'/>
+                <p><data:blogCommentMessage/></p>
+                <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
+                <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='250' id='comment-editor' name='comment-editor' src='' width='100%'/>
+                <data:post.cmtfpIframe/>
+                <script type='text/javascript'>BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;);</script>
+            </b:includable>
+            <b:includable id='commentDeleteIcon' var='comment'/>
+            <b:includable id='comment_count_picker' var='post'/>
+            <b:includable id='comment_picker' var='post'/>
+            <b:includable id='comments' var='post'/>
+            <b:includable id='feedLinks'/>
+            <b:includable id='feedLinksBody' var='links'/>
+            <b:includable id='iframe_comments' var='post'/>
+            <b:includable id='mobile-index-post' var='post'/>
+            <b:includable id='mobile-main' var='top'/>
+            <b:includable id='mobile-nextprev'/>
+            <b:includable id='mobile-post' var='post'/>
+            <b:includable id='nextprev'>
+                <b:if cond='data:newerPageUrl'>
+                    <a class='post-nav-item' expr:href='data:newerPageUrl'>
+                        <span class='label'>&#8592; প&#2498;র&#2509;ববর&#2509;ত&#2496;</span>
+                        <span class='title'><data:newerPageTitle/></span>
+                    </a>
+                </b:if>
+                <b:if cond='data:olderPageUrl'>
+                    <a class='post-nav-item' expr:href='data:olderPageUrl' style='text-align:right;'>
+                        <span class='label'>পরবর&#2509;ত&#2496; &#8594;</span>
+                        <span class='title'><data:olderPageTitle/></span>
+                    </a>
+                </b:if>
+            </b:includable>
+            <b:includable id='post' var='post'/>
+            <b:includable id='postQuickEdit' var='post'/>
+            <b:includable id='shareButtons' var='post'/>
+            <b:includable id='status-message'/>
+            <b:includable id='threaded-comment-form' var='post'/>
+            <b:includable id='threaded_comment_js' var='post'/>
+            <b:includable id='threaded_comments' var='post'/>
+          </b:widget>
+        </b:section>
+    </div>
+</b:if>
+
+<!-- FOOTER -->
+<footer>
+    <div class='container'>
+        <div class='footer-content'>
+            <div class='footer-col'>
+                <b:section id='footer-about' showaddelement='yes'>
+                  <b:widget id='HTML9' locked='false' title='Footer About' type='HTML' version='1'>
+                    <b:widget-settings>
+                      <b:widget-setting name='content'><![CDATA[<div class="about-simple">
+    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhAZwSEjULqGr1AtR2Mpt3-d89qjpQ0NmIA6vKrT9kol_7iFbAx9rT5vXXqmzL-wtJnC-XiJywJTWl7tw-WcY7QYacMZVGxProbeI3NoYNrZypOkcoxi5CL8LolcOfY5LBC0XSL5gFueEvNmiOG-4f0HcjvHZYDdx_RXrJJsblNYppmBDZ0jy7Km-f5nqe7=s300" alt="Ayman IT Logo" />
+
+    <h4>আয়মান আইটি</h4>
+
+    <p>
+        প্রযুক্তি ও সেবার নির্ভরযোগ্য ঠিকানা। আমরা গ্রামের মানুষদের জন্য ডিজিটাল সেবা পৌঁছে দিতে প্রতিশ্রুতিবদ্ধ।
+    </p>
+</div>
+
+<style>
+.about-simple {
+    text-align: center;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 15px;
+}
+
+.about-simple img {
+    width: 150px;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+.about-simple h4 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.about-simple p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+}
+</style>]]></b:widget-setting>
+                    </b:widget-settings>
+                    <b:includable id='main'><data:content/></b:includable>
+                  </b:widget>
+                </b:section>
+            </div>
+            <div class='footer-col'>
+                <b:section id='footer-links' showaddelement='yes'>
+                  <b:widget id='HTML10' locked='false' title='Footer Links' type='HTML' version='1'>
+                    <b:widget-settings>
+                      <b:widget-setting name='content'><![CDATA[<h4>দ্রুত লিংক</h4><div class="footer-links"><a href="/">হোম</a><a href="#services">সেবাসমূহ</a><a href="#gallery">গ্যালারি</a><a href="#contact">যোগাযোগ</a><a href="#blog">ব্লগ</a></div>]]></b:widget-setting>
+                    </b:widget-settings>
+                    <b:includable id='main'><data:content/></b:includable>
+                  </b:widget>
+                </b:section>
+            </div>
+            <div class='footer-col'>
+                <b:section id='footer-contact' showaddelement='yes'>
+                  <b:widget id='HTML11' locked='false' title='Footer Contact' type='HTML' version='1'>
+                    <b:widget-settings>
+                      <b:widget-setting name='content'><![CDATA[<h4>যোগাযোগ</h4><p>📍 মুলপাড়া চৌরাস্তা, নরসিংদী</p><p>📞 +৮৮০ ১৭০০-০০০০০০</p><p>📧 info@aymanit.com</p>]]></b:widget-setting>
+                    </b:widget-settings>
+                    <b:includable id='main'><data:content/></b:includable>
+                  </b:widget>
+                </b:section>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <p>&amp;copy; 2024 আয়ম&#2494;ন আইট&#2495; স&#2494;র&#2509;ভ&#2495;স&#2503;স&#2404; সর&#2509;বস&#2509;বত&#2509;ব স&#2434;রক&#2509;ষ&#2495;ত&#2404;</p>
+        </div>
+    </div>
+</footer>
+
+<a class='back-to-top' href='#' title='উপরে যান'>&#8593;</a>
+
+<!-- JAVASCRIPT FOR POPUP AND TICKER -->
+<script>
+//<![CDATA[
+function openModal(el) {
+    var title = el.getAttribute('data-title');
+    var img = el.getAttribute('data-img');
+    var desc = el.getAttribute('data-desc');
+    
+    document.getElementById('modalTitle').innerText = title;
+    document.getElementById('modalImg').src = img;
+    document.getElementById('modalText').innerText = desc;
+    document.getElementById('projectModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal(e) {
+    if(!e || e.target.id === 'projectModal') {
+        document.getElementById('projectModal').classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+}
+
+// Optional: pause ticker on hover (already in CSS)
+//]]>
+</script>
+
+<!-- Font Awesome Icons (for post meta) -->
+<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css' rel='stylesheet'/>
+</body>
+</html>
