@@ -1,0 +1,2381 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultmessages='false' b:layoutsVersion='3' b:responsive='true' lang='bn' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+  <meta charset='UTF-8'/>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes' name='viewport'/>
+  <title><data:blog.pageTitle/></title>
+  <meta content='Apple AirPods Pro 2nd Generation ANC Dubai Version — Active Noise Cancellation, Spatial Audio, ৩০ ঘণ্টা ব্যাটারি। বাংলাদেশে ফ্রি ডেলিভারি, ক্যাশ অন ডেলিভারি।' name='description'/>
+  <meta content='Apple AirPods Pro 2nd Gen ANC | Dubai Version' property='og:title'/>
+  <meta content='৩০ ঘণ্টা ব্যাটারি, ANC, Spatial Audio — এখনই অর্ডার করুন!' property='og:description'/>
+
+  <b:include data='blog' name='all-head-content'/>
+
+  <!-- ফ&#2503;সব&#2497;ক প&#2495;ক&#2509;স&#2503;ল ক&#2507;ড (আপন&#2494;র প&#2495;ক&#2509;স&#2503;ল আইড&#2495; দ&#2495;য়&#2503; XXXXXXXX পর&#2495;বর&#2509;তন কর&#2503; ন&#2495;ন) -->
+  <script>
+  //<![CDATA[
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'XXXXXXXX');
+  fbq('track', 'PageView');
+  //]]>
+  </script>
+  
+  <noscript>
+    <img height='1' src='https://www.facebook.com/tr?id=XXXXXXXX&amp;ev=PageView&amp;noscript=1' style='display:none' width='1'/>
+  </noscript>
+
+  <link href='https://fonts.googleapis.com' rel='preconnect'/>
+  <link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
+  <link href='https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&amp;display=swap' rel='stylesheet'/>
+  <script src='https://cdn.tailwindcss.com'/>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css' rel='stylesheet'/>
+  <link href='https://unpkg.com/aos@2.3.1/dist/aos.css' rel='stylesheet'/>
+  <script src='https://unpkg.com/aos@2.3.1/dist/aos.js'/>
+
+  <script>
+    //<![CDATA[
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#008bf5',
+            'primary-dark': '#0070d0',
+            'primary-light': '#e0f2fe',
+          },
+          fontFamily: {
+            siliguri: ['Hind Siliguri', 'sans-serif'],
+          },
+        }
+      }
+    }
+    //]]>
+  </script>
+
+  <b:skin><![CDATA[
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Hind Siliguri', sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      overflow-x: hidden;
+    }
+
+    .hero-gradient {
+      background: linear-gradient(135deg, #060d1f 0%, #0a1a3a 35%, #0d2d6b 65%, #0060c7 85%, #008bf5 100%);
+    }
+    .section-gradient {
+      background: linear-gradient(180deg, #f0f9ff 0%, #e8f4fd 100%);
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.13);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,0.22);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      33%       { transform: translateY(-14px) rotate(1deg); }
+      66%       { transform: translateY(-8px) rotate(-1deg); }
+    }
+    @keyframes pulse-ring {
+      0%   { box-shadow: 0 0 0 0 rgba(0,139,245,0.55); }
+      70%  { box-shadow: 0 0 0 22px rgba(0,139,245,0); }
+      100% { box-shadow: 0 0 0 0 rgba(0,139,245,0); }
+    }
+    @keyframes shimmer {
+      0%   { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    @keyframes modalIn {
+      from { opacity: 0; transform: scale(0.87) translateY(28px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    @keyframes spin-slow {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+    @keyframes badge-pop {
+      0%, 100% { transform: scale(1); }
+      50%      { transform: scale(1.1); }
+    }
+    @keyframes glow-pulse {
+      0%, 100% { opacity: 0.6; transform: scale(1); }
+      50%      { opacity: 1;   transform: scale(1.08); }
+    }
+
+    .float-anim    { animation: float 4s ease-in-out infinite; }
+    .pulse-btn     { animation: pulse-ring 2.2s ease-in-out infinite; }
+    .badge-anim    { animation: badge-pop 2s ease-in-out infinite; }
+    .modal-anim    { animation: modalIn 0.42s cubic-bezier(0.34,1.56,0.64,1) forwards; }
+    .glow-anim     { animation: glow-pulse 3s ease-in-out infinite; }
+
+    .product-glow {
+      filter:
+        drop-shadow(0 0 35px rgba(0,139,245,0.55))
+        drop-shadow(0 0 80px rgba(0,100,220,0.3))
+        drop-shadow(0 30px 50px rgba(0,0,0,0.4));
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #008bf5, #0068d0);
+      color: white;
+      font-weight: 700;
+      padding: 15px 36px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 32px rgba(0,139,245,0.42);
+      font-family: 'Hind Siliguri', sans-serif;
+      font-size: 1.05rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 44px rgba(0,139,245,0.58);
+      background: linear-gradient(135deg, #0070d0, #0050b0);
+    }
+    .btn-primary:active { transform: translateY(-1px); }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.13);
+      color: white;
+      font-weight: 600;
+      padding: 15px 36px;
+      border-radius: 50px;
+      border: 2px solid rgba(255,255,255,0.5);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'Hind Siliguri', sans-serif;
+      font-size: 1.05rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.24);
+      border-color: white;
+      transform: translateY(-3px);
+    }
+
+    .thumb {
+      cursor: pointer;
+      border-radius: 14px;
+      border: 3px solid transparent;
+      overflow: hidden;
+      transition: all 0.28s ease;
+    }
+    .thumb:hover, .thumb.active {
+      border-color: #008bf5;
+      box-shadow: 0 6px 24px rgba(0,139,245,0.3);
+    }
+    .thumb img { width: 100%; height: 70px; object-fit: cover; display: block; }
+
+    .feature-card {
+      background: white;
+      border-radius: 22px;
+      padding: 28px 22px;
+      transition: all 0.36s cubic-bezier(0.34,1.56,0.64,1);
+      border: 1.5px solid #e8eef4;
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #008bf5, #00d4ff, #0050c8);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.35s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 24px 60px rgba(0,139,245,0.16);
+      border-color: rgba(0,139,245,0.4);
+    }
+    .feature-card:hover::before { transform: scaleX(1); }
+    .feature-icon {
+      width: 56px; height: 56px;
+      border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px;
+      font-size: 1.5rem;
+    }
+
+    .gallery-card {
+      border-radius: 18px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    .gallery-card::after {
+      content: '\f00e';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      inset: 0;
+      background: rgba(0,139,245,0.0);
+      color: white;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    .gallery-card:hover { transform: scale(1.03); box-shadow: 0 14px 45px rgba(0,139,245,0.28); }
+    .gallery-card:hover::after { background: rgba(0,100,220,0.55); }
+
+    .spec-row { transition: background 0.2s; }
+    .spec-row:hover { background: #dbeafe; }
+
+    .review-card {
+      background: white;
+      border-radius: 22px;
+      padding: 26px;
+      border: 1.5px solid #e8eef4;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .review-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 20px 55px rgba(0,139,245,0.14);
+      border-color: rgba(0,139,245,0.3);
+    }
+    .review-card .quote-icon {
+      position: absolute;
+      top: 18px; right: 22px;
+      font-size: 3.5rem;
+      color: #dbeafe;
+      line-height: 1;
+    }
+
+    .faq-item { margin-bottom: 12px; }
+    .faq-header {
+      cursor: pointer;
+      background: white;
+      padding: 18px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1.5px solid #e8eef4;
+      border-radius: 14px;
+      transition: all 0.3s ease;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .faq-header:hover { background: #f0f9ff; border-color: #008bf5; color: #008bf5; }
+    .faq-header.active {
+      background: linear-gradient(135deg, #008bf5, #0068d0);
+      color: white;
+      border-color: transparent;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      box-shadow: 0 4px 20px rgba(0,139,245,0.35);
+    }
+    .faq-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.42s ease, padding 0.3s ease;
+      background: #f0f9ff;
+      border: 1.5px solid #bfdbfe;
+      border-top: none;
+      border-bottom-left-radius: 14px;
+      border-bottom-right-radius: 14px;
+      font-size: 0.95rem;
+      color: #374151;
+      line-height: 1.7;
+    }
+    .faq-body.open { max-height: 320px; padding: 18px 22px; }
+    .faq-icon { transition: transform 0.3s ease; flex-shrink: 0; }
+    .faq-header.active .faq-icon { transform: rotate(180deg); }
+
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.68);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 14px;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-box {
+      background: white;
+      border-radius: 26px;
+      width: 100%;
+      max-width: 550px;
+      max-height: 93vh;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.35);
+    }
+    .modal-header {
+      background: linear-gradient(135deg, #008bf5, #0050b0);
+      padding: 22px 28px 20px;
+      border-radius: 26px 26px 0 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 13px 16px;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      font-family: 'Hind Siliguri', sans-serif;
+      font-size: 0.95rem;
+      transition: all 0.25s ease;
+      outline: none;
+      background: #f8fafc;
+      color: #1e293b;
+    }
+    .form-input:focus { border-color: #008bf5; background: white; box-shadow: 0 0 0 4px rgba(0,139,245,0.12); }
+    .form-label { font-weight: 600; font-size: 0.88rem; color: #374151; margin-bottom: 6px; display: block; }
+    .form-group { margin-bottom: 15px; }
+    .form-err { color: #ef4444; font-size: 0.8rem; margin-top: 4px; display: none; }
+    .form-err.show { display: block; }
+
+    .payment-option {
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 11px 14px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    .payment-option:hover { border-color: #008bf5; background: #f0f9ff; }
+    .payment-option.selected { border-color: #008bf5; background: #dbeafe; color: #1d4ed8; }
+
+    /* ===== MOBILE PAYMENT INFO BOX ===== */
+    .mobile-pay-info {
+      display: none;
+      margin-top: 12px;
+      background: #f0f9ff;
+      border: 1.5px solid #bfdbfe;
+      border-radius: 14px;
+      padding: 14px;
+    }
+    .mobile-pay-info.show { display: block; }
+    .pay-number-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: white;
+      border: 2px solid #bfdbfe;
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin: 8px 0 10px;
+    }
+    .pay-number-text {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    .copy-btn {
+      background: #eff6ff;
+      border: 1.5px solid #93c5fd;
+      border-radius: 8px;
+      padding: 5px 12px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #1d4ed8;
+      cursor: pointer;
+      font-family: 'Hind Siliguri', sans-serif;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .copy-btn:hover { background: #dbeafe; }
+    .copy-btn.copied { background: #dcfce7; border-color: #86efac; color: #166534; }
+
+    /* ===== DELIVERY OPTION ===== */
+    .delivery-option {
+      border: 2px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 14px 16px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      background: #f8fafc;
+      position: relative;
+    }
+    .delivery-option:hover { border-color: #008bf5; background: #f0f9ff; }
+    .delivery-option.selected {
+      border-color: #008bf5;
+      background: linear-gradient(135deg, #dbeafe, #eff6ff);
+      color: #1d4ed8;
+    }
+    .delivery-option .delivery-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .delivery-option .delivery-badge {
+      position: absolute;
+      top: -8px; right: 10px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2px 9px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .delivery-option.selected .delivery-check {
+      width: 20px; height: 20px;
+      background: #008bf5;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+    .delivery-option .delivery-check { display: none; }
+    .delivery-option.selected .delivery-check { display: flex; }
+
+    .countdown-box {
+      background: linear-gradient(135deg, #dc2626, #991b1b);
+      border-radius: 14px;
+      padding: 10px 14px;
+      text-align: center;
+      min-width: 64px;
+      box-shadow: 0 4px 18px rgba(220,38,38,0.4);
+    }
+    .countdown-num { font-size: 2rem; font-weight: 700; color: white; line-height: 1; }
+    .countdown-label { font-size: 0.7rem; color: rgba(255,255,255,0.82); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px; }
+
+    .sticky-buy-btn {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 998;
+      padding: 11px 16px 16px;
+      background: white;
+      box-shadow: 0 -4px 30px rgba(0,0,0,0.12);
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 88px; right: 18px;
+      z-index: 997;
+      width: 58px; height: 58px;
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.7rem;
+      color: white;
+      box-shadow: 0 6px 26px rgba(37,211,102,0.55);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    .whatsapp-float:hover { transform: scale(1.14) rotate(-5deg); }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.94);
+      z-index: 10000;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox-inner { position: relative; max-width: 90vw; max-height: 90vh; }
+    .lightbox img { max-width: 90vw; max-height: 85vh; border-radius: 18px; object-fit: contain; display: block; }
+
+    .trust-badge {
+      display: flex; align-items: center; gap: 8px;
+      background: white;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 50px;
+      padding: 9px 18px;
+      font-size: 0.83rem;
+      font-weight: 600;
+      color: #374151;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+    .trust-badge:hover { border-color: #008bf5; color: #008bf5; transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,139,245,0.15); }
+
+    .shimmer-text {
+      background: linear-gradient(90deg, #60b8ff 0%, #ffffff 40%, #60b8ff 60%, #ffffff 100%);
+      background-size: 250% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 3s linear infinite;
+    }
+
+    .section-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+      color: #1d4ed8;
+      font-weight: 700;
+      padding: 6px 20px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .spinner {
+      width: 20px; height: 20px;
+      border: 3px solid rgba(255,255,255,0.35);
+      border-top-color: white;
+      border-radius: 50%;
+      animation: spin-slow 0.75s linear infinite;
+      display: inline-block;
+    }
+
+    .success-box { display: none; text-align: center; padding: 44px 24px 36px; }
+    .success-box.show { display: block; }
+    .order-form.hidden { display: none; }
+
+    .stars { color: #f59e0b; }
+    #mainImg { transition: opacity 0.3s ease; }
+    #mainImg.fade { opacity: 0; }
+
+    .modal-box::-webkit-scrollbar { width: 5px; }
+    .modal-box::-webkit-scrollbar-thumb { background: #008bf5; border-radius: 6px; }
+
+    .apple-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 50px;
+      padding: 5px 14px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .old-price { text-decoration: line-through; color: #94a3b8; }
+    .fa-star-half-alt { color: #f59e0b; }
+
+    @media (max-width: 767px) {
+      body { padding-bottom: 80px; }
+      .sticky-buy-btn { display: block; }
+    }
+    @media (min-width: 768px) {
+      .sticky-buy-btn { display: none; }
+      .whatsapp-float { bottom: 28px; right: 28px; }
+    }
+  ]]></b:skin>
+</head>
+<body>
+
+<!-- STICKY MOBILE BUY BUTTON -->
+<div class='sticky-buy-btn md:hidden'>
+  <button class='btn-primary w-full pulse-btn text-base py-4' onclick='openModal()'>
+    <i class='fas fa-headphones'/> এখনই অর&#2509;ড&#2494;র কর&#2497;ন &#8212; ম&#2494;ত&#2509;র &#2547;৩,৪৯৯
+  </button>
+</div>
+
+<!-- WHATSAPP FLOAT -->
+<a class='whatsapp-float' href='https://wa.me/8801700000000' target='_blank' title='WhatsApp এ যোগাযোগ করুন'>
+  <i class='fab fa-whatsapp'/>
+</a>
+
+<!-- LIGHTBOX -->
+<div class='lightbox' id='lightbox' onclick='closeLightbox()'>
+  <div class='lightbox-inner'>
+    <button onclick='closeLightbox()' style='position:absolute;top:-44px;right:0;color:white;font-size:2rem;background:none;border:none;cursor:pointer;line-height:1;'><i class='fas fa-times-circle'/></button>
+    <img alt='AirPods Pro Preview' id='lightboxImg' src=''/>
+  </div>
+</div>
+
+<!-- ===== ORDER MODAL ===== -->
+<div class='modal-overlay' id='orderModal' onclick='closeModalOutside(event)'>
+  <div class='modal-box modal-anim' id='modalBox'>
+
+    <div class='modal-header'>
+      <div class='flex items-center justify-between'>
+        <div>
+          <h2 class='text-white font-bold text-xl leading-tight'>🎧 অর&#2509;ড&#2494;র কর&#2497;ন</h2>
+          <p class='text-blue-100 text-sm mt-0.5'>Apple AirPods Pro 2nd Gen &#8212; Dubai Version</p>
+        </div>
+        <button class='text-white hover:text-blue-200 text-2xl transition-colors ml-4 flex-shrink-0' onclick='closeModal()'>
+          <i class='fas fa-times-circle'/>
+        </button>
+      </div>
+      <div class='flex gap-2 flex-wrap mt-3'>
+        <span class='apple-badge'><i class='fas fa-shield-alt text-green-400'/>১০০% অর&#2495;জ&#2495;ন&#2494;ল</span>
+        <span class='apple-badge'><i class='fas fa-truck text-blue-300'/>ফ&#2509;র&#2495; ড&#2503;ল&#2495;ভ&#2494;র&#2495;</span>
+        <span class='apple-badge'><i class='fas fa-undo text-yellow-300'/>৭ দ&#2495;ন র&#2495;ট&#2494;র&#2509;ন</span>
+      </div>
+    </div>
+
+    <div class='p-6' id='orderFormWrapper'>
+      <form id='orderForm' novalidate='novalidate' onsubmit='handleSubmit(event)'>
+
+        <!-- Product & Qty -->
+        <div class='grid grid-cols-2 gap-3 mb-1'>
+          <div class='form-group mb-0'>
+            <label class='form-label'>পণ&#2509;য&#2503;র ন&#2494;ম</label>
+            <input class='form-input' readonly='readonly' style='background:#f1f5f9;color:#64748b;font-size:0.85rem;' type='text' value='AirPods Pro 2nd Gen'/>
+          </div>
+          <div class='form-group mb-0'>
+            <label class='form-label'>পর&#2495;ম&#2494;ণ</label>
+            <div class='flex items-center border-2 border-gray-200 rounded-xl overflow-hidden bg-gray-50'>
+              <button class='px-3 py-3 text-primary font-bold text-lg hover:bg-blue-50 transition-colors' onclick='changeQty(-1)' type='button'>&#8722;</button>
+              <input class='form-input text-center border-0 rounded-none bg-transparent py-2 px-1' id='qtyInput' max='10' min='1' readonly='readonly' type='number' value='1'/>
+              <button class='px-3 py-3 text-primary font-bold text-lg hover:bg-blue-50 transition-colors' onclick='changeQty(1)' type='button'>+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Color & Ear Tip -->
+        <div class='grid grid-cols-2 gap-3 mb-1 mt-4'>
+          <div class='form-group mb-0'>
+            <label class='form-label'>রঙ ব&#2503;ছ&#2503; ন&#2495;ন</label>
+            <select class='form-input' id='colorSelect'>
+              <option value=''>রঙ স&#2495;ল&#2503;ক&#2509;ট কর&#2497;ন</option>
+              <option value='white'>হ&#2507;য&#2492;&#2494;ইট (White)</option>
+              <option value='black'>ব&#2509;ল&#2509;য&#2494;ক (Black)</option>
+            </select>
+          </div>
+          <div class='form-group mb-0'>
+            <label class='form-label'>ইয&#2492;&#2494;র ট&#2495;প স&#2494;ইজ</label>
+            <select class='form-input' id='sizeSelect'>
+              <option value=''>স&#2494;ইজ স&#2495;ল&#2503;ক&#2509;ট কর&#2497;ন</option>
+              <option value='XS'>XS (অত&#2495; ছ&#2507;ট)</option>
+              <option value='S'>S (ছ&#2507;ট)</option>
+              <option value='M'>M (ম&#2494;ঝ&#2494;র&#2495;)</option>
+              <option value='L'>L (বড&#2492;)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Name -->
+        <div class='form-group mt-4'>
+          <label class='form-label'><i class='fas fa-user mr-1 text-primary'/>আপন&#2494;র ন&#2494;ম *</label>
+          <input class='form-input' id='custName' placeholder='আপনার পূর্ণ নাম লিখুন' type='text'/>
+          <div class='form-err' id='nameErr'>ন&#2494;ম দ&#2503;ওয&#2492;&#2494; আবশ&#2509;যক</div>
+        </div>
+
+        <!-- Phone -->
+        <div class='form-group'>
+          <label class='form-label'><i class='fas fa-phone mr-1 text-primary'/>ম&#2507;ব&#2494;ইল নম&#2509;বর *</label>
+          <input class='form-input' id='custPhone' maxlength='11' placeholder='01XXXXXXXXX' type='tel'/>
+          <div class='form-err' id='phoneErr'>সঠ&#2495;ক ব&#2494;&#2434;ল&#2494;দ&#2503;শ&#2495; নম&#2509;বর দ&#2495;ন (01X-XXXXXXXX)</div>
+        </div>
+
+        <!-- Address -->
+        <div class='form-group'>
+          <label class='form-label'><i class='fas fa-map-marker-alt mr-1 text-primary'/>সম&#2509;প&#2498;র&#2509;ণ ঠ&#2495;ক&#2494;ন&#2494; *</label>
+          <textarea class='form-input' id='custAddress' placeholder='বাড়ি নং, গ্রাম/মহল্লা, উপজেলা, জেলা, বিভাগ' rows='3'/>
+          <div class='form-err' id='addrErr'>সম&#2509;প&#2498;র&#2509;ণ ঠ&#2495;ক&#2494;ন&#2494; দ&#2495;ন</div>
+        </div>
+
+        <!-- ===== SHIPPING METHOD ===== -->
+        <div class='form-group'>
+          <label class='form-label'><i class='fas fa-shipping-fast mr-1 text-primary'/>সম&#2509;প&#2498;র&#2509;ণ শ&#2495;প&#2495;&#2434; পদ&#2509;ধত&#2495; *</label>
+          <div class='grid grid-cols-2 gap-3'>
+            <div class='delivery-option' id='del-dhaka' onclick='selectDelivery(&apos;dhaka&apos;)'>
+              <div class='delivery-icon bg-blue-50 text-blue-700'><i class='fas fa-city'/></div>
+              <div>
+                <div class='font-bold'>ঢ&#2494;ক&#2494;র ভ&#2503;তর&#2503;</div>
+                <div class='text-xs text-gray-500'>১ ক&#2494;র&#2509;যদ&#2495;বস</div>
+              </div>
+              <div class='delivery-check'><i class='fas fa-check text-white text-xs'/></div>
+              <div class='delivery-badge bg-green-100 text-green-700'>ফ&#2509;র&#2495; ড&#2503;ল&#2495;ভ&#2494;র&#2495;</div>
+            </div>
+            <div class='delivery-option' id='del-outside' onclick='selectDelivery(&apos;outside&apos;)'>
+              <div class='delivery-icon bg-amber-50 text-amber-700'><i class='fas fa-map-marked-alt'/></div>
+              <div>
+                <div class='font-bold'>ঢ&#2494;ক&#2494;র ব&#2494;হ&#2495;র&#2503;</div>
+                <div class='text-xs text-gray-500'>২-৩ ক&#2494;র&#2509;যদ&#2495;বস</div>
+              </div>
+              <div class='delivery-check'><i class='fas fa-check text-white text-xs'/></div>
+              <div class='delivery-badge bg-amber-100 text-amber-700'>চ&#2494;র&#2509;জ প&#2509;রয&#2507;জ&#2509;য</div>
+            </div>
+          </div>
+          <div class='form-err' id='delErr'>শ&#2495;প&#2495;&#2434; পদ&#2509;ধত&#2495; ব&#2503;ছ&#2503; ন&#2495;ন</div>
+          <input id='deliveryMethod' type='hidden' value=''/>
+        </div>
+
+        <!-- ===== PAYMENT ===== -->
+        <div class='form-group'>
+          <label class='form-label'><i class='fas fa-credit-card mr-1 text-primary'/>প&#2503;ম&#2503;ন&#2509;ট পদ&#2509;ধত&#2495; *</label>
+
+          <div class='grid grid-cols-3 gap-2'>
+            <div class='payment-option' id='pay-cod' onclick='selectPayment(&apos;cod&apos;)'>
+              <i class='fas fa-money-bill-wave text-green-600 text-xl'/>
+              <span>ক&#2509;য&#2494;শ অন<br/>ড&#2503;ল&#2495;ভ&#2494;র&#2495;</span>
+            </div>
+            <div class='payment-option' id='pay-bkash' onclick='selectPayment(&apos;bkash&apos;)'>
+              <i class='fas fa-mobile-alt text-orange-500 text-xl'/>
+              <span>ব&#2495;ক&#2494;শ</span>
+            </div>
+            <div class='payment-option' id='pay-nagad' onclick='selectPayment(&apos;nagad&apos;)'>
+              <i class='fas fa-mobile-alt text-orange-500 text-xl'/>
+              <span>নগদ</span>
+            </div>
+          </div>
+
+          <div class='form-err' id='payErr'>প&#2503;ম&#2503;ন&#2509;ট পদ&#2509;ধত&#2495; ব&#2503;ছ&#2503; ন&#2495;ন</div>
+          <input id='paymentMethod' type='hidden' value=''/>
+
+          <!-- ব&#2495;ক&#2494;শ / নগদ নম&#2509;বর ও Trx ID বক&#2509;স -->
+          <div class='mobile-pay-info' id='mobilePayInfo'>
+            <p style='font-size:0.83rem;font-weight:700;color:#1e40af;margin:0 0 6px;'>
+              <i class='fas fa-info-circle mr-1'/>
+              ন&#2495;চ&#2503;র নম&#2509;বর&#2503; <span id='payBrandName'>ব&#2495;ক&#2494;শ</span> প&#2503;ম&#2503;ন&#2509;ট কর&#2497;ন:
+            </p>
+            <div class='pay-number-box'>
+              <span class='pay-number-text' id='paymentNumberLabel' style='color:#e91e7a;'>01700000000</span>
+              <button class='copy-btn' id='copyBtn' onclick='copyNumber()' type='button'>
+                <i class='fas fa-copy mr-1'/>কপ&#2495;
+              </button>
+            </div>
+            <p style='font-size:0.78rem;color:#64748b;margin:0 0 6px;'>
+              <i class='fas fa-exclamation-circle mr-1 text-amber-500'/>
+              প&#2503;ম&#2503;ন&#2509;ট সম&#2509;পন&#2509;ন কর&#2494;র পর ন&#2495;চ&#2503; Transaction ID দ&#2495;ন:
+            </p>
+            <div>
+              <input class='form-input' id='trxId' placeholder='Transaction ID লিখুন (যেমন: TRX1234567890)' type='text'/>
+              <div class='form-err' id='trxErr'>Transaction ID দ&#2503;ওয&#2492;&#2494; আবশ&#2509;যক</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Price Summary -->
+        <div class='bg-gradient-to-br from-blue-50 to-sky-50 border border-blue-100 rounded-2xl p-4 mb-5'>
+          <div class='flex justify-between text-sm text-gray-500 mb-1.5'>
+            <span>পণ&#2509;য&#2503;র ম&#2498;ল&#2509;য:</span>
+            <span class='font-medium text-gray-700'>&#2547;<span id='basePrice'>3499</span></span>
+          </div>
+          <div class='flex justify-between text-sm text-gray-500 mb-1.5'>
+            <span>পর&#2495;ম&#2494;ণ:</span>
+            <span class='font-medium text-gray-700'>&#215; <span id='qtyDisplay'>1</span></span>
+          </div>
+          <div class='flex justify-between text-sm text-gray-500 mb-1.5' id='deliveryChargeRow' style='display:none;'>
+            <span>ড&#2503;ল&#2495;ভ&#2494;র&#2495; চ&#2494;র&#2509;জ:</span>
+            <span class='text-gray-700' id='deliveryChargeText'>&#2547;0</span>
+          </div>
+          <hr class='border-blue-200 mb-3'/>
+          <div class='flex justify-between font-bold text-primary text-xl'>
+            <span>ম&#2507;ট ম&#2498;ল&#2509;য:</span>
+            <span>&#2547;<span id='totalPrice'>3499</span></span>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <button class='btn-primary w-full text-lg py-4' id='submitBtn' type='submit'>
+          <i class='fas fa-paper-plane'/> অর&#2509;ড&#2494;র ন&#2495;শ&#2509;চ&#2495;ত কর&#2497;ন
+        </button>
+        <p class='text-center text-xs text-gray-400 mt-3'>
+          <i class='fas fa-lock mr-1 text-green-500'/>আপন&#2494;র তথ&#2509;য সম&#2509;প&#2498;র&#2509;ণ এনক&#2509;র&#2495;প&#2509;ট&#2503;ড ও স&#2497;রক&#2509;ষ&#2495;ত
+        </p>
+      </form>
+
+      <!-- Success -->
+      <div class='success-box' id='successBox'>
+        <div class='mb-3' style='font-size:4.5rem;'>🎉</div>
+        <h3 class='text-2xl font-bold text-green-600 mb-2'>অর&#2509;ড&#2494;র সফল হয&#2492;&#2503;ছ&#2503;!</h3>
+        <p class='text-gray-500 mb-5'>আপন&#2494;র অর&#2509;ড&#2494;র ন&#2495;শ&#2509;চ&#2495;ত কর&#2494; হয&#2492;&#2503;ছ&#2503;&#2404; আম&#2494;দ&#2503;র ট&#2495;ম শ&#2496;ঘ&#2509;রই আপন&#2494;র নম&#2509;বর&#2503; কল করব&#2503;&#2404;</p>
+        <div class='bg-green-50 border border-green-200 rounded-2xl p-4 mb-6 text-sm text-green-700 text-left'>
+          <div class='flex items-start gap-2 mb-2'><i class='fas fa-check-circle mt-0.5'/><span>ঢ&#2494;ক&#2494;য&#2492; ড&#2503;ল&#2495;ভ&#2494;র&#2495;: ১ ক&#2494;র&#2509;যদ&#2495;বস</span></div>
+          <div class='flex items-start gap-2'><i class='fas fa-check-circle mt-0.5'/><span>স&#2494;র&#2494; দ&#2503;শ&#2503;: ২&#8211;৩ ক&#2494;র&#2509;যদ&#2495;বস</span></div>
+        </div>
+        <button class='btn-primary px-10 py-3' onclick='closeModal()'>বন&#2509;ধ কর&#2497;ন</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class='hero-gradient min-h-screen flex items-center relative overflow-hidden pt-14 pb-20 md:pb-16'>
+  <div style='position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(0,139,245,0.14) 0%,transparent 70%);border-radius:50%;top:-200px;right:-200px;pointer-events:none;'/>
+  <div style='position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(0,80,200,0.10) 0%,transparent 70%);border-radius:50%;bottom:-180px;left:-150px;pointer-events:none;'/>
+
+  <div class='max-w-6xl mx-auto px-4 w-full'>
+    <div class='grid md:grid-cols-2 gap-10 items-center'>
+
+      <div class='text-white order-2 md:order-1' data-aos='fade-right' data-aos-duration='850'>
+        <div class='flex flex-wrap items-center gap-3 mb-5'>
+          <span class='glass text-white text-xs font-bold px-4 py-2 rounded-full tracking-widest uppercase'><i class='fab fa-apple mr-1.5'/>Apple Official</span>
+          <span class='bg-red-500 text-white text-xs font-bold px-4 py-2 rounded-full badge-anim shadow-lg'>৩৫% ছ&#2494;ড&#2492;</span>
+          <span class='glass text-white text-xs font-bold px-3 py-2 rounded-full'><i class='fas fa-globe mr-1 text-yellow-300'/>Dubai Version</span>
+        </div>
+        <h1 class='text-4xl md:text-5xl lg:text-[3.4rem] font-bold leading-tight mb-2'>Apple AirPods Pro</h1>
+        <h2 class='text-3xl md:text-4xl font-bold mb-2'><span class='shimmer-text'>2nd Generation ANC</span></h2>
+        <p class='text-blue-100 text-base md:text-lg mb-7 leading-relaxed max-w-md'>
+          Advanced Active Noise Cancellation, Personalized Spatial Audio এব&#2434; MagSafe Charging &#8212; ব&#2494;&#2434;ল&#2494;দ&#2503;শ&#2503; স&#2503;র&#2494; দ&#2494;ম&#2503;, ১০০% অর&#2495;জ&#2495;ন&#2494;ল Dubai Version&#2404;
+        </p>
+        <div class='flex items-end gap-4 mb-8'>
+          <div>
+            <div class='flex items-center gap-3 mb-1'>
+              <span class='text-4xl md:text-5xl font-bold'>&#2547;৩,৪৯৯</span>
+              <span class='text-xl old-price'>&#2547;৫,৩৯৯</span>
+            </div>
+            <div class='flex items-center gap-3'>
+              <span class='bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full'><i class='fas fa-tag mr-1'/>&#2547;১,৯০০ স&#2494;শ&#2509;রয&#2492;</span>
+              <span class='text-green-400 text-sm font-semibold'>ফ&#2509;র&#2495; ড&#2503;ল&#2495;ভ&#2494;র&#2495;</span>
+            </div>
+          </div>
+        </div>
+        <div class='flex flex-wrap gap-4 mb-8'>
+          <button class='btn-primary pulse-btn text-lg px-8 py-4' onclick='openModal()'>
+            <i class='fas fa-shopping-cart'/>এখনই ক&#2495;ন&#2497;ন
+          </button>
+          <button class='btn-secondary text-lg px-8 py-4' onclick='document.getElementById(&apos;features&apos;).scrollIntoView({behavior:&apos;smooth&apos;})'>
+            <i class='fas fa-info-circle'/>ব&#2495;স&#2509;ত&#2494;র&#2495;ত দ&#2503;খ&#2497;ন
+          </button>
+        </div>
+        <div class='flex flex-wrap gap-3'>
+          <span class='glass text-white text-xs px-3 py-2 rounded-full font-medium'><i class='fas fa-shield-alt mr-1 text-green-400'/>১ বছর&#2503;র ওয&#2492;&#2494;র&#2503;ন&#2509;ট&#2495;</span>
+          <span class='glass text-white text-xs px-3 py-2 rounded-full font-medium'><i class='fas fa-truck mr-1 text-blue-300'/>ফ&#2509;র&#2495; ড&#2503;ল&#2495;ভ&#2494;র&#2495;</span>
+          <span class='glass text-white text-xs px-3 py-2 rounded-full font-medium'><i class='fas fa-undo mr-1 text-yellow-300'/>৭ দ&#2495;ন&#2503;র র&#2495;ট&#2494;র&#2509;ন</span>
+          <span class='glass text-white text-xs px-3 py-2 rounded-full font-medium'><i class='fas fa-certificate mr-1 text-pink-300'/>১০০% অর&#2495;জ&#2495;ন&#2494;ল</span>
+        </div>
+      </div>
+
+      <div class='flex flex-col items-center gap-5 order-1 md:order-2' data-aos='fade-left' data-aos-duration='850'>
+        <div class='relative flex items-center justify-center' style='min-height:280px;'>
+          <div class='glow-anim' style='position:absolute;width:260px;height:260px;background:radial-gradient(circle,rgba(0,139,245,0.28) 0%,transparent 70%);border-radius:50%;pointer-events:none;'/>
+          <img alt='Apple AirPods Pro 2nd Gen' class='product-glow float-anim relative z-10' id='mainImg' onclick='openLightbox(this.src)' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_uQUt3mJbDSYMaV2o8IL9lgsLXDNfHjagpUxr6T0jhy3nfpLr60peGIgvPcgb5vSJS7aRQ84Ujov3sVSuxSqR3bQbR_UmfUrShXJdMiBpyUYBQtguPADrhAzzd1R5jsBObXVgLNrDcAyH677xigiPMzku_Wv3aB8OewMCMX_GZWRKmZmsQU-WMoOR6bMx/w640-h636/cof0MxW9RY6V5wbXng4WbxhJSlmlOyHDhSv5dAHd.png' style='width:260px;height:260px;object-fit:contain;cursor:pointer;'/>
+          <div class='glass absolute top-0 -left-2 px-3 py-2 rounded-xl text-white text-xs font-bold flex items-center gap-1.5' style='z-index:20;'><i class='fas fa-star text-yellow-300'/>৪.৯/৫ র&#2503;ট&#2495;&#2434;</div>
+          <div class='glass absolute bottom-0 -right-2 px-3 py-2 rounded-xl text-white text-xs font-bold flex items-center gap-1.5' style='z-index:20;'><i class='fas fa-fire text-orange-300'/>স&#2496;ম&#2495;ত স&#2509;টক</div>
+        </div>
+        <div class='flex gap-3 flex-wrap justify-center'>
+          <div class='thumb active' onclick='switchImg(this,&apos;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_uQUt3mJbDSYMaV2o8IL9lgsLXDNfHjagpUxr6T0jhy3nfpLr60peGIgvPcgb5vSJS7aRQ84Ujov3sVSuxSqR3bQbR_UmfUrShXJdMiBpyUYBQtguPADrhAzzd1R5jsBObXVgLNrDcAyH677xigiPMzku_Wv3aB8OewMCMX_GZWRKmZmsQU-WMoOR6bMx/w640-h636/cof0MxW9RY6V5wbXng4WbxhJSlmlOyHDhSv5dAHd.png&apos;)' style='width:68px;'>
+            <img alt='t1' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_uQUt3mJbDSYMaV2o8IL9lgsLXDNfHjagpUxr6T0jhy3nfpLr60peGIgvPcgb5vSJS7aRQ84Ujov3sVSuxSqR3bQbR_UmfUrShXJdMiBpyUYBQtguPADrhAzzd1R5jsBObXVgLNrDcAyH677xigiPMzku_Wv3aB8OewMCMX_GZWRKmZmsQU-WMoOR6bMx/w640-h636/cof0MxW9RY6V5wbXng4WbxhJSlmlOyHDhSv5dAHd.png'/>
+          </div>
+          <div class='thumb' onclick='switchImg(this,&apos;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgr6dAFhLTGDrQrhtDo2bGqutM-m-AvWnJVkP3vYu11IIPEdsm4vtV7F92vs2zSFozS4Z5aWQnJMf1D36lJCJzeJbuunBGefrMJ-7a7m0v_GZ87Uh-dD3GEVPc8WuNGHpKoHPu3iTJcxdSJyeyqjios2C2TjBelGY6IeMXEb9cGs6P1cmj-AddgphfJMoBD/w640-h640/0BRV5OJkK5cNdQK83uDEYwUZyrihWlPNModO5tga.webp&apos;)' style='width:68px;'>
+            <img alt='t2' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgr6dAFhLTGDrQrhtDo2bGqutM-m-AvWnJVkP3vYu11IIPEdsm4vtV7F92vs2zSFozS4Z5aWQnJMf1D36lJCJzeJbuunBGefrMJ-7a7m0v_GZ87Uh-dD3GEVPc8WuNGHpKoHPu3iTJcxdSJyeyqjios2C2TjBelGY6IeMXEb9cGs6P1cmj-AddgphfJMoBD/w640-h640/0BRV5OJkK5cNdQK83uDEYwUZyrihWlPNModO5tga.webp'/>
+          </div>
+          <div class='thumb' onclick='switchImg(this,&apos;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh54xlezoSRuTARt5cUZJDQZBeP1T5-0k3SlDCZlHwucOSm-T1toxIC1_042qda3iKXMiypcefuHZ7BCaxTCAlJewWlV-NC3TFy5lFMj6WsVcldH8LIKbiMip7Pw-aAxlZFAZhLWkDETTEGY92y8Yeqp929lE2WCj1sQWBJ5wDYNARA8DeGuR3RyaJVcjQ/w640-h546/lPG62w3PLXKLaIBHcqQUzy9saAlPFKEAGSsV7h2n.jpg&apos;)' style='width:68px;'>
+            <img alt='t3' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh54xlezoSRuTARt5cUZJDQZBeP1T5-0k3SlDCZlHwucOSm-T1toxIC1_042qda3iKXMiypcefuHZ7BCaxTCAlJewWlV-NC3TFy5lFMj6WsVcldH8LIKbiMip7Pw-aAxlZFAZhLWkDETTEGY92y8Yeqp929lE2WCj1sQWBJ5wDYNARA8DeGuR3RyaJVcjQ/w640-h546/lPG62w3PLXKLaIBHcqQUzy9saAlPFKEAGSsV7h2n.jpg'/>
+          </div>
+          <div class='thumb' onclick='switchImg(this,&apos;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQnj89i9f8Jd7PYwQXJc012Jo20KkuxXU9BBtmMNykW5NQjeiZn-ka3Hlej5iZxkJkZDhIKGflY8xBGapnbONevYSvlCKmUlIQmcO1icT-ZuL-cXro4THIxApB8dekUj2ChN2NWtMDxXDmDxwhxHTaij_UOh3jwaAxcxnZ6AV-rxeD9Tg_fjas7XdotEyI/w640-h640/WZAF4rVvbZGf5aOtFT8avMdEtUEGfZVOeZxrfndV.jpg&apos;)' style='width:68px;'>
+            <img alt='t4' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQnj89i9f8Jd7PYwQXJc012Jo20KkuxXU9BBtmMNykW5NQjeiZn-ka3Hlej5iZxkJkZDhIKGflY8xBGapnbONevYSvlCKmUlIQmcO1icT-ZuL-cXro4THIxApB8dekUj2ChN2NWtMDxXDmDxwhxHTaij_UOh3jwaAxcxnZ6AV-rxeD9Tg_fjas7XdotEyI/w640-h640/WZAF4rVvbZGf5aOtFT8avMdEtUEGfZVOeZxrfndV.jpg'/>
+          </div>
+          <div class='thumb' onclick='switchImg(this,&apos;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuNqI9K6PT-03B_WnboRHoSJqxqqTOuTfOm-_mc-U59lCYfLjD_brdpLXk1f1wf47fOC-hfNPVf8T_iugPKMf6tb1fj7QshNtO4746Xf25tll3HZb2rXj2KMI1CoP31Ksoil33EoC2s3oczt84FlYmQnoD4P4TNDwblrf5lJbwS92734Heqxug8sHpHv7J/w640-h640/prod-6245613.w7Be1UCfVdWv3j5vDo9wjetRtaBZ7Ku6BPrCsHTi.jpg&apos;)' style='width:68px;'>
+            <img alt='t5' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuNqI9K6PT-03B_WnboRHoSJqxqqTOuTfOm-_mc-U59lCYfLjD_brdpLXk1f1wf47fOC-hfNPVf8T_iugPKMf6tb1fj7QshNtO4746Xf25tll3HZb2rXj2KMI1CoP31Ksoil33EoC2s3oczt84FlYmQnoD4P4TNDwblrf5lJbwS92734Heqxug8sHpHv7J/w640-h640/prod-6245613.w7Be1UCfVdWv3j5vDo9wjetRtaBZ7Ku6BPrCsHTi.jpg'/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section class='bg-gradient-to-r from-red-600 via-rose-600 to-orange-500 py-6'>
+  <div class='max-w-4xl mx-auto px-4 text-center text-white'>
+    <p class='font-bold text-lg mb-4'><i class='fas fa-fire mr-2 text-yellow-300'/>অফ&#2494;র&#2503;র ম&#2503;য&#2492;&#2494;দ শ&#2503;ষ হওয&#2492;&#2494;র আগ&#2503;ই অর&#2509;ড&#2494;র কর&#2497;ন!</p>
+    <div class='flex justify-center items-center gap-4'>
+      <div class='countdown-box'><div class='countdown-num' id='cdHours'>00</div><div class='countdown-label'>ঘণ&#2509;ট&#2494;</div></div>
+      <span class='text-3xl font-bold opacity-70'>:</span>
+      <div class='countdown-box'><div class='countdown-num' id='cdMins'>00</div><div class='countdown-label'>ম&#2495;ন&#2495;ট</div></div>
+      <span class='text-3xl font-bold opacity-70'>:</span>
+      <div class='countdown-box'><div class='countdown-num' id='cdSecs'>00</div><div class='countdown-label'>স&#2503;ক&#2503;ন&#2509;ড</div></div>
+    </div>
+    <p class='mt-4 text-sm text-red-100'><i class='fas fa-info-circle mr-1'/>ম&#2494;ত&#2509;র স&#2496;ম&#2495;ত কপ&#2495; ব&#2494;ক&#2495; আছ&#2503; &#8212; দ&#2509;র&#2497;ত অর&#2509;ড&#2494;র কর&#2497;ন!</p>
+  </div>
+</section>
+
+<!-- TRUST BADGES -->
+<section class='bg-white py-8 border-b border-gray-100'>
+  <div class='max-w-5xl mx-auto px-4'>
+    <div class='flex flex-wrap justify-center gap-3'>
+      <div class='trust-badge'><i class='fas fa-certificate text-primary'/><span>১০০% অর&#2495;জ&#2495;ন&#2494;ল পণ&#2509;য</span></div>
+      <div class='trust-badge'><i class='fab fa-apple text-primary'/><span>Apple Authorized</span></div>
+      <div class='trust-badge'><i class='fas fa-truck text-primary'/><span>ফ&#2509;র&#2495; হ&#2507;ম ড&#2503;ল&#2495;ভ&#2494;র&#2495;</span></div>
+      <div class='trust-badge'><i class='fas fa-money-bill-wave text-primary'/><span>ক&#2509;য&#2494;শ অন ড&#2503;ল&#2495;ভ&#2494;র&#2495;</span></div>
+      <div class='trust-badge'><i class='fas fa-undo text-primary'/><span>৭ দ&#2495;ন&#2503;র র&#2495;ট&#2494;র&#2509;ন</span></div>
+      <div class='trust-badge'><i class='fas fa-award text-primary'/><span>১ বছর&#2503;র ওয&#2492;&#2494;র&#2503;ন&#2509;ট&#2495;</span></div>
+      <div class='trust-badge'><i class='fas fa-headset text-primary'/><span>২৪/৭ স&#2494;প&#2507;র&#2509;ট</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class='py-20 section-gradient' id='features'>
+  <div class='max-w-6xl mx-auto px-4'>
+    <div class='text-center mb-14' data-aos='fade-up'>
+      <div class='section-tag'>ম&#2498;ল ব&#2504;শ&#2495;ষ&#2509;ট&#2509;য</div>
+      <h2 class='text-3xl md:text-4xl font-bold text-gray-800 mt-2'>ক&#2503;ন AirPods Pro আল&#2494;দ&#2494;?</h2>
+      <p class='text-gray-500 mt-3 max-w-lg mx-auto'>Apple-এর সর&#2509;ব&#2507;চ&#2509;চ প&#2509;রয&#2497;ক&#2509;ত&#2495; &#8212; আপন&#2494;র শ&#2509;রবণ অভ&#2495;জ&#2509;ঞত&#2494;ক&#2503; ন&#2495;য&#2492;&#2503; য&#2494;ব&#2503; সম&#2509;প&#2498;র&#2509;ণ নত&#2497;ন ম&#2494;ত&#2509;র&#2494;য&#2492;&#2404;</p>
+    </div>
+    <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+      <div class='feature-card' data-aos='fade-up' data-aos-delay='0'>
+        <div class='feature-icon bg-gradient-to-br from-blue-400 to-primary'><i class='fas fa-volume-mute text-white'/></div>
+        <h3 class='text-lg font-bold text-gray-800 mb-2'>Active Noise Cancellation</h3>
+        <p class='text-gray-500 text-sm leading-relaxed'>২য&#2492; প&#2509;রজন&#2509;ম&#2503;র উন&#2509;নত ANC প&#2509;রয&#2497;ক&#2509;ত&#2495; ব&#2494;ইর&#2503;র শব&#2509;দক&#2503; প&#2509;র&#2494;য&#2492; সম&#2509;প&#2498;র&#2509;ণ দ&#2498;র কর&#2503; &#8212; অফ&#2495;স, ব&#2494;স ব&#2494; ট&#2509;র&#2503;ন&#2503; পর&#2495;প&#2498;র&#2509;ণ শ&#2509;রবণ অভ&#2495;জ&#2509;ঞত&#2494;&#2404;</p>
+      </div>
+      <div class='feature-card' data-aos='fade-up' data-aos-delay='80'>
+        <div class='feature-icon bg-gradient-to-br from-violet-400 to-purple-600'><i class='fas fa-globe text-white'/></div>
+        <h3 class='text-lg font-bold text-gray-800 mb-2'>Personalized Spatial Audio</h3>
+        <p class='text-gray-500 text-sm leading-relaxed'>Dynamic head tracking সহ Personalized Spatial Audio &#8212; শব&#2509;দ চ&#2494;রদ&#2495;ক থ&#2503;ক&#2503; আসছ&#2503; মন&#2503; হব&#2503;, য&#2503;ন স&#2495;ন&#2503;ম&#2494; হল&#2503; আছ&#2503;ন&#2404;</p>
+      </div>
+      <div class='feature-card' data-aos='fade-up' data-aos-delay='160'>
+        <div class='feature-icon bg-gradient-to-br from-emerald-400 to-green-600'><i class='fas fa-eye text-white'/></div>
+        <h3 class='text-lg font-bold text-gray-800 mb-2'>Adaptive Transparency</h3>
+        <p class='text-gray-500 text-sm leading-relaxed'>ব&#2494;ইর&#2503;র জর&#2497;র&#2495; শব&#2509;দ শ&#2497;ন&#2497;ন, ক&#2495;ন&#2509;ত&#2497; ক&#2509;ষত&#2495;কর উচ&#2509;চ শব&#2509;দ স&#2509;বয&#2492;&#2434;ক&#2509;র&#2495;য&#2492;ভ&#2494;ব&#2503; কম&#2503; য&#2494;ব&#2503;&#2404; র&#2494;স&#2509;ত&#2494;য&#2492; চলত&#2503; সম&#2509;প&#2498;র&#2509;ণ ন&#2495;র&#2494;পদ&#2404;</p>
+      </div>
+      <div class='feature-card' data-aos='fade-up' data-aos-delay='0'>
+        <div class='feature-icon bg-gradient-to-br from-amber-400 to-orange-500'><i class='fas fa-battery-full text-white'/></div>
+        <h3 class='text-lg font-bold text-gray-800 mb-2'>৩০ ঘণ&#2509;ট&#2494; ব&#2509;য&#2494;ট&#2494;র&#2495; ল&#2494;ইফ</h3>
+        <p class='text-gray-500 text-sm leading-relaxed'>ANC চ&#2494;ল&#2497; থ&#2494;কল&#2503; ৬ ঘণ&#2509;ট&#2494; + MagSafe ক&#2503;স সহ ম&#2507;ট ৩০ ঘণ&#2509;ট&#2494;র ব&#2509;য&#2494;ট&#2494;র&#2495; ব&#2509;য&#2494;কআপ &#8212; স&#2494;র&#2494;দ&#2495;ন&#2503;র জন&#2509;য যথ&#2503;ষ&#2509;ট&#2404;</p>
+      </div>
+      <div class='feature-card' data-aos='fade-up' data-aos-delay='80'>
+        <div class='feature-icon bg-gradient-to-br from-pink-400 to-rose-600'><i class='fas fa-magnet text-white'/></div>
+        <h3 class='text-lg font-bold text-gray-800 mb-2'>MagSafe &amp; Wireless Charging</h3>
+        <p class='text-gray-500 text-sm leading-relaxed'>MagSafe, Apple Watch charger, Qi wireless এব&#2434; Lightning &#8212; য&#2503;ক&#2507;ন&#2507; উপ&#2494;য&#2492;&#2503; চ&#2494;র&#2509;জ কর&#2497;ন&#2404; সর&#2509;ব&#2507;চ&#2509;চ স&#2497;ব&#2495;ধ&#2494;&#2404;</p>
+      </div>
+      <div class='feature-card' data-aos='fade-up' data-aos-delay='160'>
+        <div class='feature-icon bg-gradient-to-br from-cyan-400 to-blue-500'><i class='fas fa-hand-point-up text-white'/></div>
+        <h3 class='text-lg font-bold text-gray-800 mb-2'>Touch Control</h3>
+        <p class='text-gray-500 text-sm leading-relaxed'>ভল&#2495;উম অ&#2509;য&#2494;ডজ&#2494;স&#2509;ট, প&#2509;ল&#2503;ব&#2509;য&#2494;ক কন&#2509;ট&#2509;র&#2507;ল, কল ম&#2509;য&#2494;ন&#2503;জম&#2503;ন&#2509;ট এব&#2434; ANC/Transparency ম&#2507;ড স&#2497;ইচ &#8212; সব ক&#2495;ছ&#2497; আঙ&#2497;ল&#2503;র স&#2509;পর&#2509;শ&#2503;&#2404;</p>
+      </div>
+      <div class='feature-card' data-aos='fade-up' data-aos-delay='0'>
+        <div class='feature-icon bg-gradient-to-br from-teal-400 to-emerald-600'><i class='fas fa-running text-white'/></div>
+        <h3 class='text-lg font-bold text-gray-800 mb-2'>৪ স&#2494;ইজ&#2503;র ইয&#2492;&#2494;র ট&#2495;প</h3>
+        <p class='text-gray-500 text-sm leading-relaxed'>XS, S, M, L &#8212; চ&#2494;রট&#2495; স&#2495;ল&#2495;ক&#2507;ন ইয&#2492;&#2494;র ট&#2495;প স&#2494;ইজ সহ আস&#2503;&#2404; ন&#2495;খ&#2497;&#2433;ত ফ&#2495;ট, সর&#2509;ব&#2507;চ&#2509;চ আর&#2494;ম এব&#2434; স&#2503;র&#2494; আওয&#2492;&#2494;জ ন&#2495;র&#2507;ধক&#2404;</p>
+      </div>
+      <div class='feature-card' data-aos='fade-up' data-aos-delay='80'>
+        <div class='feature-icon bg-gradient-to-br from-indigo-400 to-blue-700'><i class='fab fa-apple text-white'/></div>
+        <h3 class='text-lg font-bold text-gray-800 mb-2'>Apple Ecosystem Integration</h3>
+        <p class='text-gray-500 text-sm leading-relaxed'>iPhone, iPad, Mac, Apple Watch &#8212; সব Apple ড&#2495;ভ&#2494;ইস&#2503; ন&#2495;রবচ&#2509;ছ&#2495;ন&#2509;ন স&#2434;য&#2507;গ&#2404; Siri স&#2494;প&#2507;র&#2509;ট সহ সম&#2509;প&#2498;র&#2509;ণ হ&#2509;য&#2494;ন&#2509;ডস-ফ&#2509;র&#2495; অভ&#2495;জ&#2509;ঞত&#2494;&#2404;</p>
+      </div>
+      <div class='feature-card' data-aos='fade-up' data-aos-delay='160'>
+        <div class='feature-icon bg-gradient-to-br from-gray-500 to-gray-800'><i class='fas fa-globe-asia text-white'/></div>
+        <h3 class='text-lg font-bold text-gray-800 mb-2'>Dubai Version &#8212; Premium Quality</h3>
+        <p class='text-gray-500 text-sm leading-relaxed'>মধ&#2509;যপ&#2509;র&#2494;চ&#2509;য&#2503;র অফ&#2495;শ&#2495;য&#2492;&#2494;ল Dubai Version &#8212; ব&#2495;শ&#2509;বম&#2494;ন&#2503;র গ&#2497;ণগত ম&#2494;ন, আন&#2509;তর&#2509;জ&#2494;ত&#2495;ক ওয&#2492;&#2494;র&#2503;ন&#2509;ট&#2495; এব&#2434; প&#2509;র&#2495;ম&#2495;য&#2492;&#2494;ম প&#2509;য&#2494;ক&#2503;জ&#2495;&#2434; সহ&#2404;</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class='py-20 bg-white'>
+  <div class='max-w-6xl mx-auto px-4'>
+    <div class='text-center mb-14' data-aos='fade-up'>
+      <div class='section-tag'>পণ&#2509;য&#2503;র ছব&#2495;</div>
+      <h2 class='text-3xl md:text-4xl font-bold text-gray-800 mt-2'>সব দ&#2495;ক থ&#2503;ক&#2503; দ&#2503;খ&#2497;ন</h2>
+      <p class='text-gray-500 mt-2 text-sm'>ছব&#2495;ত&#2503; ক&#2509;ল&#2495;ক কর&#2503; বড&#2492; কর&#2503; দ&#2503;খ&#2497;ন</p>
+    </div>
+    <div class='grid grid-cols-2 md:grid-cols-3 gap-5'>
+      <div class='gallery-card md:col-span-1' data-aos='fade-up' data-aos-delay='0'>
+        <img alt='AirPods Pro Front' class='w-full h-52 md:h-64 object-cover' onclick='openLightbox(this.src)' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_uQUt3mJbDSYMaV2o8IL9lgsLXDNfHjagpUxr6T0jhy3nfpLr60peGIgvPcgb5vSJS7aRQ84Ujov3sVSuxSqR3bQbR_UmfUrShXJdMiBpyUYBQtguPADrhAzzd1R5jsBObXVgLNrDcAyH677xigiPMzku_Wv3aB8OewMCMX_GZWRKmZmsQU-WMoOR6bMx/w640-h636/cof0MxW9RY6V5wbXng4WbxhJSlmlOyHDhSv5dAHd.png'/>
+      </div>
+      <div class='gallery-card' data-aos='fade-up' data-aos-delay='80'>
+        <img alt='AirPods Pro Case' class='w-full h-52 md:h-64 object-cover' onclick='openLightbox(this.src)' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgr6dAFhLTGDrQrhtDo2bGqutM-m-AvWnJVkP3vYu11IIPEdsm4vtV7F92vs2zSFozS4Z5aWQnJMf1D36lJCJzeJbuunBGefrMJ-7a7m0v_GZ87Uh-dD3GEVPc8WuNGHpKoHPu3iTJcxdSJyeyqjios2C2TjBelGY6IeMXEb9cGs6P1cmj-AddgphfJMoBD/w640-h640/0BRV5OJkK5cNdQK83uDEYwUZyrihWlPNModO5tga.webp'/>
+      </div>
+      <div class='gallery-card' data-aos='fade-up' data-aos-delay='160'>
+        <img alt='AirPods Pro Lifestyle' class='w-full h-52 md:h-64 object-cover' onclick='openLightbox(this.src)' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh54xlezoSRuTARt5cUZJDQZBeP1T5-0k3SlDCZlHwucOSm-T1toxIC1_042qda3iKXMiypcefuHZ7BCaxTCAlJewWlV-NC3TFyI5lFMj6WsVcldH8LIKbiMip7Pw-aAxlZFAZhLWkDETTEGY92y8Yeqp929lE2WCj1sQWBJ5wDYNARA8DeGuR3RyaJVcjQ/w640-h546/lPG62w3PLXKLaIBHcqQUzy9saAlPFKEAGSsV7h2n.jpg'/>
+      </div>
+      <div class='gallery-card' data-aos='fade-up' data-aos-delay='0'>
+        <img alt='AirPods Pro Black' class='w-full h-48 object-cover' onclick='openLightbox(this.src)' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQnj89i9f8Jd7PYwQXJc012Jo20KkuxXU9BBtmMNykW5NQjeiZn-ka3Hlej5iZxkJkZDhIKGflY8xBGapnbONevYSvlCKmUlIQmcO1icT-ZuL-cXro4THIxApB8dekUj2ChN2NWtMDxXDmDxwhxHTaij_UOh3jwaAxcxnZ6AV-rxeD9Tg_fjas7XdotEyI/w640-h640/WZAF4rVvbZGf5aOtFT8avMdEtUEGfZVOeZxrfndV.jpg'/>
+      </div>
+      <div class='gallery-card md:col-span-2' data-aos='fade-up' data-aos-delay='80'>
+        <img alt='AirPods Pro Product Shot' class='w-full h-48 object-cover' onclick='openLightbox(this.src)' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuNqI9K6PT-03B_WnboRHoSJqxqqTOuTfOm-_mc-U59lCYfLjD_brdpLXk1f1wf47fOC-hfNPVf8T_iugPKMf6tb1fj7QshNtO4746Xf25tll3HZb2rXj2KMI1CoP31Ksoil33EoC2s3oczt84FlYmQnoD4P4TNDwblrf5lJbwS92734Heqxug8sHpHv7J/w640-h640/prod-6245613.w7Be1UCfVdWv3j5vDo9wjetRtaBZ7Ku6BPrCsHTi.jpg'/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIFICATIONS -->
+<section class='py-20 section-gradient'>
+  <div class='max-w-4xl mx-auto px-4'>
+    <div class='text-center mb-14' data-aos='fade-up'>
+      <div class='section-tag'>স&#2509;প&#2503;স&#2495;ফ&#2495;ক&#2503;শন</div>
+      <h2 class='text-3xl md:text-4xl font-bold text-gray-800 mt-2'>প&#2509;রয&#2497;ক&#2509;ত&#2495;গত ব&#2495;বরণ</h2>
+    </div>
+    <div class='bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100' data-aos='fade-up' data-aos-delay='100'>
+      <table class='w-full'>
+        <thead>
+          <tr style='background:linear-gradient(135deg,#008bf5,#0060c7);'>
+            <th class='px-6 py-4 text-white text-left font-bold text-sm'>ব&#2504;শ&#2495;ষ&#2509;ট&#2509;য</th>
+            <th class='px-6 py-4 text-white text-left font-bold text-sm'>ব&#2495;বরণ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class='spec-row border-b border-gray-100'><td class='px-6 py-4 font-semibold text-gray-600 bg-gray-50 text-sm'><i class='fas fa-microchip mr-2 text-primary'/>চ&#2495;প</td><td class='px-6 py-4 text-gray-800 font-medium text-sm'>Apple H2 Chip</td></tr>
+          <tr class='spec-row border-b border-gray-100'><td class='px-6 py-4 font-semibold text-gray-600 bg-gray-50 text-sm'><i class='fas fa-volume-mute mr-2 text-primary'/>নয&#2492;&#2503;জ ক&#2509;য&#2494;ন&#2509;স&#2503;ল&#2503;শন</td><td class='px-6 py-4 text-gray-800 font-medium text-sm'>Active Noise Cancellation (2nd Gen), Adaptive Transparency</td></tr>
+          <tr class='spec-row border-b border-gray-100'><td class='px-6 py-4 font-semibold text-gray-600 bg-gray-50 text-sm'><i class='fas fa-music mr-2 text-primary'/>অড&#2495;ও</td><td class='px-6 py-4 text-gray-800 font-medium text-sm'>Personalized Spatial Audio with Dynamic Head Tracking</td></tr>
+          <tr class='spec-row border-b border-gray-100'><td class='px-6 py-4 font-semibold text-gray-600 bg-gray-50 text-sm'><i class='fas fa-battery-full mr-2 text-primary'/>ব&#2509;য&#2494;ট&#2494;র&#2495; (ইয&#2492;&#2494;রব&#2494;ড)</td><td class='px-6 py-4 text-gray-800 font-medium text-sm'>৬ ঘণ&#2509;ট&#2494; (ANC on) | ৩০ ঘণ&#2509;ট&#2494; ক&#2503;স সহ</td></tr>
+          <tr class='spec-row border-b border-gray-100'><td class='px-6 py-4 font-semibold text-gray-600 bg-gray-50 text-sm'><i class='fas fa-charging-station mr-2 text-primary'/>চ&#2494;র&#2509;জ&#2495;&#2434;</td><td class='px-6 py-4 text-gray-800 font-medium text-sm'>MagSafe | Apple Watch Charger | Qi Wireless | Lightning</td></tr>
+          <tr class='spec-row border-b border-gray-100'><td class='px-6 py-4 font-semibold text-gray-600 bg-gray-50 text-sm'><i class='fas fa-wifi mr-2 text-primary'/>ক&#2494;ন&#2503;ক&#2509;ট&#2495;ভ&#2495;ট&#2495;</td><td class='px-6 py-4 text-gray-800 font-medium text-sm'>Bluetooth 5.3</td></tr>
+          <tr class='spec-row border-b border-gray-100'><td class='px-6 py-4 font-semibold text-gray-600 bg-gray-50 text-sm'><i class='fas fa-tint mr-2 text-primary'/>ওয&#2492;&#2494;ট&#2494;র র&#2503;জ&#2495;স&#2509;ট&#2509;য&#2494;ন&#2509;স</td><td class='px-6 py-4 text-gray-800 font-medium text-sm'>IPX4 (Earbuds) | IPX4 (Case)</td></tr>
+          <tr class='spec-row border-b border-gray-100'><td class='px-6 py-4 font-semibold text-gray-600 bg-gray-50 text-sm'><i class='fas fa-ear-listen mr-2 text-primary'/>ইয&#2492;&#2494;র ট&#2495;প স&#2494;ইজ</td><td class='px-6 py-4 text-gray-800 font-medium text-sm'>XS, S, M, L &#8212; ৪ট&#2495; স&#2495;ল&#2495;ক&#2507;ন ইয&#2492;&#2494;র ট&#2495;প অন&#2509;তর&#2509;ভ&#2497;ক&#2509;ত</td></tr>
+          <tr class='spec-row border-b border-gray-100'><td class='px-6 py-4 font-semibold text-gray-600 bg-gray-50 text-sm'><i class='fab fa-apple mr-2 text-primary'/>কমপ&#2509;য&#2494;ট&#2495;ব&#2495;ল&#2495;ট&#2495;</td><td class='px-6 py-4 text-gray-800 font-medium text-sm'>iOS 16+, iPadOS 16+, macOS 13+, watchOS 9+, tvOS 16+</td></tr>
+          <tr class='spec-row border-b border-gray-100'><td class='px-6 py-4 font-semibold text-gray-600 bg-gray-50 text-sm'><i class='fas fa-palette mr-2 text-primary'/>রঙ</td><td class='px-6 py-4 text-gray-800 font-medium text-sm'>White (হ&#2507;য&#2492;&#2494;ইট) | Black (ব&#2509;ল&#2509;য&#2494;ক)</td></tr>
+          <tr class='spec-row'><td class='px-6 py-4 font-semibold text-gray-600 bg-gray-50 text-sm'><i class='fas fa-box mr-2 text-primary'/>ব&#2494;ক&#2509;স&#2503;র ব&#2495;ষয&#2492;বস&#2509;ত&#2497;</td><td class='px-6 py-4 text-gray-800 font-medium text-sm'>AirPods Pro, MagSafe Charging Case, Lightning Cable, ৪ স&#2494;ইজ&#2503;র ইয&#2492;&#2494;র ট&#2495;প, ডক&#2497;ম&#2503;ন&#2509;ট&#2503;শন</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class='py-20 bg-white'>
+  <div class='max-w-5xl mx-auto px-4'>
+    <div class='grid md:grid-cols-2 gap-14 items-center'>
+      <div data-aos='fade-right'>
+        <div class='section-tag'>ক&#2503;ন আমর&#2494;?</div>
+        <h2 class='text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-8'>AirPods Pro 2nd Gen ক&#2503;ন স&#2503;র&#2494; পছন&#2509;দ?</h2>
+        <div class='space-y-5'>
+          <div class='flex items-start gap-4 p-4 rounded-xl border border-blue-50 hover:border-blue-200 hover:bg-blue-50 transition-all'>
+            <div class='w-10 h-10 rounded-xl bg-primary flex-shrink-0 flex items-center justify-center'><i class='fas fa-check text-white text-sm'/></div>
+            <div><h4 class='font-bold text-gray-800 mb-1'>ব&#2495;শ&#2509;ব&#2503;র স&#2503;র&#2494; ANC প&#2509;রয&#2497;ক&#2509;ত&#2495;</h4><p class='text-gray-500 text-sm'>Apple H2 chip-powered ANC &#8212; য&#2503;ক&#2507;ন&#2507; পর&#2495;ব&#2503;শ&#2503; ক&#2509;র&#2495;স&#2509;ট&#2494;ল ক&#2509;ল&#2495;য&#2492;&#2494;র স&#2494;উন&#2509;ড&#2404;</p></div>
+          </div>
+          <div class='flex items-start gap-4 p-4 rounded-xl border border-blue-50 hover:border-blue-200 hover:bg-blue-50 transition-all'>
+            <div class='w-10 h-10 rounded-xl bg-primary flex-shrink-0 flex items-center justify-center'><i class='fas fa-check text-white text-sm'/></div>
+            <div><h4 class='font-bold text-gray-800 mb-1'>১০০% অর&#2495;জ&#2495;ন&#2494;ল Dubai Version</h4><p class='text-gray-500 text-sm'>সর&#2494;সর&#2495; Dubai থ&#2503;ক&#2503; আন&#2494; অফ&#2495;শ&#2495;য&#2492;&#2494;ল প&#2509;য&#2494;ক&#2503;জ &#8212; ক&#2507;ন&#2507; নকল ন&#2503;ই, ক&#2507;ন&#2507; আপ&#2507;ষ ন&#2503;ই&#2404;</p></div>
+          </div>
+          <div class='flex items-start gap-4 p-4 rounded-xl border border-blue-50 hover:border-blue-200 hover:bg-blue-50 transition-all'>
+            <div class='w-10 h-10 rounded-xl bg-primary flex-shrink-0 flex items-center justify-center'><i class='fas fa-check text-white text-sm'/></div>
+            <div><h4 class='font-bold text-gray-800 mb-1'>স&#2494;র&#2494; ব&#2494;&#2434;ল&#2494;দ&#2503;শ&#2503; দ&#2509;র&#2497;ত ড&#2503;ল&#2495;ভ&#2494;র&#2495;</h4><p class='text-gray-500 text-sm'>ঢ&#2494;ক&#2494;য&#2492; ১ দ&#2495;ন, স&#2494;র&#2494; দ&#2503;শ&#2503; ২-৩ ক&#2494;র&#2509;যদ&#2495;বস&#2404; অর&#2509;ড&#2494;র পর&#2503; কল কর&#2503; ন&#2495;শ&#2509;চ&#2495;ত কর&#2494; হয&#2492;&#2404;</p></div>
+          </div>
+          <div class='flex items-start gap-4 p-4 rounded-xl border border-blue-50 hover:border-blue-200 hover:bg-blue-50 transition-all'>
+            <div class='w-10 h-10 rounded-xl bg-primary flex-shrink-0 flex items-center justify-center'><i class='fas fa-check text-white text-sm'/></div>
+            <div><h4 class='font-bold text-gray-800 mb-1'>১ বছর&#2503;র ওয&#2492;&#2494;র&#2503;ন&#2509;ট&#2495; + সহজ র&#2495;ট&#2494;র&#2509;ন</h4><p class='text-gray-500 text-sm'>য&#2503;ক&#2507;ন&#2507; ম&#2509;য&#2494;ন&#2497;ফ&#2509;য&#2494;কচ&#2494;র&#2495;&#2434; সমস&#2509;য&#2494;য&#2492; ব&#2495;ন&#2494;ম&#2498;ল&#2509;য&#2503; স&#2503;ব&#2494;&#2404; ৭ দ&#2495;ন&#2503;র মধ&#2509;য&#2503; ফ&#2503;রত দ&#2503;ওয&#2492;&#2494; য&#2494;ব&#2503;&#2404;</p></div>
+          </div>
+        </div>
+        <div class='mt-8'>
+          <button class='btn-primary text-lg' onclick='openModal()'><i class='fas fa-shopping-cart'/>এখনই অর&#2509;ড&#2494;র কর&#2497;ন</button>
+        </div>
+      </div>
+      <div class='flex justify-center' data-aos='fade-left'>
+        <div class='relative'>
+          <div style='position:absolute;inset:-24px;background:linear-gradient(135deg,rgba(0,139,245,0.07),rgba(0,80,200,0.04));border-radius:34px;'/>
+          <img alt='AirPods Pro Case' class='w-72 md:w-80 h-auto object-contain relative z-10 float-anim rounded-3xl shadow-2xl' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgr6dAFhLTGDrQrhtDo2bGqutM-m-AvWnJVkP3vYu11IIPEdsm4vtV7F92vs2zSFozS4Z5aWQnJMf1D36lJCJzeJbuunBGefrMJ-7a7m0v_GZ87Uh-dD3GEVPc8WuNGHpKoHPu3iTJcxdSJyeyqjios2C2TjBelGY6IeMXEb9cGs6P1cmj-AddgphfJMoBD/w640-h640/0BRV5OJkK5cNdQK83uDEYwUZyrihWlPNModO5tga.webp'/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERY INFO -->
+<section class='py-14' style='background:linear-gradient(135deg,#008bf5 0%,#0050b0 50%,#003080 100%);'>
+  <div class='max-w-5xl mx-auto px-4'>
+    <div class='text-center text-white mb-10' data-aos='fade-up'>
+      <h2 class='text-2xl md:text-3xl font-bold'>ড&#2503;ল&#2495;ভ&#2494;র&#2495; তথ&#2509;য</h2>
+      <p class='text-blue-100 mt-2'>স&#2494;র&#2494; ব&#2494;&#2434;ল&#2494;দ&#2503;শ&#2503; আমর&#2494; প&#2508;&#2433;ছ&#2503; য&#2494;ই</p>
+    </div>
+    <div class='grid grid-cols-2 md:grid-cols-4 gap-5'>
+      <div class='glass text-center p-6 rounded-2xl text-white' data-aos='zoom-in' data-aos-delay='0'><i class='fas fa-city text-3xl mb-3 text-yellow-300'/><div class='font-bold text-lg'>ঢ&#2494;ক&#2494;য&#2492;</div><div class='text-blue-100 text-sm mt-1'>১ ক&#2494;র&#2509;যদ&#2495;বস</div></div>
+      <div class='glass text-center p-6 rounded-2xl text-white' data-aos='zoom-in' data-aos-delay='80'><i class='fas fa-map-marked-alt text-3xl mb-3 text-yellow-300'/><div class='font-bold text-lg'>স&#2494;র&#2494; দ&#2503;শ</div><div class='text-blue-100 text-sm mt-1'>২-৩ ক&#2494;র&#2509;যদ&#2495;বস</div></div>
+      <div class='glass text-center p-6 rounded-2xl text-white' data-aos='zoom-in' data-aos-delay='160'><i class='fas fa-truck text-3xl mb-3 text-yellow-300'/><div class='font-bold text-lg'>ড&#2503;ল&#2495;ভ&#2494;র&#2495; চ&#2494;র&#2509;জ</div><div class='text-green-300 text-sm font-bold mt-1'>ব&#2495;ন&#2494;ম&#2498;ল&#2509;য&#2503;!</div></div>
+      <div class='glass text-center p-6 rounded-2xl text-white' data-aos='zoom-in' data-aos-delay='240'><i class='fas fa-money-bill-wave text-3xl mb-3 text-yellow-300'/><div class='font-bold text-lg'>প&#2503;ম&#2503;ন&#2509;ট</div><div class='text-blue-100 text-sm mt-1'>ড&#2503;ল&#2495;ভ&#2494;র&#2495;ত&#2503; পর&#2495;শ&#2507;ধ</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class='py-20 section-gradient'>
+  <div class='max-w-6xl mx-auto px-4'>
+    <div class='text-center mb-14' data-aos='fade-up'>
+      <div class='section-tag'>গ&#2509;র&#2494;হক&#2503;র মত&#2494;মত</div>
+      <h2 class='text-3xl md:text-4xl font-bold text-gray-800 mt-2'>সন&#2509;ত&#2497;ষ&#2509;ট গ&#2509;র&#2494;হকর&#2494; ক&#2496; বলছ&#2503;ন?</h2>
+      <div class='flex justify-center items-center gap-2 mt-3'>
+        <div class='stars text-xl'><i class='fas fa-star'/><i class='fas fa-star'/><i class='fas fa-star'/><i class='fas fa-star'/><i class='fas fa-star'/></div>
+        <span class='font-bold text-gray-700'>৪.৯/৫</span>
+        <span class='text-gray-400 text-sm'>(২,৬৫৩ র&#2495;ভ&#2495;উ)</span>
+      </div>
+    </div>
+    <div class='grid md:grid-cols-3 gap-6'>
+      <div class='review-card' data-aos='fade-up' data-aos-delay='0'>
+        <div class='quote-icon'>&quot;</div>
+        <div class='flex items-center gap-3 mb-4'>
+          <div class='w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-primary flex items-center justify-center text-white font-bold text-lg flex-shrink-0'>স</div>
+          <div><div class='font-bold text-gray-800'>স&#2494;ইফ&#2497;ল ইসল&#2494;ম</div><div class='text-gray-400 text-xs'>ঢ&#2494;ক&#2494;, গ&#2497;লশ&#2494;ন</div></div>
+          <div class='ml-auto stars text-sm flex-shrink-0'><i class='fas fa-star'/><i class='fas fa-star'/><i class='fas fa-star'/><i class='fas fa-star'/><i class='fas fa-star'/></div>
+        </div>
+        <p class='text-gray-600 text-sm leading-relaxed mb-4'>&quot;ANC সত&#2509;য&#2495;ই অস&#2494;ধ&#2494;রণ! অফ&#2495;স&#2503; প&#2494;শ&#2503; সব&#2494;ই কথ&#2494; বলছ&#2503;, আম&#2495; একদম ন&#2495;জ&#2503;র দ&#2497;ন&#2495;য&#2492;&#2494;য&#2492;&#2404; Spatial Audio চ&#2494;ল&#2497; করল&#2503; মন&#2503; হয&#2492; স&#2495;ন&#2503;ম&#2494; হল&#2503; বস&#2503; আছ&#2495;&#2404; ট&#2494;ক&#2494; প&#2497;র&#2507;প&#2497;র&#2495; উস&#2497;ল&#2404;&quot;</p>
+        <div class='flex items-center gap-2 text-xs text-green-600 font-semibold'><i class='fas fa-check-circle'/>য&#2494;চ&#2494;ইক&#2499;ত ক&#2509;র&#2503;ত&#2494;</div>
+        <div class='mt-3 bg-gray-50 rounded-xl p-2 text-xs text-gray-400 text-center'>📅 ৮ এপ&#2509;র&#2495;ল, ২০২৫</div>
+      </div>
+      <div class='review-card' data-aos='fade-up' data-aos-delay='100'>
+        <div class='quote-icon'>&quot;</div>
+        <div class='flex items-center gap-3 mb-4'>
+          <div class='w-12 h-12 rounded-full bg-gradient-to-br from-pink-400 to-rose-500 flex items-center justify-center text-white font-bold text-lg flex-shrink-0'>ন</div>
+          <div><div class='font-bold text-gray-800'>ন&#2494;দ&#2495;য&#2492;&#2494; রহম&#2494;ন</div><div class='text-gray-400 text-xs'>চট&#2509;টগ&#2509;র&#2494;ম, ন&#2494;স&#2495;র&#2494;ব&#2494;দ</div></div>
+          <div class='ml-auto stars text-sm flex-shrink-0'><i class='fas fa-star'/><i class='fas fa-star'/><i class='fas fa-star'/><i class='fas fa-star'/><i class='fas fa-star'/></div>
+        </div>
+        <p class='text-gray-600 text-sm leading-relaxed mb-4'>&quot;প&#2509;য&#2494;ক&#2503;জ&#2495;&#2434; দ&#2503;খ&#2503;ই ব&#2497;ঝল&#2494;ম ১০০% অর&#2495;জ&#2495;ন&#2494;ল&#2404; ব&#2509;য&#2494;ট&#2494;র&#2495; সত&#2509;য&#2495;ই অন&#2503;কক&#2509;ষণ ট&#2503;ক&#2503;&#2404; ব&#2499;ষ&#2509;ট&#2495;ত&#2503; ভ&#2495;জ&#2503;ও ক&#2507;ন&#2507; সমস&#2509;য&#2494; হয&#2492;ন&#2495;&#2404; iPhone-এর স&#2494;থ&#2503; স&#2434;য&#2507;গ ম&#2494;ত&#2509;র ৫ স&#2503;ক&#2503;ন&#2509;ড&#2503;&#2404;&quot;</p>
+        <div class='flex items-center gap-2 text-xs text-green-600 font-semibold'><i class='fas fa-check-circle'/>য&#2494;চ&#2494;ইক&#2499;ত ক&#2509;র&#2503;ত&#2494;</div>
+        <div class='mt-3 bg-gray-50 rounded-xl p-2 text-xs text-gray-400 text-center'>📅 ২১ ম&#2494;র&#2509;চ, ২০২৫</div>
+      </div>
+      <div class='review-card' data-aos='fade-up' data-aos-delay='200'>
+        <div class='quote-icon'>&quot;</div>
+        <div class='flex items-center gap-3 mb-4'>
+          <div class='w-12 h-12 rounded-full bg-gradient-to-br from-emerald-400 to-green-600 flex items-center justify-center text-white font-bold text-lg flex-shrink-0'>র</div>
+          <div><div class='font-bold text-gray-800'>র&#2494;ফ&#2495; হ&#2507;স&#2503;ন</div><div class='text-gray-400 text-xs'>স&#2495;ল&#2503;ট</div></div>
+          <div class='ml-auto stars text-sm flex-shrink-0'><i class='fas fa-star'/><i class='fas fa-star'/><i class='fas fa-star'/><i class='fas fa-star'/><i class='fas fa-star-half-alt'/></div>
+        </div>
+        <p class='text-gray-600 text-sm leading-relaxed mb-4'>&quot;Dubai version ম&#2494;ন&#2503;ই আল&#2494;দ&#2494; একট&#2494; ব&#2509;য&#2494;প&#2494;র আছ&#2503;&#2404; Call quality অন&#2503;ক পর&#2495;ষ&#2509;ক&#2494;র&#2404; Transparency mode-এ র&#2494;স&#2509;ত&#2494;য&#2492; চল&#2494; ন&#2495;র&#2494;পদ&#2404; ২ দ&#2495;ন&#2503;ই ড&#2503;ল&#2495;ভ&#2494;র&#2495; প&#2503;য&#2492;&#2503;ছ&#2495;&#2404;&quot;</p>
+        <div class='flex items-center gap-2 text-xs text-green-600 font-semibold'><i class='fas fa-check-circle'/>য&#2494;চ&#2494;ইক&#2499;ত ক&#2509;র&#2503;ত&#2494;</div>
+        <div class='mt-3 bg-gray-50 rounded-xl p-2 text-xs text-gray-400 text-center'>📅 ৫ ফ&#2503;ব&#2509;র&#2497;য&#2492;&#2494;র&#2495;, ২০২৫</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class='py-20 bg-white'>
+  <div class='max-w-3xl mx-auto px-4'>
+    <div class='text-center mb-14' data-aos='fade-up'>
+      <div class='section-tag'>স&#2494;ধ&#2494;রণ প&#2509;রশ&#2509;ন</div>
+      <h2 class='text-3xl md:text-4xl font-bold text-gray-800 mt-2'>প&#2509;র&#2494;য&#2492;শই জ&#2495;জ&#2509;ঞ&#2494;স&#2495;ত প&#2509;রশ&#2509;ন&#2494;বল&#2496;</h2>
+    </div>
+    <div id='faqContainer'>
+      <div class='faq-item' data-aos='fade-up' data-aos-delay='0'>
+        <div class='faq-header' onclick='toggleFaq(this)'><span>Dubai Version ক&#2495; আসল Apple পণ&#2509;য?</span><i class='fas fa-chevron-down faq-icon'/></div>
+        <div class='faq-body'>হ&#2509;য&#2494;&#2433;, একদম! Dubai Version হল&#2507; মধ&#2509;যপ&#2509;র&#2494;চ&#2509;য&#2503;র অফ&#2495;শ&#2495;য&#2492;&#2494;ল Apple পণ&#2509;য &#8212; আন&#2509;তর&#2509;জ&#2494;ত&#2495;ক ম&#2494;ন&#2503;র, অর&#2495;জ&#2495;ন&#2494;ল Apple প&#2509;য&#2494;ক&#2503;জ&#2495;&#2434; সহ&#2404; ব&#2494;&#2434;ল&#2494;দ&#2503;শ&#2503; সর&#2494;সর&#2495; Import কর&#2494; হয&#2492;&#2404; Serial Number দ&#2495;য&#2492;&#2503; Apple-এর ওয&#2492;&#2503;বস&#2494;ইট&#2503; য&#2494;চ&#2494;ই করত&#2503; প&#2494;রব&#2503;ন&#2404;</div>
+      </div>
+      <div class='faq-item' data-aos='fade-up' data-aos-delay='40'>
+        <div class='faq-header' onclick='toggleFaq(this)'><span>Android ফ&#2507;ন&#2503; ক&#2495; ব&#2509;যবহ&#2494;র কর&#2494; য&#2494;ব&#2503;?</span><i class='fas fa-chevron-down faq-icon'/></div>
+        <div class='faq-body'>হ&#2509;য&#2494;&#2433;, Bluetooth-এর ম&#2494;ধ&#2509;যম&#2503; Android ফ&#2507;ন&#2503; স&#2434;য&#2507;গ কর&#2494; য&#2494;ব&#2503; এব&#2434; স&#2494;উন&#2509;ড শ&#2497;নত&#2503; প&#2494;রব&#2503;ন&#2404; তব&#2503; ANC, Spatial Audio, Siri, Automatic ear detection এব&#2434; অন&#2509;য Apple-exclusive ফ&#2495;চ&#2494;রগ&#2497;ল&#2507; সম&#2509;প&#2498;র&#2509;ণর&#2498;প&#2503; ক&#2494;জ করত&#2503; iOS 16+ ব&#2494; অন&#2509;য Apple ড&#2495;ভ&#2494;ইস প&#2509;রয&#2492;&#2507;জন&#2404;</div>
+      </div>
+      <div class='faq-item' data-aos='fade-up' data-aos-delay='80'>
+        <div class='faq-header' onclick='toggleFaq(this)'><span>ANC কতট&#2494; ক&#2494;র&#2509;যকর?</span><i class='fas fa-chevron-down faq-icon'/></div>
+        <div class='faq-body'>AirPods Pro 2nd Gen-এর ANC ব&#2494;জ&#2494;র&#2503;র স&#2503;র&#2494;&#2404; Apple-এর ন&#2495;জস&#2509;ব পর&#2495;স&#2434;খ&#2509;য&#2494;ন অন&#2497;য&#2494;য&#2492;&#2496; এট&#2495; ১ম প&#2509;রজন&#2509;ম&#2503;র ত&#2497;লন&#2494;য&#2492; দ&#2509;ব&#2495;গ&#2497;ণ ক&#2494;র&#2509;যকর&#2404; অফ&#2495;স, ব&#2494;স, ট&#2509;র&#2503;ন ব&#2494; ক&#2509;য&#2494;ফ&#2503;ত&#2503; &#8212; ব&#2494;ইর&#2503;র শব&#2509;দ প&#2509;র&#2494;য&#2492; সম&#2509;প&#2498;র&#2509;ণ বন&#2509;ধ হয&#2492;&#2503; য&#2494;য&#2492;&#2404;</div>
+      </div>
+      <div class='faq-item' data-aos='fade-up' data-aos-delay='120'>
+        <div class='faq-header' onclick='toggleFaq(this)'><span>ড&#2503;ল&#2495;ভ&#2494;র&#2495; কত দ&#2495;ন&#2503; প&#2494;ব?</span><i class='fas fa-chevron-down faq-icon'/></div>
+        <div class='faq-body'>ঢ&#2494;ক&#2494;র ভ&#2503;তর&#2503; স&#2494;ধ&#2494;রণত ১ ক&#2494;র&#2509;যদ&#2495;বস&#2404; স&#2494;র&#2494; ব&#2494;&#2434;ল&#2494;দ&#2503;শ&#2503; ২-৩ ক&#2494;র&#2509;যদ&#2495;বস&#2404; অর&#2509;ড&#2494;র ন&#2495;শ&#2509;চ&#2495;ত হওয&#2492;&#2494;র পর&#2503; আম&#2494;দ&#2503;র ট&#2495;ম আপন&#2494;ক&#2503; ফ&#2507;ন কর&#2503; ড&#2503;ল&#2495;ভ&#2494;র&#2495;র সময&#2492; জ&#2494;ন&#2494;ব&#2503;&#2404;</div>
+      </div>
+      <div class='faq-item' data-aos='fade-up' data-aos-delay='160'>
+        <div class='faq-header' onclick='toggleFaq(this)'><span>পণ&#2509;য পছন&#2509;দ ন&#2494; হল&#2503; ক&#2495; ফ&#2503;রত দ&#2495;ত&#2503; প&#2494;রব?</span><i class='fas fa-chevron-down faq-icon'/></div>
+        <div class='faq-body'>অবশ&#2509;যই&#2404; পণ&#2509;য প&#2494;ওয&#2492;&#2494;র ৭ দ&#2495;ন&#2503;র মধ&#2509;য&#2503; অর&#2495;জ&#2495;ন&#2494;ল প&#2509;য&#2494;ক&#2503;জ&#2495;&#2434; সহ ফ&#2503;রত প&#2494;ঠ&#2494;ল&#2503; সম&#2509;প&#2498;র&#2509;ণ অর&#2509;থ ফ&#2503;রত দ&#2503;ওয&#2492;&#2494; হব&#2503;&#2404; ড&#2503;ল&#2495;ভ&#2494;র&#2495;ত&#2503; সমস&#2509;য&#2494; থ&#2494;কল&#2503; ব&#2494; পণ&#2509;য ক&#2509;ষত&#2495;গ&#2509;রস&#2509;ত অবস&#2509;থ&#2494;য&#2492; প&#2503;ল&#2503; ত&#2494;ৎক&#2509;ষণ&#2495;ক প&#2509;রত&#2495;স&#2509;থ&#2494;পন কর&#2494; হব&#2503;&#2404;</div>
+      </div>
+      <div class='faq-item' data-aos='fade-up' data-aos-delay='200'>
+        <div class='faq-header' onclick='toggleFaq(this)'><span>ব&#2495;ক&#2494;শ/নগদ&#2503; প&#2503;ম&#2503;ন&#2509;ট ক&#2496;ভ&#2494;ব&#2503; করব?</span><i class='fas fa-chevron-down faq-icon'/></div>
+        <div class='faq-body'>অর&#2509;ড&#2494;র ফর&#2509;ম&#2503; ব&#2495;ক&#2494;শ ব&#2494; নগদ স&#2495;ল&#2503;ক&#2509;ট করল&#2503; আম&#2494;দ&#2503;র নম&#2509;বর দ&#2503;খ&#2494;ব&#2503;&#2404; স&#2503;ই নম&#2509;বর&#2503; প&#2503;ম&#2503;ন&#2509;ট প&#2494;ঠ&#2494;ন, ত&#2494;রপর Transaction ID ফর&#2509;ম&#2503; ল&#2495;খ&#2497;ন&#2404; আমর&#2494; য&#2494;চ&#2494;ই কর&#2503; আপন&#2494;র অর&#2509;ড&#2494;র কনফ&#2494;র&#2509;ম করব&#2404;</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class='py-20 hero-gradient'>
+  <div class='max-w-3xl mx-auto px-4 text-center text-white' data-aos='zoom-in'>
+    <div class='mb-4' style='font-size:4rem;'>🎧</div>
+    <h2 class='text-3xl md:text-4xl font-bold mb-4'>এখনই অভ&#2495;জ&#2509;ঞত&#2494; ন&#2495;ন!</h2>
+    <p class='text-blue-100 text-lg mb-3 max-w-xl mx-auto'>Apple AirPods Pro 2nd Gen ANC Dubai Version &#8212; ব&#2494;&#2434;ল&#2494;দ&#2503;শ&#2503; স&#2503;র&#2494; দ&#2494;ম&#2503;, ১০০% অর&#2495;জ&#2495;ন&#2494;ল&#2404;</p>
+    <div class='glass inline-block px-6 py-3 rounded-2xl mb-6 text-base'>
+      <span class='old-price mr-2'>&#2547;৫,৩৯৯</span>
+      <span class='text-2xl font-bold'>&#2547;৩,৪৯৯</span>
+      <span class='ml-2 text-xs bg-red-500 text-white px-2 py-0.5 rounded-full font-bold'>৩৫% ছ&#2494;ড&#2492;</span>
+    </div>
+    <div class='flex flex-wrap justify-center gap-4'>
+      <button class='btn-primary pulse-btn text-xl px-10 py-5' onclick='openModal()'><i class='fas fa-shopping-cart'/>এখনই অর&#2509;ড&#2494;র কর&#2497;ন</button>
+    </div>
+    <div class='flex justify-center gap-6 mt-8 flex-wrap text-sm text-blue-100'>
+      <span><i class='fas fa-shield-alt mr-1.5'/>ন&#2495;র&#2494;পদ ক&#2503;ন&#2494;ক&#2494;ট&#2494;</span>
+      <span><i class='fas fa-truck mr-1.5'/>ফ&#2509;র&#2495; ড&#2503;ল&#2495;ভ&#2494;র&#2495;</span>
+      <span><i class='fas fa-undo mr-1.5'/>৭ দ&#2495;ন&#2503;র র&#2495;ট&#2494;র&#2509;ন</span>
+      <span><i class='fas fa-award mr-1.5'/>১ বছর ওয&#2492;&#2494;র&#2503;ন&#2509;ট&#2495;</span>
+    </div>
+    <div class='glass inline-flex items-center gap-2 px-5 py-3 rounded-2xl mt-8 text-sm'>
+      <i class='fas fa-fire text-orange-400'/>
+      গত ২৪ ঘণ&#2509;ট&#2494;য&#2492; <strong class='mx-1'>২৮৬ জন</strong> এই পণ&#2509;যট&#2495; অর&#2509;ড&#2494;র কর&#2503;ছ&#2503;ন
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class='bg-gray-950 text-gray-400 py-10'>
+  <div class='max-w-5xl mx-auto px-4 text-center'>
+    <div class='flex items-center justify-center gap-2 mb-3'>
+      <i class='fab fa-apple text-white text-2xl'/>
+      <span class='text-xl font-bold text-white'>AirPods Pro BD</span>
+    </div>
+    <p class='text-sm text-gray-500 mb-4'>ব&#2494;&#2434;ল&#2494;দ&#2503;শ&#2503;র ব&#2495;শ&#2509;বস&#2509;ত Apple গ&#2509;য&#2494;জ&#2503;ট শপ &#8212; ১০০% অর&#2495;জ&#2495;ন&#2494;ল পণ&#2509;য</p>
+    <div class='flex justify-center gap-5 mb-5 flex-wrap text-sm'>
+      <a class='hover:text-white transition-colors' href='#'>প&#2509;র&#2494;ইভ&#2503;স&#2495; পল&#2495;স&#2495;</a>
+      <span class='text-gray-700'>|</span>
+      <a class='hover:text-white transition-colors' href='#'>র&#2495;ট&#2494;র&#2509;ন পল&#2495;স&#2495;</a>
+      <span class='text-gray-700'>|</span>
+      <a class='hover:text-white transition-colors' href='#'>য&#2507;গ&#2494;য&#2507;গ</a>
+    </div>
+    <p class='text-xs text-gray-600'>&#169; ২০২৫ AirPods Pro BD. সর&#2509;বস&#2509;বত&#2509;ব স&#2434;রক&#2509;ষ&#2495;ত&#2404; Apple এব&#2434; AirPods Pro ত&#2494;দ&#2503;র ন&#2495;জস&#2509;ব ট&#2509;র&#2503;ডম&#2494;র&#2509;ক&#2404;</p>
+  </div>
+</footer>
+
+<!-- Blogger প&#2509;রয&#2492;&#2507;জন&#2496;য&#2492; হ&#2495;ড&#2503;ন এর&#2495;য&#2492;&#2494; (এট&#2495; ব&#2509;লগস&#2509;পট থ&#2495;ম&#2503;র জন&#2509;য আবশ&#2509;যক ক&#2495;ন&#2509;ত&#2497; ব&#2509;য&#2494;কএন&#2509;ড&#2503; ল&#2497;ক&#2494;ন&#2507; থ&#2494;কব&#2503;) -->
+<div style='display:none;'>
+  <b:section id='main' maxwidgets='1' showaddelement='no'>
+    <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='1'>
+      <b:widget-settings>
+        <b:widget-setting name='showDateHeader'>true</b:widget-setting>
+        <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
+        <b:widget-setting name='showShareButtons'>false</b:widget-setting>
+        <b:widget-setting name='authorLabel'>By</b:widget-setting>
+        <b:widget-setting name='showCommentLink'>false</b:widget-setting>
+        <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
+        <b:widget-setting name='showAuthor'>false</b:widget-setting>
+        <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
+        <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+        <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+        <b:widget-setting name='reactionsLabel'/>
+        <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
+        <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+        <b:widget-setting name='showLabels'>false</b:widget-setting>
+        <b:widget-setting name='showLocation'>false</b:widget-setting>
+        <b:widget-setting name='showTimestamp'>true</b:widget-setting>
+        <b:widget-setting name='postsPerAd'>1</b:widget-setting>
+        <b:widget-setting name='showBacklinks'>false</b:widget-setting>
+        <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+        <b:widget-setting name='showInlineAds'>false</b:widget-setting>
+        <b:widget-setting name='showReactions'>false</b:widget-setting>
+      </b:widget-settings>
+      <b:includable id='main'>
+        <!-- Empty Includable -->
+      </b:includable>
+      <b:includable id='backlinkDeleteIcon' var='backlink'/>
+      <b:includable id='backlinks' var='post'/>
+      <b:includable id='comment-form' var='post'>
+  <div class='comment-form'>
+    <a name='comment-form'/>
+    <b:if cond='data:mobile'>
+      <h4 id='comment-post-message'>
+        <a expr:id='data:widget.instanceId + &quot;_comment-editor-toggle-link&quot;' href='javascript:void(0)'><data:postCommentMsg/></a></h4>
+      <p><data:blogCommentMessage/></p>
+      <data:blogTeamBlogMessage/>
+      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
+      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
+    <b:else/>
+      <h4 id='comment-post-message'><data:postCommentMsg/></h4>
+      <p><data:blogCommentMessage/></p>
+      <data:blogTeamBlogMessage/>
+      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
+      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
+    </b:if>
+    <data:post.cmtfpIframe/>
+    <script type='text/javascript'>
+      BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;);
+    </script>
+  </div>
+</b:includable>
+      <b:includable id='commentDeleteIcon' var='comment'>
+  <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
+    <b:if cond='data:showCmtPopup'>
+      <div class='goog-toggle-button'>
+        <div class='goog-inline-block comment-action-icon'/>
+      </div>
+    <b:else/>
+      <a class='comment-delete' expr:href='data:comment.deleteUrl' expr:title='data:top.deleteCommentMsg'>
+        <img src='https://resources.blogblog.com/img/icon_delete13.gif'/>
+      </a>
+    </b:if>
+  </span>
+</b:includable>
+      <b:includable id='comment_count_picker' var='post'>
+  <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
+    <data:post.commentLabelFull/>:
+  </a>
+</b:includable>
+      <b:includable id='comment_picker' var='post'>
+  <b:if cond='data:post.showThreadedComments'>
+    <b:include data='post' name='threaded_comments'/>
+  <b:else/>
+    <b:include data='post' name='comments'/>
+  </b:if>
+</b:includable>
+      <b:includable id='comments' var='post'>
+  <div class='comments' id='comments'>
+    <a name='comments'/>
+    <b:if cond='data:post.allowComments'>
+      <h4><data:post.commentLabelFull/>:</h4>
+
+      <b:if cond='data:post.commentPagingRequired'>
+        <span class='paging-control-container'>
+          <b:if cond='data:post.hasOlderLinks'>
+            <a expr:class='data:post.oldLinkClass' expr:href='data:post.oldestLinkUrl'><data:post.oldestLinkText/></a>
+              &#160;
+            <a expr:class='data:post.oldLinkClass' expr:href='data:post.olderLinkUrl'><data:post.olderLinkText/></a>
+              &#160;
+          </b:if>
+
+          <data:post.commentRangeText/>
+
+          <b:if cond='data:post.hasNewerLinks'>
+            &#160;
+            <a expr:class='data:post.newLinkClass' expr:href='data:post.newerLinkUrl'><data:post.newerLinkText/></a>
+            &#160;
+            <a expr:class='data:post.newLinkClass' expr:href='data:post.newestLinkUrl'><data:post.newestLinkText/></a>
+          </b:if>
+        </span>
+      </b:if>
+
+      <div expr:id='data:widget.instanceId + &quot;_comments-block-wrapper&quot;'>
+        <dl expr:class='data:post.avatarIndentClass' id='comments-block'>
+          <b:loop values='data:post.comments' var='comment'>
+            <dt expr:class='&quot;comment-author &quot; + data:comment.authorClass' expr:id='data:comment.anchorName'>
+              <b:if cond='data:comment.favicon'>
+                <img expr:src='data:comment.favicon' height='16px' style='margin-bottom:-2px;' width='16px'/>
+              </b:if>
+              <a expr:name='data:comment.anchorName'/>
+              <b:if cond='data:blog.enabledCommentProfileImages'>
+                <data:comment.authorAvatarImage/>
+              </b:if>
+              <b:if cond='data:comment.authorUrl'>
+                <a expr:href='data:comment.authorUrl' rel='nofollow'><data:comment.author/></a>
+              <b:else/>
+                <data:comment.author/>
+              </b:if>
+              <data:commentPostedByMsg/>
+            </dt>
+            <dd class='comment-body' expr:id='data:widget.instanceId + data:comment.cmtBodyIdPostfix'>
+              <b:if cond='data:comment.isDeleted'>
+                <span class='deleted-comment'><data:comment.body/></span>
+              <b:else/>
+                <p>
+                  <data:comment.body/>
+                </p>
+              </b:if>
+            </dd>
+            <dd class='comment-footer'>
+              <span class='comment-timestamp'>
+                <a expr:href='data:comment.url' title='comment permalink'>
+                  <data:comment.timestamp/>
+                </a>
+                <b:include data='comment' name='commentDeleteIcon'/>
+              </span>
+            </dd>
+          </b:loop>
+        </dl>
+      </div>
+
+      <b:if cond='data:post.commentPagingRequired'>
+        <span class='paging-control-container'>
+          <a expr:class='data:post.oldLinkClass' expr:href='data:post.oldestLinkUrl'>
+            <data:post.oldestLinkText/>
+          </a>
+          <a expr:class='data:post.oldLinkClass' expr:href='data:post.olderLinkUrl'>
+            <data:post.olderLinkText/>
+          </a>
+          &#160;
+          <data:post.commentRangeText/>
+          &#160;
+          <a expr:class='data:post.newLinkClass' expr:href='data:post.newerLinkUrl'>
+            <data:post.newerLinkText/>
+          </a>
+          <a expr:class='data:post.newLinkClass' expr:href='data:post.newestLinkUrl'>
+            <data:post.newestLinkText/>
+          </a>
+        </span>
+      </b:if>
+
+      <p class='comment-footer'>
+        <b:if cond='data:post.embedCommentForm'>
+          <b:if cond='data:post.allowNewComments'>
+            <b:include data='post' name='comment-form'/>
+          <b:else/>
+            <data:post.noNewCommentsText/>
+          </b:if>
+        <b:elseif cond='data:post.allowComments'/>
+          <a expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><data:postCommentMsg/></a>
+        </b:if>
+      </p>
+    </b:if>
+    <b:if cond='data:showCmtPopup'>
+      <div id='comment-popup'>
+        <iframe allowtransparency='true' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'>
+        </iframe>
+      </div>
+    </b:if>
+
+  </div>
+</b:includable>
+      <b:includable id='feedLinks'>
+  <b:if cond='data:blog.pageType != &quot;item&quot;'> <!-- Blog feed links -->
+    <b:if cond='data:feedLinks'>
+      <div class='blog-feeds'>
+        <b:include data='feedLinks' name='feedLinksBody'/>
+      </div>
+    </b:if>
+
+  <b:else/> <!--Post feed links -->
+    <div class='post-feeds'>
+      <b:loop values='data:posts' var='post'>
+        <b:include cond='data:post.allowComments and data:post.feedLinks' data='post.feedLinks' name='feedLinksBody'/>
+      </b:loop>
+    </div>
+  </b:if>
+</b:includable>
+      <b:includable id='feedLinksBody' var='links'>
+  <div class='feed-links'>
+  <data:feedLinksMsg/>
+  <b:loop values='data:links' var='f'>
+     <a class='feed-link' expr:href='data:f.url' expr:type='data:f.mimeType' target='_blank'><data:f.name/> (<data:f.feedType/>)</a>
+  </b:loop>
+  </div>
+</b:includable>
+      <b:includable id='iframe_comments' var='post'>
+  <!-- G+ comments, no longer available. The includable is retained for backwards-compatibility. -->
+</b:includable>
+      <b:includable id='mobile-index-post' var='post'>
+  <div class='mobile-date-outer date-outer'>
+    <b:if cond='data:post.dateHeader'>
+      <div class='date-header'>
+        <span><data:post.dateHeader/></span>
+      </div>
+    </b:if>
+
+    <div class='mobile-post-outer'>
+      <a expr:href='data:post.url'>
+        <h3 class='mobile-index-title entry-title' itemprop='name'>
+          <data:post.title/>
+        </h3>
+
+        <div class='mobile-index-arrow'>&amp;rsaquo;</div>
+
+        <div class='mobile-index-contents'>
+          <b:if cond='data:post.thumbnailUrl'>
+            <div class='mobile-index-thumbnail'>
+              <div class='Image'>
+                <img expr:src='data:post.thumbnailUrl'/>
+              </div>
+            </div>
+          </b:if>
+
+          <div class='post-body'>
+            <b:if cond='data:post.snippet'><data:post.snippet/></b:if>
+          </div>
+        </div>
+
+        <div style='clear: both;'/>
+      </a>
+
+      <div class='mobile-index-comment'>
+        <b:include cond='data:blog.pageType != &quot;static_page&quot;                          and data:post.allowComments                          and data:post.numComments != 0' data='post' name='comment_count_picker'/>
+      </div>
+    </div>
+  </div>
+</b:includable>
+      <b:includable id='mobile-main' var='top'>
+    <!-- posts -->
+    <div class='blog-posts hfeed'>
+
+      <b:include data='top' name='status-message'/>
+
+      <b:if cond='data:blog.pageType == &quot;index&quot;'>
+        <b:loop values='data:posts' var='post'>
+          <b:include data='post' name='mobile-index-post'/>
+        </b:loop>
+      <b:else/>
+        <b:loop values='data:posts' var='post'>
+          <b:include data='post' name='mobile-post'/>
+        </b:loop>
+      </b:if>
+    </div>
+
+   <b:include name='mobile-nextprev'/>
+</b:includable>
+      <b:includable id='mobile-nextprev'>
+  <div class='blog-pager' id='blog-pager'>
+    <b:if cond='data:newerPageUrl'>
+      <div class='mobile-link-button' id='blog-pager-newer-link'>
+      <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle'>&amp;lsaquo;</a>
+      </div>
+    </b:if>
+
+    <b:if cond='data:olderPageUrl'>
+      <div class='mobile-link-button' id='blog-pager-older-link'>
+      <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle'>&amp;rsaquo;</a>
+      </div>
+    </b:if>
+
+    <div class='mobile-link-button' id='blog-pager-home-link'>
+    <a class='home-link' expr:href='data:blog.homepageUrl'><data:homeMsg/></a>
+    </div>
+
+    <div class='mobile-desktop-link'>
+      <a class='home-link' expr:href='data:desktopLinkUrl'><data:desktopLinkMsg/></a>
+    </div>
+
+  </div>
+  <div class='clear'/>
+</b:includable>
+      <b:includable id='mobile-post' var='post'>
+  <div class='date-outer'>
+    <b:if cond='data:post.dateHeader'>
+      <h2 class='date-header'><span><data:post.dateHeader/></span></h2>
+    </b:if>
+    <div class='date-posts'>
+      <div class='post-outer'>
+
+        <div class='post hentry uncustomized-post-template' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
+          <b:if cond='data:post.thumbnailUrl'>
+            <meta expr:content='data:post.thumbnailUrl' itemprop='image_url'/>
+          </b:if>
+          <meta expr:content='data:blog.blogId' itemprop='blogId'/>
+          <meta expr:content='data:post.id' itemprop='postId'/>
+
+          <a expr:name='data:post.id'/>
+          <b:if cond='data:post.title'>
+            <h3 class='post-title entry-title' itemprop='name'>
+              <b:if cond='data:post.link'>
+                <a expr:href='data:post.link'><data:post.title/></a>
+              <b:elseif cond='data:post.url and data:blog.url != data:post.url'/>
+                <a expr:href='data:post.url'><data:post.title/></a>
+              <b:else/>
+                <data:post.title/>
+              </b:if>
+            </h3>
+          </b:if>
+
+          <div class='post-header'>
+            <div class='post-header-line-1'/>
+          </div>
+
+          <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
+            <data:post.body/>
+            <div style='clear: both;'/> <!-- clear for photos floats -->
+          </div>
+
+          <div class='post-footer'>
+            <div class='post-footer-line post-footer-line-1'>
+              <span class='post-author vcard'>
+                <b:if cond='data:top.showAuthor'>
+                  <b:if cond='data:post.authorProfileUrl'>
+                    <span class='fn' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
+                      <meta expr:content='data:post.authorProfileUrl' itemprop='url'/>
+                      <a expr:href='data:post.authorProfileUrl' rel='author' title='author profile'>
+                        <span itemprop='name'><data:post.author/></span>
+                      </a>
+                    </span>
+                  <b:else/>
+                    <span class='fn' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
+                      <span itemprop='name'><data:post.author/></span>
+                    </span>
+                  </b:if>
+                </b:if>
+              </span>
+
+              <span class='post-timestamp'>
+                <b:if cond='data:top.showTimestamp'>
+                  <data:top.timestampLabel/>
+                  <b:if cond='data:post.url'>
+                    <meta expr:content='data:post.url.canonical' itemprop='url'/>
+                    <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published' expr:title='data:post.timestampISO8601' itemprop='datePublished'><data:post.timestamp/></abbr></a>
+                  </b:if>
+                </b:if>
+              </span>
+
+              <span class='post-comment-link'>
+                <b:include cond='data:blog.pageType not in {&quot;item&quot;,&quot;static_page&quot;}                                  and data:post.allowComments' data='post' name='comment_count_picker'/>
+              </span>
+            </div>
+
+            <div class='post-footer-line post-footer-line-2'>
+              <b:if cond='data:top.showMobileShare'>
+                <div class='mobile-link-button goog-inline-block' id='mobile-share-button'>
+                  <a href='javascript:void(0);'><data:shareMsg/></a>
+                </div>
+              </b:if>
+            </div>
+
+          </div>
+        </div>
+
+        <b:include cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}' data='post' name='comment_picker'/>
+      </div>
+    </div>
+  </div>
+</b:includable>
+      <b:includable id='nextprev'>
+  <div class='blog-pager' id='blog-pager'>
+    <b:if cond='data:newerPageUrl'>
+      <span id='blog-pager-newer-link'>
+      <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle'><data:newerPageTitle/></a>
+      </span>
+    </b:if>
+
+    <b:if cond='data:olderPageUrl'>
+      <span id='blog-pager-older-link'>
+      <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle'><data:olderPageTitle/></a>
+      </span>
+    </b:if>
+
+    <a class='home-link' expr:href='data:blog.homepageUrl'><data:homeMsg/></a>
+
+    <b:if cond='data:mobileLinkUrl'>
+      <div class='blog-mobile-link'>
+        <a expr:href='data:mobileLinkUrl'><data:mobileLinkMsg/></a>
+      </div>
+    </b:if>
+
+  </div>
+  <div class='clear'/>
+</b:includable>
+      <b:includable id='post' var='post'>
+  <div class='post hentry uncustomized-post-template' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
+    <b:if cond='data:post.firstImageUrl'>
+      <meta expr:content='data:post.firstImageUrl' itemprop='image_url'/>
+    </b:if>
+    <meta expr:content='data:blog.blogId' itemprop='blogId'/>
+    <meta expr:content='data:post.id' itemprop='postId'/>
+
+    <a expr:name='data:post.id'/>
+    <b:if cond='data:post.title'>
+      <h3 class='post-title entry-title' itemprop='name'>
+      <b:if cond='data:post.link or (data:post.url and data:blog.url != data:post.url)'>
+        <a expr:href='data:post.link ? data:post.link : data:post.url'><data:post.title/></a>
+      <b:else/>
+        <data:post.title/>
+      </b:if>
+      </h3>
+    </b:if>
+
+    <div class='post-header'>
+    <div class='post-header-line-1'/>
+    </div>
+
+    <!-- Then use the post body as the schema.org description, for good G+/FB snippeting. -->
+    <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' expr:itemprop='(data:blog.metaDescription ? &quot;&quot; : &quot;description &quot;) + &quot;articleBody&quot;'>
+      <data:post.body/>
+      <div style='clear: both;'/> <!-- clear for photos floats -->
+    </div>
+
+    <b:if cond='data:post.hasJumpLink'>
+      <div class='jump-link'>
+        <a expr:href='data:post.url + &quot;#more&quot;' expr:title='data:post.title'><data:post.jumpText/></a>
+      </div>
+    </b:if>
+
+    <div class='post-footer'>
+    <div class='post-footer-line post-footer-line-1'>
+      <span class='post-author vcard'>
+        <b:if cond='data:top.showAuthor'>
+          <data:top.authorLabel/>
+            <b:if cond='data:post.authorProfileUrl'>
+              <span class='fn' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
+                <meta expr:content='data:post.authorProfileUrl' itemprop='url'/>
+                <a class='g-profile' expr:href='data:post.authorProfileUrl' rel='author' title='author profile'>
+                  <span itemprop='name'><data:post.author/></span>
+                </a>
+              </span>
+            <b:else/>
+              <span class='fn' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
+                <span itemprop='name'><data:post.author/></span>
+              </span>
+            </b:if>
+        </b:if>
+      </span>
+
+      <span class='post-timestamp'>
+        <b:if cond='data:top.showTimestamp'>
+          <data:top.timestampLabel/>
+          <b:if cond='data:post.url'>
+            <meta expr:content='data:post.url.canonical' itemprop='url'/>
+            <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published' expr:title='data:post.timestampISO8601' itemprop='datePublished'><data:post.timestamp/></abbr></a>
+          </b:if>
+        </b:if>
+      </span>
+
+      <span class='post-comment-link'>
+        <b:include cond='data:blog.pageType not in {&quot;item&quot;,&quot;static_page&quot;}                          and data:post.allowComments' data='post' name='comment_count_picker'/>
+      </span>
+
+      <span class='post-icons'>
+        <!-- email post links -->
+        <b:if cond='data:post.emailPostUrl'>
+          <span class='item-action'>
+          <a expr:href='data:post.emailPostUrl' expr:title='data:top.emailPostMsg'>
+            <img alt='' class='icon-action' height='13' src='https://resources.blogblog.com/img/icon18_email.gif' width='18'/>
+          </a>
+          </span>
+        </b:if>
+
+        <!-- quickedit pencil -->
+        <b:include data='post' name='postQuickEdit'/>
+      </span>
+
+      <!-- share buttons -->
+      <div class='post-share-buttons goog-inline-block'>
+        <b:include cond='data:post.sharePostUrl' data='post' name='shareButtons'/>
+      </div>
+
+      </div>
+
+      <div class='post-footer-line post-footer-line-2'>
+      <span class='post-labels'>
+        <b:if cond='data:top.showPostLabels and data:post.labels'>
+          <data:postLabelsLabel/>
+          <b:loop values='data:post.labels' var='label'>
+            <a expr:href='data:label.url' rel='tag'><data:label.name/></a><b:if cond='not data:label.isLast'>,</b:if>
+          </b:loop>
+        </b:if>
+      </span>
+      </div>
+
+      <div class='post-footer-line post-footer-line-3'>
+      <span class='post-location'>
+        <b:if cond='data:top.showLocation and data:post.location'>
+          <data:postLocationLabel/>
+          <a expr:href='data:post.location.mapsUrl' target='_blank'><data:post.location.name/></a>
+        </b:if>
+      </span>
+      </div>
+      <b:if cond='data:post.authorAboutMe'>
+        <div class='author-profile' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
+          <b:if cond='data:post.authorPhoto.url'>
+            <img expr:src='data:post.authorPhoto.url' itemprop='image' width='50px'/>
+          </b:if>
+          <div>
+            <a class='g-profile' expr:href='data:post.authorProfileUrl' itemprop='url' rel='author' title='author profile'>
+              <span itemprop='name'><data:post.author/></span>
+            </a>
+          </div>
+          <span itemprop='description'><data:post.authorAboutMe/></span>
+        </div>
+      </b:if>
+    </div>
+  </div>
+</b:includable>
+      <b:includable id='postQuickEdit' var='post'>
+  <b:if cond='data:post.editUrl'>
+    <span expr:class='&quot;item-control &quot; + data:post.adminClass'>
+      <a expr:href='data:post.editUrl' expr:title='data:top.editPostMsg'>
+        <img alt='' class='icon-action' height='18' src='https://resources.blogblog.com/img/icon18_edit_allbkg.gif' width='18'/>
+      </a>
+    </span>
+  </b:if>
+</b:includable>
+      <b:includable id='shareButtons' var='post'>
+  <b:if cond='data:top.showEmailButton'><a class='goog-inline-block share-button sb-email' expr:href='data:post.sharePostUrl + &quot;&amp;target=email&quot;' expr:title='data:top.emailThisMsg' target='_blank'><span class='share-button-link-text'><data:top.emailThisMsg/></span></a></b:if><b:if cond='data:top.showBlogThisButton'><a class='goog-inline-block share-button sb-blog' expr:href='data:post.sharePostUrl + &quot;&amp;target=blog&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=270,width=475\&quot;); return false;&quot;' expr:title='data:top.blogThisMsg' target='_blank'><span class='share-button-link-text'><data:top.blogThisMsg/></span></a></b:if><b:if cond='data:top.showTwitterButton'><a class='goog-inline-block share-button sb-twitter' expr:href='data:post.sharePostUrl + &quot;&amp;target=twitter&quot;' expr:title='data:top.shareToTwitterMsg' target='_blank'><span class='share-button-link-text'><data:top.shareToTwitterMsg/></span></a></b:if><b:if cond='data:top.showFacebookButton'><a class='goog-inline-block share-button sb-facebook' expr:href='data:post.sharePostUrl + &quot;&amp;target=facebook&quot;' expr:onclick='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' expr:title='data:top.shareToFacebookMsg' target='_blank'><span class='share-button-link-text'><data:top.shareToFacebookMsg/></span></a></b:if><b:if cond='data:top.showPinterestButton'><a class='goog-inline-block share-button sb-pinterest' expr:href='data:post.sharePostUrl + &quot;&amp;target=pinterest&quot;' expr:title='data:top.shareToPinterestMsg' target='_blank'><span class='share-button-link-text'><data:top.shareToPinterestMsg/></span></a></b:if>
+</b:includable>
+      <b:includable id='status-message'>
+  <b:if cond='data:navMessage'>
+  <div class='status-msg-wrap'>
+    <div class='status-msg-body'>
+      <data:navMessage/>
+    </div>
+    <div class='status-msg-border'>
+      <div class='status-msg-bg'>
+        <div class='status-msg-hidden'><data:navMessage/></div>
+      </div>
+    </div>
+  </div>
+  <div style='clear: both;'/>
+  </b:if>
+</b:includable>
+      <b:includable id='threaded-comment-form' var='post'>
+  <div class='comment-form'>
+    <a name='comment-form'/>
+    <b:if cond='data:mobile'>
+      <p><data:blogCommentMessage/></p>
+      <data:blogTeamBlogMessage/>
+      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
+      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' style='display: none' width='100%'/>
+    <b:else/>
+      <p><data:blogCommentMessage/></p>
+      <data:blogTeamBlogMessage/>
+      <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
+      <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
+    </b:if>
+    <data:post.cmtfpIframe/>
+    <script type='text/javascript'>
+      BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;);
+    </script>
+  </div>
+</b:includable>
+      <b:includable id='threaded_comment_js' var='post'>
+  <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
+
+  <script type='text/javascript'>
+    (function() {
+      var items = <data:post.commentJso/>;
+      var msgs = <data:post.commentMsgs/>;
+      var config = <data:post.commentConfig/>;
+
+// <![CDATA[
+      var cursor = null;
+      if (items && items.length > 0) {
+        cursor = parseInt(items[items.length - 1].timestamp) + 1;
+      }
+
+      var bodyFromEntry = function(entry) {
+        var text = (entry &&
+                    ((entry.content && entry.content.$t) ||
+                     (entry.summary && entry.summary.$t))) ||
+            '';
+        if (entry && entry.gd$extendedProperty) {
+          for (var k in entry.gd$extendedProperty) {
+            if (entry.gd$extendedProperty[k].name == 'blogger.contentRemoved') {
+              return '<span class="deleted-comment">' + text + '</span>';
+            }
+          }
+        }
+        return text;
+      }
+
+      var parse = function(data) {
+        cursor = null;
+        var comments = [];
+        if (data && data.feed && data.feed.entry) {
+          for (var i = 0, entry; entry = data.feed.entry[i]; i++) {
+            var comment = {};
+            // comment ID, parsed out of the original id format
+            var id = /blog-(\d+).post-(\d+)/.exec(entry.id.$t);
+            comment.id = id ? id[2] : null;
+            comment.body = bodyFromEntry(entry);
+            comment.timestamp = Date.parse(entry.published.$t) + '';
+            if (entry.author && entry.author.constructor === Array) {
+              var auth = entry.author[0];
+              if (auth) {
+                comment.author = {
+                  name: (auth.name ? auth.name.$t : undefined),
+                  profileUrl: (auth.uri ? auth.uri.$t : undefined),
+                  avatarUrl: (auth.gd$image ? auth.gd$image.src : undefined)
+                };
+              }
+            }
+            if (entry.link) {
+              if (entry.link[2]) {
+                comment.link = comment.permalink = entry.link[2].href;
+              }
+              if (entry.link[3]) {
+                var pid = /.*comments\/default\/(\d+)\?.*/.exec(entry.link[3].href);
+                if (pid && pid[1]) {
+                  comment.parentId = pid[1];
+                }
+              }
+            }
+            comment.deleteclass = 'item-control blog-admin';
+            if (entry.gd$extendedProperty) {
+              for (var k in entry.gd$extendedProperty) {
+                if (entry.gd$extendedProperty[k].name == 'blogger.itemClass') {
+                  comment.deleteclass += ' ' + entry.gd$extendedProperty[k].value;
+                } else if (entry.gd$extendedProperty[k].name == 'blogger.displayTime') {
+                  comment.displayTime = entry.gd$extendedProperty[k].value;
+                }
+              }
+            }
+            comments.push(comment);
+          }
+        }
+        return comments;
+      };
+
+      var paginator = function(callback) {
+        if (hasMore()) {
+          var url = config.feed + '?alt=json&v=2&orderby=published&reverse=false&max-results=50';
+          if (cursor) {
+            url += '&published-min=' + new Date(cursor).toISOString();
+          }
+          window.bloggercomments = function(data) {
+            var parsed = parse(data);
+            cursor = parsed.length < 50 ? null
+                : parseInt(parsed[parsed.length - 1].timestamp) + 1
+            callback(parsed);
+            window.bloggercomments = null;
+          }
+          url += '&callback=bloggercomments';
+          var script = document.createElement('script');
+          script.type = 'text/javascript';
+          script.src = url;
+          document.getElementsByTagName('head')[0].appendChild(script);
+        }
+      };
+      var hasMore = function() {
+        return !!cursor;
+      };
+      var getMeta = function(key, comment) {
+        if ('iswriter' == key) {
+          var matches = !!comment.author
+              && comment.author.name == config.authorName
+              && comment.author.profileUrl == config.authorUrl;
+          return matches ? 'true' : '';
+        } else if ('deletelink' == key) {
+          return config.baseUri + '/comment/delete/'
+               + config.blogId + '/' + comment.id;
+        } else if ('deleteclass' == key) {
+          return comment.deleteclass;
+        }
+        return '';
+      };
+
+      var replybox = null;
+      var replyUrlParts = null;
+      var replyParent = undefined;
+
+      var onReply = function(commentId, domId) {
+        if (replybox == null) {
+          // lazily cache replybox, and adjust to suit this style:
+          replybox = document.getElementById('comment-editor');
+          if (replybox != null) {
+            replybox.height = '250px';
+            replybox.style.display = 'block';
+            replyUrlParts = replybox.src.split('#');
+          }
+        }
+        if (replybox && (commentId !== replyParent)) {
+          replybox.src = '';
+          document.getElementById(domId).insertBefore(replybox, null);
+          replybox.src = replyUrlParts[0]
+              + (commentId ? '&parentID=' + commentId : '')
+              + '#' + replyUrlParts[1];
+          replyParent = commentId;
+        }
+      };
+
+      var hash = (window.location.hash || '#').substring(1);
+      var startThread, targetComment;
+      if (/^comment-form_/.test(hash)) {
+        startThread = hash.substring('comment-form_'.length);
+      } else if (/^c[0-9]+$/.test(hash)) {
+        targetComment = hash.substring(1);
+      }
+
+      // Configure commenting API:
+      var configJso = {
+        'maxDepth': config.maxThreadDepth
+      };
+      var provider = {
+        'id': config.postId,
+        'data': items,
+        'loadNext': paginator,
+        'hasMore': hasMore,
+        'getMeta': getMeta,
+        'onReply': onReply,
+        'rendered': true,
+        'initComment': targetComment,
+        'initReplyThread': startThread,
+        'config': configJso,
+        'messages': msgs
+      };
+
+      var render = function() {
+        if (window.goog && window.goog.comments) {
+          var holder = document.getElementById('comment-holder');
+          window.goog.comments.render(holder, provider);
+        }
+      };
+
+      // render now, or queue to render when library loads:
+      if (window.goog && window.goog.comments) {
+        render();
+      } else {
+        window.goog = window.goog || {};
+        window.goog.comments = window.goog.comments || {};
+        window.goog.comments.loadQueue = window.goog.comments.loadQueue || [];
+        window.goog.comments.loadQueue.push(render);
+      }
+    })();
+// ]]>
+  </script>
+</b:includable>
+      <b:includable id='threaded_comments' var='post'>
+  <div class='comments' id='comments'>
+    <a name='comments'/>
+    <h4><data:post.commentLabelFull/>:</h4>
+
+    <div class='comments-content'>
+      <b:include cond='data:post.embedCommentForm' data='post' name='threaded_comment_js'/>
+      <div id='comment-holder'>
+         <data:post.commentHtml/>
+      </div>
+    </div>
+
+    <p class='comment-footer'>
+      <b:if cond='data:post.allowNewComments'>
+        <b:include data='post' name='threaded-comment-form'/>
+      <b:else/>
+        <data:post.noNewCommentsText/>
+      </b:if>
+    </p>
+
+    <b:if cond='data:showCmtPopup'>
+      <div id='comment-popup'>
+        <iframe allowtransparency='true' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'>
+        </iframe>
+      </div>
+    </b:if>
+
+    <div id='backlinks-container'>
+    <div expr:id='data:widget.instanceId + &quot;_backlinks-container&quot;'>
+    </div>
+    </div>
+  </div>
+</b:includable>
+    </b:widget>
+  </b:section>
+</div>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+  //<![CDATA[
+  AOS.init({ duration: 720, once: true, easing: 'ease-out-cubic', offset: 55 });
+
+  /* ===== আপনার পেমেন্ট নম্বর এখানে বসান ===== */
+  const BKASH_NUMBER = '01700000000';   /* ← আপনার বিকাশ নম্বর */
+  const NAGAD_NUMBER = '01800000000';   /* ← আপনার নগদ নম্বর  */
+
+  /* ===== CONFIG ===== */
+  const BASE_PRICE = 3499;
+  const OUTSIDE_DHAKA_CHARGE = 130; // ঢাকার বাহিরে ডেলিভারি চার্জ
+
+  /* ===== COUNTDOWN ===== */
+  (function() {
+    const KEY = 'airpods_offer_end';
+    const now = Date.now();
+    let end = parseInt(localStorage.getItem(KEY) || '0');
+    if (!end || end <= now) {
+      end = now + (8 * 3600 + 27 * 60 + 44) * 1000;
+      localStorage.setItem(KEY, end);
+    }
+    function tick() {
+      const diff = Math.max(0, end - Date.now());
+      const h = Math.floor(diff / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      document.getElementById('cdHours').textContent = String(h).padStart(2, '0');
+      document.getElementById('cdMins').textContent  = String(m).padStart(2, '0');
+      document.getElementById('cdSecs').textContent  = String(s).padStart(2, '0');
+      if (diff === 0) { end = Date.now() + 8 * 3600 * 1000; localStorage.setItem(KEY, end); }
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
+
+  /* ===== THUMBNAIL SWITCHER ===== */
+  function switchImg(thumbEl, src) {
+    document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+    thumbEl.classList.add('active');
+    const img = document.getElementById('mainImg');
+    img.classList.add('fade');
+    setTimeout(() => { img.src = src; img.classList.remove('fade'); }, 280);
+  }
+
+  /* ===== FAQ ===== */
+  function toggleFaq(header) {
+    const body   = header.nextElementSibling;
+    const isOpen = body.classList.contains('open');
+    document.querySelectorAll('.faq-body').forEach(b => b.classList.remove('open'));
+    document.querySelectorAll('.faq-header').forEach(h => h.classList.remove('active'));
+    if (!isOpen) { body.classList.add('open'); header.classList.add('active'); }
+  }
+
+  /* ===== MODAL ===== */
+  function openModal() {
+    document.getElementById('orderModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    // Facebook Pixel: ViewContent event
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'ViewContent', {
+        content_name: 'AirPods Pro 2nd Gen',
+        content_category: 'Electronics',
+        value: BASE_PRICE,
+        currency: 'BDT'
+      });
+    }
+  }
+  function closeModal() {
+    document.getElementById('orderModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeModalOutside(e) {
+    if (e.target === document.getElementById('orderModal')) closeModal();
+  }
+
+  /* ===== LIGHTBOX ===== */
+  function openLightbox(src) {
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  /* ===== QUANTITY & SHIPPING ===== */
+  let selectedDelivery = '';
+
+  function selectDelivery(method) {
+    selectedDelivery = method;
+    document.getElementById('deliveryMethod').value = method;
+    ['dhaka', 'outside'].forEach(id => {
+      document.getElementById('del-' + id).classList.remove('selected');
+    });
+    document.getElementById('del-' + method).classList.add('selected');
+    document.getElementById('delErr').classList.remove('show');
+    updateTotal();
+  }
+
+  function changeQty(delta) {
+    const inp = document.getElementById('qtyInput');
+    const v   = parseInt(inp.value) + delta;
+    if (v < 1 || v > 10) return;
+    inp.value = v;
+    updateTotal();
+  }
+
+  function updateTotal() {
+    const qty = parseInt(document.getElementById('qtyInput').value);
+    let deliveryCharge = 0;
+    if (selectedDelivery === 'outside') {
+      deliveryCharge = OUTSIDE_DHAKA_CHARGE;
+    }
+    const total = (BASE_PRICE * qty) + deliveryCharge;
+
+    document.getElementById('qtyDisplay').textContent = qty;
+    document.getElementById('basePrice').textContent  = BASE_PRICE.toLocaleString('bn-BD');
+    document.getElementById('totalPrice').textContent = total.toLocaleString('bn-BD');
+
+    const chargeRow = document.getElementById('deliveryChargeRow');
+    const chargeText = document.getElementById('deliveryChargeText');
+    if (deliveryCharge > 0) {
+      chargeRow.style.display = 'flex';
+      chargeText.textContent = '৳' + deliveryCharge;
+      chargeText.className = 'text-amber-600 font-medium';
+    } else if (selectedDelivery === 'dhaka') {
+      chargeRow.style.display = 'flex';
+      chargeText.textContent = 'বিনামূল্যে';
+      chargeText.className = 'text-green-600 font-medium';
+    } else {
+      chargeRow.style.display = 'none';
+    }
+  }
+
+  /* ===== PAYMENT SELECTION ===== */
+  let selectedPayment = '';
+  function selectPayment(m) {
+    selectedPayment = m;
+    document.getElementById('paymentMethod').value = m;
+
+    ['cod', 'bkash', 'nagad'].forEach(id =>
+      document.getElementById('pay-' + id).classList.remove('selected')
+    );
+    document.getElementById('pay-' + m).classList.add('selected');
+    document.getElementById('payErr').classList.remove('show');
+
+    const infoBox   = document.getElementById('mobilePayInfo');
+    const numLabel  = document.getElementById('paymentNumberLabel');
+    const brandName = document.getElementById('payBrandName');
+
+    if (m === 'bkash') {
+      infoBox.classList.add('show');
+      numLabel.textContent  = BKASH_NUMBER;
+      numLabel.style.color  = '#e91e7a';
+      brandName.textContent = 'বিকাশ';
+      resetCopyBtn();
+    } else if (m === 'nagad') {
+      infoBox.classList.add('show');
+      numLabel.textContent  = NAGAD_NUMBER;
+      numLabel.style.color  = '#f47920';
+      brandName.textContent = 'নগদ';
+      resetCopyBtn();
+    } else {
+      infoBox.classList.remove('show');
+      document.getElementById('trxId').value = '';
+      document.getElementById('trxErr').classList.remove('show');
+    }
+  }
+
+  /* ===== COPY NUMBER ===== */
+  function copyNumber() {
+    const num = document.getElementById('paymentNumberLabel').textContent;
+    const btn = document.getElementById('copyBtn');
+    navigator.clipboard.writeText(num).then(() => {
+      btn.classList.add('copied');
+      btn.innerHTML = '<i class="fas fa-check mr-1"><\/i>কপি হয়েছে!';
+      setTimeout(() => resetCopyBtn(), 2500);
+    }).catch(() => {
+      const el = document.createElement('textarea');
+      el.value = num;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+      btn.classList.add('copied');
+      btn.innerHTML = '<i class="fas fa-check mr-1"><\/i>কপি হয়েছে!';
+      setTimeout(() => resetCopyBtn(), 2500);
+    });
+  }
+  function resetCopyBtn() {
+    const btn = document.getElementById('copyBtn');
+    btn.classList.remove('copied');
+    btn.innerHTML = '<i class="fas fa-copy mr-1"><\/i>কপি';
+  }
+
+  /* ===== VALIDATION ===== */
+  function validateForm() {
+    let ok = true;
+    const name  = document.getElementById('custName').value.trim();
+    const phone = document.getElementById('custPhone').value.trim();
+    const addr  = document.getElementById('custAddress').value.trim();
+
+    const toggle = (id, show) =>
+      document.getElementById(id).classList[show ? 'add' : 'remove']('show');
+
+    toggle('nameErr', !name);
+    if (!name) ok = false;
+
+    const phoneOk = /^01[3-9]\d{8}$/.test(phone);
+    toggle('phoneErr', !phoneOk);
+    if (!phoneOk) ok = false;
+
+    toggle('addrErr', addr.length < 10);
+    if (addr.length < 10) ok = false;
+
+    toggle('delErr', !selectedDelivery);
+    if (!selectedDelivery) ok = false;
+
+    toggle('payErr', !selectedPayment);
+    if (!selectedPayment) ok = false;
+
+    if (selectedPayment === 'bkash' || selectedPayment === 'nagad') {
+      const trx = document.getElementById('trxId').value.trim();
+      toggle('trxErr', trx.length < 5);
+      if (trx.length < 5) ok = false;
+    }
+
+    return ok;
+  }
+
+  /* ===== TELEGRAM ===== */
+  async function sendToTelegram(d) {
+    const BOT  = 'YOUR_TELEGRAM_BOT_TOKEN';
+    const CHAT = 'YOUR_TELEGRAM_CHAT_ID';
+    const msg  =
+`🎧 *নতুন অর্ডার — Apple AirPods Pro 2nd Gen*
+━━━━━━━━━━━━━━━━━━━━━
+📦 *পণ্য:* AirPods Pro 2nd Gen ANC Dubai Version
+🎨 *রঙ:* ${d.color || 'উল্লেখ নেই'}
+📏 *ইয়ার টিপ:* ${d.size || 'উল্লেখ নেই'}
+🔢 *পরিমাণ:* ${d.qty}
+🚚 *শিপিং:* ${d.shipping}
+━━━━━━━━━━━━━━━━━━━━━
+👤 *নাম:* ${d.name}
+📱 *ফোন:* ${d.phone}
+📍 *ঠিকানা:* ${d.address}
+💳 *পেমেন্ট:* ${d.payment}
+🧾 *Trx ID:* ${d.trxId}
+💰 *মোট:* ৳${d.total}
+━━━━━━━━━━━━━━━━━━━━━
+🕐 ${new Date().toLocaleString('bn-BD')}`;
+    try {
+      await fetch(`https://api.telegram.org/bot${BOT}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: CHAT, text: msg, parse_mode: 'Markdown' })
+      });
+    } catch(e) { console.warn('Telegram error:', e); }
+  }
+
+  /* ===== GOOGLE FORM ===== */
+  async function sendToGoogleForm(d) {
+    const URL = 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse';
+    const fd  = new FormData();
+    fd.append('entry.111111111', d.name);
+    fd.append('entry.222222222', d.phone);
+    fd.append('entry.333333333', d.address);
+    fd.append('entry.444444444', d.payment);
+    fd.append('entry.555555555', d.qty);
+    fd.append('entry.666666666', d.color);
+    fd.append('entry.777777777', d.size);
+    fd.append('entry.888888888', d.trxId);
+    fd.append('entry.999999999', d.shipping); // শিপিং পদ্ধতি
+    try { await fetch(URL, { method: 'POST', mode: 'no-cors', body: fd }); }
+    catch(e) { console.warn('Form error:', e); }
+  }
+
+  /* ===== HANDLE SUBMIT ===== */
+  async function handleSubmit(e) {
+    e.preventDefault();
+    if (!validateForm()) return;
+
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner"><\/span> প্রক্রিয়া হচ্ছে...';
+
+    const qty  = parseInt(document.getElementById('qtyInput').value);
+    const payLabel =
+      selectedPayment === 'cod'    ? 'Cash on Delivery' :
+      selectedPayment === 'bkash'  ? 'বিকাশ'            : 'নগদ';
+    const shippingLabel =
+      selectedDelivery === 'dhaka'   ? 'ঢাকার ভেতরে' :
+      selectedDelivery === 'outside' ? 'ঢাকার বাহিরে' : '';
+
+    let deliveryCharge = 0;
+    if (selectedDelivery === 'outside') deliveryCharge = OUTSIDE_DHAKA_CHARGE;
+    const totalAmount = (BASE_PRICE * qty) + deliveryCharge;
+
+    const data = {
+      name    : document.getElementById('custName').value.trim(),
+      phone   : document.getElementById('custPhone').value.trim(),
+      address : document.getElementById('custAddress').value.trim(),
+      payment : payLabel,
+      shipping: shippingLabel,
+      color   : document.getElementById('colorSelect').value,
+      size    : document.getElementById('sizeSelect').value,
+      trxId   : document.getElementById('trxId').value.trim() || 'N/A',
+      qty,
+      total   : totalAmount.toLocaleString(),
+    };
+
+    await Promise.allSettled([sendToTelegram(data), sendToGoogleForm(data)]);
+
+    // Facebook Pixel: Purchase event
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'Purchase', {
+        content_name: 'AirPods Pro 2nd Gen',
+        content_category: 'Electronics',
+        value: totalAmount,
+        currency: 'BDT',
+        num_items: qty,
+        shipping: shippingLabel
+      });
+    }
+
+    document.getElementById('orderForm').classList.add('hidden');
+    document.getElementById('successBox').classList.add('show');
+
+    btn.disabled = false;
+    btn.innerHTML = '<i class="fas fa-paper-plane"><\/i> অর্ডার নিশ্চিত করুন';
+  }
+
+  /* ===== SCROLL SHADOW ===== */
+  window.addEventListener('scroll', () => {
+    const sb = document.querySelector('.sticky-buy-btn');
+    if (sb) sb.style.boxShadow = window.scrollY > 80
+      ? '0 -6px 30px rgba(0,139,245,0.22)'
+      : '0 -4px 28px rgba(0,0,0,0.10)';
+  });
+
+  /* ===== ESC KEY ===== */
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { closeModal(); closeLightbox(); }
+  });
+
+  updateTotal();
+  //]]>
+</script>
+</body>
+</html>
